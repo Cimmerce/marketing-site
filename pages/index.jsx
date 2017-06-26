@@ -1,14 +1,16 @@
-import React from 'react';
-import Helmet from 'react-helmet';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
+import React from 'react'
+import cx from 'classnames'
+import Helmet from 'react-helmet'
+import { Link } from 'react-router'
+import { prefixLink } from 'gatsby-helpers'
 
-import { config } from 'config';
+import { config } from 'config'
+import styles from '../styles/index.scss'
 
 export default class Index extends React.Component {
   render() {
     return (
-      <div className="main">
+      <div className={cx(['main', styles.test])}>
         <div className="main-container">
           <Helmet title={config.siteTitle} meta={[{ 'name': 'description', 'content': 'sample' }]} />
 
@@ -51,6 +53,6 @@ export default class Index extends React.Component {
           </p>
         </div>
       </div>
-    );
+    )
   }
 }
