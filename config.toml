@@ -1,4 +1,4 @@
-siteTitle="Alchemy"
-siteDescription="A Gatsby starter with PostCSS powers"
+siteTitle="Cimmerce"
+siteDescription="3D and Virtual Reality for ecommerce"
 
-linkPrefix = "/gatsby-starter-alchemy"
+linkPrefix = "/"
