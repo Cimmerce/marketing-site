@@ -1,8 +1,7 @@
 {
-  "name": "gatsby-starter-alchemy",
+  "name": "cimmerce-marketing-site",
   "version": "1.0.0",
-  "description": "A Gatsby starter with PostCSS powers",
-  "main": "n/a",
+  "description": "Static marketing site based on Gatsby",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -10,19 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bntzio/gatsby-starter-alchemy.git"
+    "url": "git+https://github.com/Cimmerce/marketing-site.git"
   },
   "keywords": [
     "gatsby",
     "postcss",
     "react"
   ],
-  "author": "Enrique Benitez <bntz.io>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bntzio/gatsby-starter-alchemy/issues"
-  },
-  "homepage": "https://github.com/bntzio/gatsby-starter-alchemy#readme",
+  "author": "Casper Fabricius <casper@cimmerce.cim>",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/Cimmerce/marketing-site",
   "dependencies": {
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-preset-es2015": "^6.13.2",
