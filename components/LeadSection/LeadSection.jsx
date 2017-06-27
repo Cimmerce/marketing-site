@@ -1,6 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
 
+import ModelViewer from '../ModelViewer'
+
 import sectionStyles from '../../styles/base/section.scss'
 import styles from './LeadSection.scss'
 
@@ -19,11 +21,11 @@ const LeadSection = () => {
       </div>
 
       <div className={styles.modelsContainer}>
-        Model goes here
+        <ModelViewer modelId="8b1d41b3-220f-4ffc-811e-cb43c1b0b61a" />
       </div>
 
       <div className={styles.signupContainer}>
-        Signup goes here
+        Email box goes here
       </div>
     </section>
   )
