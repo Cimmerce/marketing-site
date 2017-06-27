@@ -1,0 +1,13 @@
+.section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+
+  background-color: #eee;
+  color: #505354;
+}
+
+.contrastSection {
+  background-color: #505354;
+  color: #eee;
+}
