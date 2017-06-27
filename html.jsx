@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import PropTypes from 'prop-types'
 import { prefixLink } from 'gatsby-helpers'
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import typography from './utils/typography'
@@ -9,7 +10,7 @@ const BUILD_TIME = new Date().getTime()
 module.exports = React.createClass({
   propTypes () {
     return {
-      body: React.PropTypes.string
+      body: PropTypes.string
     }
   },
   render () {
