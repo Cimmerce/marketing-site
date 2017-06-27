@@ -14,7 +14,7 @@ module.exports = React.createClass({
     }
   },
   render () {
-    const head = Helmet.rewind()
+    const head = Helmet.renderStatic()
 
     let css
     if (process.env.NODE_ENV === 'production') {
@@ -32,6 +32,7 @@ module.exports = React.createClass({
           <TypographyStyle typography={typography} />
           <GoogleFont typography={typography} />
           {css}
+          {head.script.toComponent()}
         </head>
         <body>
           <div id='react-mount' dangerouslySetInnerHTML={{ __html: this.props.body }} />
