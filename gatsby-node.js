@@ -8,12 +8,12 @@ exports.modifyWebpackConfig = function (config, env) {
   if (env === 'develop') {
     config.loader('sass', {
       test: /\.(sass|scss$)/,
-      loaders: ['style', 'css?modules', 'sass'],
+      loaders: ['style', 'css?modules', 'sass']
     })
   } else {
     config.loader('sass', {
       test: /\.(sass|scss)$/,
-      loader: ExtractTextPlugin.extract('style', ['css?modules', 'postcss', 'sass']),
+      loader: ExtractTextPlugin.extract('style', ['css?modules', 'postcss', 'sass'])
     })
   }
 

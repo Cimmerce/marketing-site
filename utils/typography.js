@@ -1,25 +1,25 @@
-import ReactDOM from 'react-dom/server';
-import React from 'react';
-import Typography from 'typography';
-import { GoogleFont } from 'react-typography';
-import CodePlugin from 'typography-plugin-code';
+import ReactDOM from 'react-dom/server'
+import React from 'react'
+import Typography from 'typography'
+import { GoogleFont } from 'react-typography'
+import CodePlugin from 'typography-plugin-code'
 
 const options = {
   googleFonts: [
     {
       name: 'Roboto Slab',
       styles: [
-        '700',
-      ],
+        '700'
+      ]
     },
     {
       name: 'Arvo',
       styles: [
         '400',
         '400i',
-        '700',
-      ],
-    },
+        '700'
+      ]
+    }
   ],
   headerFontFamily: ['Roboto Slab', 'serif'],
   bodyFontFamily: ['Arvo', 'sans-serif'],
@@ -27,22 +27,22 @@ const options = {
   baseLineHeight: 1.65,
   scaleRatio: 2.25,
   plugins: [
-    new CodePlugin(),
-  ],
-};
+    new CodePlugin()
+  ]
+}
 
-const typography = new Typography(options);
+const typography = new Typography(options)
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {
-  typography.injectStyles();
+  typography.injectStyles()
   if (typeof document !== 'undefined') {
     const googleFonts = ReactDOM.renderToStaticMarkup(
       React.createFactory(GoogleFont)({ typography })
-    );
-    const head = document.getElementsByTagName('head')[0];
-    head.insertAdjacentHTML('beforeend', googleFonts);
+    )
+    const head = document.getElementsByTagName('head')[0]
+    head.insertAdjacentHTML('beforeend', googleFonts)
   }
 }
 
-export default typography;
+export default typography

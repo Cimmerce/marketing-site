@@ -4,11 +4,11 @@ import React from 'react'
 require('normalize.css')
 
 class Template extends React.Component {
-  render() {
+  render () {
     const { children } = this.props
 
     return (
-      <div className="wrapper">
+      <div className='wrapper'>
         {children}
       </div>
     )
