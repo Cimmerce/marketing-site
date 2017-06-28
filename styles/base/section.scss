@@ -2,13 +2,47 @@
 
 .section {
   width: 100vw;
-  height: 100vh;
 
   background-color: $default-background-color;
   color: $default-text-color;
 }
 
 .contrastSection {
+  height: 100vh;
   background-color: $contrast-background-color;
   color: $contrast-text-color;
+}
+
+.inner {
+  padding: 50px;
+  text-align: center;
+}
+
+.headline {
+  font-size: 4.0rem;
+}
+
+.list {
+  margin-top: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.listItem {
+  width: 250px;
+  height: 200px;
+  margin: auto;
+  text-align: left;
+}
+
+.listItemHeader {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.listItemBody {
+  font-size: 1.6rem;
+  line-height: 1.5em;
 }

@@ -5,6 +5,7 @@ import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 
 import LeadSection from '../components/LeadSection'
+import HowItWorksSection from '../components/HowItWorksSection'
 
 export default class Index extends Component {
   render () {
@@ -15,6 +16,7 @@ export default class Index extends Component {
           meta={[{ name: 'description', content: config.siteDescription }]}
         />
         <LeadSection />
+        <HowItWorksSection />
       </div>
     )
   }
