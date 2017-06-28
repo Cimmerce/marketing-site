@@ -2,8 +2,6 @@
 
 .section {
   width: 100vw;
-
-  background-color: $default-background-color;
   color: $default-text-color;
 }
 
@@ -31,7 +29,6 @@
 
 .listItem {
   width: 250px;
-  height: 200px;
   margin: auto;
   text-align: left;
 }

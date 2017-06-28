@@ -2,41 +2,41 @@ import React from 'react'
 import cx from 'classnames'
 
 import sectionStyles from '../../styles/base/section.scss'
-import styles from './HowItWorksSection.scss'
+import styles from './HowToUseItSection.scss'
 
-const HowItWorksSection = () => {
+const HowToUseItSection = () => {
   return (
     <section className={sectionStyles.section}>
       <div className={sectionStyles.inner}>
         <div className={sectionStyles.headline}>
-          How it works
+          How to use it
         </div>
 
         <div className={sectionStyles.list}>
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
             <div className={sectionStyles.listItemHeader}>
-              Photorealistic 3D scans
+              3D & VR catalog
             </div>
             <div className={sectionStyles.listItemBody}>
-              We help you digitize your products into highly realistic, true 3D models.
+              A selection of your products digitized into 3D models on a page designed by you, but fully hosted and managed by us. Link to your 3D & VR catalog from anywhere with links back to your website to complete the purchase.
             </div>
           </div>
 
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
             <div className={sectionStyles.listItemHeader}>
-              3D on any device
+              Webshop plugin
             </div>
             <div className={sectionStyles.listItemBody}>
-              We provide the platform that lets your customers see your products in 3D on any device with a web browser.
+              Complement or replace product photos with 3D models and VR right into your existing webshop. We plug right into leading ecommerce platforms, and are adding more all the time.
             </div>
           </div>
 
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
             <div className={sectionStyles.listItemHeader}>
-              Virtual Reality support
+              Customized integration
             </div>
             <div className={sectionStyles.listItemBody}>
-              Our platform can give your customers a brand new and completely immersive experience exploring your products in virtual reality.
+              We can help you integrate our 3D and VR solution into your custom-built ecommerce solution tailored specifically to your needs. We offer both light-weight client-side integration and deep, API-based server-side integration.
             </div>
           </div>
         </div>
@@ -45,4 +45,4 @@ const HowItWorksSection = () => {
   )
 }
 
-export default HowItWorksSection
+export default HowToUseItSection

@@ -6,6 +6,9 @@ import { config } from 'config'
 
 import LeadSection from '../components/LeadSection'
 import HowItWorksSection from '../components/HowItWorksSection'
+import HowToUseItSection from '../components/HowToUseItSection'
+
+import styles from '../styles/index.scss'
 
 export default class Index extends Component {
   render () {
@@ -17,6 +20,8 @@ export default class Index extends Component {
         />
         <LeadSection />
         <HowItWorksSection />
+        <hr className={styles.separator} />
+        <HowToUseItSection />
       </div>
     )
   }
