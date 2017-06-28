@@ -25,7 +25,13 @@ const LeadSection = () => {
       </div>
 
       <div className={styles.signupContainer}>
-        Email box goes here
+        <form className={styles.signupForm}>
+          <input type='submit' value='Get access' className={styles.submitButton} />
+          <span className={styles.emailFieldWrapper}>
+            <input type='email' id='email' placeholder='Enter email' className={styles.emailField} />
+          </span>
+          <p className={styles.signupDescription}>Enter your email and we will contact you for beta access.</p>
+        </form>
       </div>
     </section>
   )

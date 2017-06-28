@@ -1,12 +1,14 @@
+@import '../variables/colors.scss';
+
 .section {
   width: 100vw;
   height: 100vh;
 
-  background-color: #eee;
-  color: #505354;
+  background-color: $default-background-color;
+  color: $default-text-color;
 }
 
 .contrastSection {
-  background-color: #505354;
-  color: #eee;
+  background-color: $contrast-background-color;
+  color: $contrast-text-color;
 }

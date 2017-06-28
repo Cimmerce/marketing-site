@@ -1,4 +1,5 @@
 @import '../../styles/variables/breakpoints.scss';
+@import '../../styles/variables/colors.scss';
 
 .leadTextsContainer {
   width: 50%;
@@ -29,7 +30,52 @@
  .signupContainer {
   width: 50%;
   float: left;
+  text-align: center;
  }
+
+.signupForm {
+  margin: 5vh auto 0 auto;
+  width: 80%;
+}
+
+.emailField, .submitButton {
+  border: 2px solid  $contrast-text-color;
+  font-size: 1.6rem;
+  padding: 0.4em;
+}
+
+.emailFieldWrapper {
+  display: block;
+  overflow: hidden;
+}
+
+.emailField {
+  width: 100%;
+  border-radius: 5px 0 0 5px;
+  border-right: none;
+  background: transparent;
+  color: $contrast-text-color;
+
+  &::placeholder {
+    color: $contrast-text-color;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+.submitButton {
+  border-radius: 0 5px 5px 0;
+  background-color: $default-background-color;
+  float: right;
+  color: $default-text-color;
+}
+
+.signupDescription {
+  font-size: 1.1rem;
+  margin-top: 1em;
+}
 
  @media screen and (max-width: $full-mobile-width-breakpoint) {
   .leadTextsContainer, .modelsContainer, .signupContainer {
