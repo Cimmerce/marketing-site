@@ -4,17 +4,17 @@
 .leadTextsContainer {
   width: 50%;
   float: left;
+  padding: 20vh 20px 0 20px;
 }
 
 .bigLeadText {
   font-size: 5.0rem;
-  margin-top: 20vh;
 }
 
 .subLeadText {
   font-size: 2.0rem;
   margin-top: 2.0rem;
-  line-height: 3.0rem;
+  line-height: 1.5em;
 }
 
 .bigLeadText, .subLeadText {
@@ -83,6 +83,10 @@
     float: none;
   }
 
+  .leadTextsContainer {
+    padding: 20px;
+  }
+
   .bigLeadText {
     font-size: 3.5rem;
   }
@@ -92,6 +96,6 @@
   }
 
   .modelsContainer {
-    height: 50vh;
+    height: 40vh;
   }
 }
