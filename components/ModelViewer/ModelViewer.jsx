@@ -40,7 +40,8 @@ class ModelViewer extends Component {
     if(typeof(Cimmerce) === 'object') {
       Cimmerce.configure({
         modelId: this.props.modelId,
-        container: `#${this.containerId}`
+        container: `#${this.containerId}`,
+        transparent: true
       })
     } else {
       // Clunky way of waiting for script, only relevant for development
