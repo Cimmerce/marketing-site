@@ -15,9 +15,7 @@ class ModelViewer extends Component {
   }
 
   componentDidMount() {
-    if(window) {
-      this.configureViewer()
-    }
+    this.configureViewer()
   }
 
   render() {
@@ -39,16 +37,13 @@ class ModelViewer extends Component {
   }
 
   configureViewer() {
-    const embedScript = window.document.querySelector(`#${scriptId}`)
-
-    if(embedScript) {
-      embedScript.addEventListener('load', event => {
-        Cimmerce.configure({
-          modelId: this.props.modelId,
-          container: `#${this.containerId}`
-        })
+    if(typeof(Cimmerce) === 'object') {
+      Cimmerce.configure({
+        modelId: this.props.modelId,
+        container: `#${this.containerId}`
       })
     } else {
+      // Clunky way of waiting for script, only relevant for development
       setTimeout(this.configureViewer.bind(this), 100)
     }
   }
