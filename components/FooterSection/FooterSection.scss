@@ -1,0 +1,34 @@
+@import '../../styles/variables/breakpoints.scss';
+@import '../../styles/variables/colors.scss';
+
+.headline {
+  font-size: 3.5rem;
+  text-align: center;
+  margin: 50px;
+}
+
+.flexContainer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.emailContainer {
+  flex: 2;
+  margin: 0 50px;
+}
+
+.contactContainer {
+  flex: 1;
+  margin: 0 50px;
+}
+
+.emailLink {
+  color: $contrast-text-color;
+}
+
+@media screen and (max-width: $full-mobile-width-breakpoint) {
+  .headline {
+    font-size: 2.5rem;
+  }
+}

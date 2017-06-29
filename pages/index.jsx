@@ -10,6 +10,7 @@ import HowItWorksSection from '../components/HowItWorksSection'
 import HowToUseItSection from '../components/HowToUseItSection'
 import HowWeAreDifferentSection from '../components/HowWeAreDifferentSection'
 import WhoWeAreSection from '../components/WhoWeAreSection'
+import FooterSection from '../components/FooterSection'
 
 import styles from '../styles/index.scss'
 
@@ -21,16 +22,24 @@ export default class Index extends Component {
           title={`${config.siteTitle} - ${config.siteDescription}`}
           meta={[{ name: 'description', content: config.siteDescription }]}
         />
+
         <LeadSection />
+
         <ValuePropositionSection />
         <hr className={styles.separator} />
+
         <HowItWorksSection />
         <hr className={styles.separator} />
+
         <HowToUseItSection />
         <hr className={styles.separator} />
+
         <HowWeAreDifferentSection />
         <hr className={styles.separator} />
+
         <WhoWeAreSection />
+
+        <FooterSection />
       </div>
     )
   }
