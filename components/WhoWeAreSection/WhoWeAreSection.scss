@@ -1,3 +1,5 @@
+@import '../../styles/variables/breakpoints.scss';
+
 .listItem {
   width: 200px;
   height: 360px;
@@ -12,4 +14,10 @@
 .title {
   margin: -10px 0 10px 0;
   font-size: 1.6rem;
+}
+
+ @media screen and (max-width: $full-mobile-width-breakpoint) {
+  .listItem {
+    height: auto;
+  }
 }

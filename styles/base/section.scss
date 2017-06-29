@@ -1,3 +1,4 @@
+@import '../variables/breakpoints.scss';
 @import '../variables/colors.scss';
 
 .section {
@@ -6,7 +7,8 @@
 }
 
 .contrastSection {
-  height: 100vh;
+  min-height: 100vh;
+  overflow: hidden;
   background-color: $contrast-background-color;
   color: $contrast-text-color;
 }
@@ -42,4 +44,15 @@
 .listItemBody {
   font-size: 1.6rem;
   line-height: 1.5em;
+}
+
+ @media screen and (max-width: $full-mobile-width-breakpoint) {
+  .headline {
+    font-size: 3.0rem;
+  }
+
+  .listItem {
+    height: auto;
+    margin-bottom: 40px;
+  }
 }

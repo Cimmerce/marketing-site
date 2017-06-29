@@ -1,3 +1,11 @@
+@import '../../styles/variables/breakpoints.scss';
+
 .listItem {
   height: 250px;
+}
+
+ @media screen and (max-width: $full-mobile-width-breakpoint) {
+  .listItem {
+    height: auto;
+  }
 }
