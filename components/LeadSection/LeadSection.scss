@@ -1,6 +1,7 @@
 @import '../../styles/variables/breakpoints.scss';
 
 .fullHeightSection {
+  position: relative;
   min-height: 100vh;
 }
 
@@ -42,7 +43,33 @@
   }
  }
 
- @media screen and (max-width: $full-mobile-width-breakpoint) {
+ .downArrow {
+   position: absolute;
+   left: calc(50% - 16px);
+   bottom: 0;
+
+   width: 32px;
+   height: 32px;
+
+   animation: pointy 5s infinite;
+   animation-fill-mode: both;
+
+   cursor: pointer;
+ }
+
+ @keyframes pointy {
+  0%,
+  100% {
+    transform:translateY(-10px);
+    transform:translateY(-10px)
+  }
+  50% {
+    transform:translateY(0);
+    transform:translateY(0)
+  }
+}
+
+@media screen and (max-width: $full-mobile-width-breakpoint) {
   .leadTextsContainer, .modelsContainer, .signupContainer {
     width: 100%;
     float: none;

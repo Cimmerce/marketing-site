@@ -1,9 +1,11 @@
 import React from 'react'
 import cx from 'classnames'
+import jump from 'jump.js'
 
 import ModelViewer from '../ModelViewer'
 import Email from '../Email'
 
+import downArrowSrc from './angle-down.svg'
 import sectionStyles from '../../styles/base/section.scss'
 import styles from './LeadSection.scss'
 
@@ -28,6 +30,12 @@ const LeadSection = () => {
       <div className={styles.signupContainer}>
         <Email />
       </div>
+
+      <img
+        src={downArrowSrc}
+        className={styles.downArrow}
+        onClick={jump.bind(undefined, '#scrollTarget')}
+      />
     </section>
   )
 }

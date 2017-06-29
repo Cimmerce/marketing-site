@@ -6,7 +6,7 @@ import styles from './ValuePropositionSection.scss'
 
 const ValuePropositionSection = () => {
   return (
-    <section className={sectionStyles.section}>
+    <section id="scrollTarget" className={sectionStyles.section}>
       <div className={sectionStyles.inner}>
         <div className={sectionStyles.headline}>
           The time to get ahead is now
