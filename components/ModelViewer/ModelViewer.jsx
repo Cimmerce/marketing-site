@@ -38,10 +38,12 @@ class ModelViewer extends Component {
 
   configureViewer() {
     if(typeof(Cimmerce) === 'object') {
+      console.log('configureViewer', this.props.modelId)
       Cimmerce.configure({
         modelId: this.props.modelId,
         container: `#${this.containerId}`,
-        transparent: true
+        transparent: true,
+        onload: this.props.onLoad
       })
     } else {
       // Clunky way of waiting for script, only relevant for development
@@ -51,7 +53,8 @@ class ModelViewer extends Component {
 }
 
 ModelViewer.propTypes = {
-  modelId: PropTypes.string.isRequired
+  modelId: PropTypes.string.isRequired,
+  onLoad: PropTypes.func
 }
 
 export default ModelViewer

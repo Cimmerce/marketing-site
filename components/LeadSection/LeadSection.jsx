@@ -2,7 +2,7 @@ import React from 'react'
 import cx from 'classnames'
 import jump from 'jump.js'
 
-import ModelViewer from '../ModelViewer'
+import ModelCarousel from '../ModelCarousel'
 import Email from '../Email'
 
 import downArrowSrc from './angle-down.svg'
@@ -24,7 +24,11 @@ const LeadSection = () => {
       </div>
 
       <div className={styles.modelsContainer}>
-        <ModelViewer modelId="8b1d41b3-220f-4ffc-811e-cb43c1b0b61a" />
+        <ModelCarousel modelIds={[
+          '8b1d41b3-220f-4ffc-811e-cb43c1b0b61a',
+          '0d09dafc-434b-49b3-92b0-1da6edd631de',
+          'd0e14325-6258-436c-98db-9e12ce0d0c03'
+        ]} />
       </div>
 
       <div className={styles.signupContainer}>
