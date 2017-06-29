@@ -8,6 +8,7 @@ import LeadSection from '../components/LeadSection'
 import HowItWorksSection from '../components/HowItWorksSection'
 import HowToUseItSection from '../components/HowToUseItSection'
 import HowWeAreDifferentSection from '../components/HowWeAreDifferentSection'
+import WhoWeAreSection from '../components/WhoWeAreSection'
 
 import styles from '../styles/index.scss'
 
@@ -25,6 +26,8 @@ export default class Index extends Component {
         <HowToUseItSection />
         <hr className={styles.separator} />
         <HowWeAreDifferentSection />
+        <hr className={styles.separator} />
+        <WhoWeAreSection />
       </div>
     )
   }

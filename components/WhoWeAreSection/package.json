@@ -1,0 +1,6 @@
+{
+  "name": "WhoWeAreSection",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./WhoWeAreSection.jsx"
+}
