@@ -38,7 +38,6 @@ class ModelViewer extends Component {
 
   configureViewer() {
     if(typeof(Cimmerce) === 'object') {
-      console.log('configureViewer', this.props.modelId)
       Cimmerce.configure({
         modelId: this.props.modelId,
         container: `#${this.containerId}`,

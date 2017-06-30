@@ -27,9 +27,8 @@
 
  .modelsContainer {
   width: 50%;
-  height: 90vh;
+  height: 100vh;
   float: right;
-  margin: 5vh 0;
  }
 
  .signupContainer {
@@ -88,6 +87,12 @@
   }
 
   .modelsContainer {
-    height: 40vh;
+    height: 45vh;
+  }
+
+  .signupContainer {
+    form {
+      margin-top: 10px;
+    }
   }
 }

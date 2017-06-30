@@ -1,12 +1,62 @@
+@import '../../styles/variables/breakpoints.scss';
+@import '../../styles/variables/zIndexes.scss';
+
 .container, .modelViewer {
   width: 100%;
   height: 100%;
 }
 
+.container {
+  position: relative;
+  overflow: hidden;
+}
+
 .modelViewer {
-  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 1000ms ease-in;
+  z-index: $model-carousel-model-viewer-z-index;
 }
 
 .currentlyShownModel {
-  display: block;
+  opacity: 1;
+  transition: opacity 1000ms ease-out;
+  z-index: $model-carousel-current-model-z-index;
+}
+
+.switcher {
+  display: flex;
+  position: absolute;
+  left: calc(50% - 40px);
+  bottom: 0;
+  z-index: $model-carousel-switcher-z-index;
+
+  margin: 0;
+  padding: 0;
+  width: 80px;
+
+  list-style: none;
+
+  li {
+    flex: 1;
+  }
+}
+
+.switcherAnchor {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: $full-mobile-width-breakpoint) {
+  .modelViewer {
+    height: calc(100% - 50px)
+  }
+
+  .switcherAnchor {
+    width: 16px;
+    height: 16px;
+  }
 }
