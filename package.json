@@ -45,7 +45,8 @@
     "typography": "^0.15.8",
     "typography-plugin-code": "^0.15.0",
     "underscore.string": "^3.2.3",
-    "url-loader": "^0.5.7"
+    "url-loader": "^0.5.7",
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.7",
