@@ -4,6 +4,11 @@ import cx from 'classnames'
 import sectionStyles from '../../styles/base/section.scss'
 import styles from './ValuePropositionSection.scss'
 
+import lineChartIconSrc from './line-chart.svg'
+import magicIconSrc from './magic.svg'
+import rocketIconSrc from './rocket.svg'
+import undoIconSrc from './undo.svg'
+
 const ValuePropositionSection = () => {
   return (
     <section id="scrollTarget" className={sectionStyles.section}>
@@ -14,6 +19,7 @@ const ValuePropositionSection = () => {
 
         <div className={sectionStyles.list}>
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
+            <img src={lineChartIconSrc} className={sectionStyles.listIcon} />
             <div className={sectionStyles.listItemHeader}>
               Conversion rate
             </div>
@@ -23,6 +29,7 @@ const ValuePropositionSection = () => {
           </div>
 
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
+            <img src={magicIconSrc} className={sectionStyles.listIcon} />
             <div className={sectionStyles.listItemHeader}>
               Experience
             </div>
@@ -32,6 +39,7 @@ const ValuePropositionSection = () => {
           </div>
 
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
+            <img src={rocketIconSrc} className={sectionStyles.listIcon} />
             <div className={sectionStyles.listItemHeader}>
               Competitive advantage
             </div>
@@ -41,6 +49,7 @@ const ValuePropositionSection = () => {
           </div>
 
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
+            <img src={undoIconSrc} className={sectionStyles.listIcon} />
             <div className={sectionStyles.listItemHeader}>
               Fewer returns
             </div>
