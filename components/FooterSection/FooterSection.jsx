@@ -26,8 +26,8 @@ const FooterSection = () => {
             Denmark
           </p>
           <p>
-            <a href="mailto:info@cimmerce.com" className={styles.emailLink}>
-              info@cimmerce.com
+            <a href="mailto:info@cimmerse.com" className={styles.emailLink}>
+              info@cimmerse.com
             </a>
           </p>
         </div>

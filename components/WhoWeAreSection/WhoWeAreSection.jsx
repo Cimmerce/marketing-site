@@ -25,7 +25,7 @@ const WhoWeAreSection = () => {
               Co-founder &amp; CEO
             </div>
             <div className={sectionStyles.listItemBody}>
-              <a href="mailto:eric@cimmerce.com">eric@cimmerce.com</a><br />
+              <a href="mailto:eric@cimmerse.com">eric@cimmerse.com</a><br />
               <a href="tel:+4542617850">+45 4261 7850</a><br />
             </div>
           </div>
@@ -39,7 +39,7 @@ const WhoWeAreSection = () => {
               Co-founder &amp; CTO
             </div>
             <div className={sectionStyles.listItemBody}>
-              <a href="mailto:eric@cimmerce.com">casper@cimmerce.com</a><br />
+              <a href="mailto:eric@cimmerse.com">casper@cimmerse.com</a><br />
               <a href="tel:+4540508409">+45 4050 8409</a><br />
             </div>
           </div>
