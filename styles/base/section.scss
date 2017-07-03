@@ -59,6 +59,12 @@
   margin: 0 20px 0 0;
 }
 
+.bottomIcon {
+  width: 35px;
+  margin: 10px 10px 0 10px;
+  vertical-align: middle;
+}
+
  @media screen and (max-width: $full-mobile-width-breakpoint) {
   .headline {
     font-size: 3.0rem;

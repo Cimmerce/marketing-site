@@ -41,10 +41,10 @@ const HowItWorksSection = () => {
             <div className={sectionStyles.listItemBody}>
               We provide the platform that lets your customers see your products in 3D on any device with a web browser.
             </div>
-            <img src={laptopImageSrc} className={styles.bottomIcon} />
-            <img src={mobileImageSrc} className={styles.bottomIcon} />
-            <img src={tabletImageSrc} className={styles.bottomIcon} />
-            <img src={desktopImageSrc} className={styles.bottomIcon} />
+            <img src={laptopImageSrc} className={sectionStyles.bottomIcon} />
+            <img src={mobileImageSrc} className={sectionStyles.bottomIcon} />
+            <img src={tabletImageSrc} className={sectionStyles.bottomIcon} />
+            <img src={desktopImageSrc} className={sectionStyles.bottomIcon} />
           </div>
 
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
@@ -54,10 +54,10 @@ const HowItWorksSection = () => {
             <div className={sectionStyles.listItemBody}>
               Our platform can give your customers a brand new and completely immersive experience exploring your products in virtual reality.
             </div>
-            <img src={cardboardImageSrc} className={styles.bottomIcon} />
-            <img src={daydreamImageSrc} className={styles.bottomIcon} />
-            <img src={oculusImageSrc} className={styles.bottomIcon} />
-            <img src={viveImageSrc} className={styles.bottomIcon} />
+            <img src={cardboardImageSrc} className={sectionStyles.bottomIcon} />
+            <img src={daydreamImageSrc} className={sectionStyles.bottomIcon} />
+            <img src={oculusImageSrc} className={sectionStyles.bottomIcon} />
+            <img src={viveImageSrc} className={sectionStyles.bottomIcon} />
 
           </div>
         </div>
