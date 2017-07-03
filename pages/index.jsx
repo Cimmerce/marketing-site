@@ -10,6 +10,7 @@ import HowItWorksSection from '../components/HowItWorksSection'
 import HowToUseItSection from '../components/HowToUseItSection'
 import HowWeAreDifferentSection from '../components/HowWeAreDifferentSection'
 import WhoWeAreSection from '../components/WhoWeAreSection'
+import WhereToMeetUsSection from '../components/WhereToMeetUsSection'
 import FooterSection from '../components/FooterSection'
 
 import styles from '../styles/index.scss'
@@ -31,13 +32,16 @@ export default class Index extends Component {
         <HowItWorksSection />
         <hr className={styles.separator} />
 
-        <HowToUseItSection />
-        <hr className={styles.separator} />
-
         <HowWeAreDifferentSection />
         <hr className={styles.separator} />
 
+        <HowToUseItSection />
+        <hr className={styles.separator} />
+
         <WhoWeAreSection />
+        <hr className={styles.separator} />
+
+        <WhereToMeetUsSection />
 
         <FooterSection />
       </div>
