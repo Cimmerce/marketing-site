@@ -5,6 +5,12 @@
   min-height: 100vh;
 }
 
+.logo {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+}
+
 .leadTextsContainer {
   width: 50%;
   float: left;
@@ -74,12 +80,19 @@
     float: none;
   }
 
+  .logo {
+    left: calc(50% - 60px);
+    top: 10px;
+    width: 120px;
+  }
+
   .leadTextsContainer {
+    margin-top: 35px;
     padding: 20px;
   }
 
   .bigLeadText {
-    font-size: 3.0rem;
+    font-size: 2.5rem;
   }
 
   .subLeadText {
