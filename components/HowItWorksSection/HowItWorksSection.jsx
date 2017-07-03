@@ -1,11 +1,11 @@
 import React from 'react'
 import cx from 'classnames'
 
+import desktopImageSrc from './desktop.svg'
 import laptopImageSrc from './laptop.svg'
 import mobileImageSrc from './mobile.svg'
 import snowflakeImageSrc from './snowflake-o.svg'
 import tabletImageSrc from './tablet.svg'
-import televisionImageSrc from './television.svg'
 
 import cardboardImageSrc from './cardboard.png'
 import daydreamImageSrc from './daydream.png'
@@ -44,7 +44,7 @@ const HowItWorksSection = () => {
             <img src={laptopImageSrc} className={styles.bottomIcon} />
             <img src={mobileImageSrc} className={styles.bottomIcon} />
             <img src={tabletImageSrc} className={styles.bottomIcon} />
-            <img src={televisionImageSrc} className={styles.bottomIcon} />
+            <img src={desktopImageSrc} className={styles.bottomIcon} />
           </div>
 
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
