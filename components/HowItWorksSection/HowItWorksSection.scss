@@ -4,6 +4,18 @@
   height: 200px;
 }
 
+.bottomIcon {
+  width: 35px;
+  margin: 10px 10px 0 10px;
+  vertical-align: middle;
+}
+
+.centerIcon {
+  width: 35px;
+  margin: 20px auto;
+  display: block;
+}
+
 @media screen and (max-width: $full-mobile-width-breakpoint) {
   .listItem {
     height: auto;
