@@ -27,7 +27,7 @@ const HowToUseItSection = () => {
               Webshop plugin
             </div>
             <div className={sectionStyles.listItemBody}>
-              Complement or replace product photos with 3D models and VR right into your existing webshop. We plug right into leading ecommerce platforms, and are adding more all the time.
+              Complement or replace product photos with 3D models and VR in your existing webshop. We plug right into leading ecommerce platforms.
             </div>
           </div>
 
