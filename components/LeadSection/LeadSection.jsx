@@ -20,6 +20,7 @@ const LeadSection = () => {
         </div>
         <div className={styles.subLeadText}>
           Cimmerce lets your business increase conversion and decrease returns
+          Cimmerse lets your business increase conversion and decrease returns
           with web-based 3D visualization and Virtual Reality that plugs right
           into your website.
         </div>
