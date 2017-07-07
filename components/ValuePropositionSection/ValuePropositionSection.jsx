@@ -14,7 +14,7 @@ const ValuePropositionSection = () => {
     <section id="scrollTarget" className={sectionStyles.section}>
       <div className={sectionStyles.inner}>
         <div className={sectionStyles.headline}>
-          The time to get ahead is now
+          The future is now
         </div>
 
         <div className={sectionStyles.list}>
