@@ -1,8 +1,11 @@
 @import '../../styles/variables/breakpoints.scss';
+@import '../../styles/variables/colors.scss';
 
 .fullHeightSection {
   position: relative;
   min-height: 100vh;
+  background: linear-gradient(to bottom, rgb(249, 251, 252), rgb(44, 55, 64));
+  color: $headline-color;
 }
 
 .logo {
