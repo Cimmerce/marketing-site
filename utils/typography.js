@@ -13,8 +13,16 @@ const options = {
         '400i',
         '700'
       ]
+    },
+    {
+      name: 'Roboto Condensed',
+      styles: [
+        '400',
+        '700'
+      ]
     }
   ],
+  headerFontFamily: ['Roboto Condensed', 'sans-serif'],
   bodyFontFamily: ['Montserrat', 'sans-serif'],
   baseFontSize: '18px',
   baseLineHeight: 1.65,
