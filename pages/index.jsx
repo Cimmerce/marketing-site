@@ -9,7 +9,7 @@ import ValuePropositionSection from '../components/ValuePropositionSection'
 import HowItWorksSection from '../components/HowItWorksSection'
 import HowToUseItSection from '../components/HowToUseItSection'
 import HowWeAreDifferentSection from '../components/HowWeAreDifferentSection'
-import WhoWeAreSection from '../components/WhoWeAreSection'
+import OurStory from '../components/OurStory'
 import WhereToMeetUsSection from '../components/WhereToMeetUsSection'
 import FooterSection from '../components/FooterSection'
 
@@ -38,7 +38,7 @@ export default class Index extends Component {
         <HowToUseItSection />
         <hr className={styles.separator} />
 
-        <WhoWeAreSection />
+        <OurStory />
         <hr className={styles.separator} />
 
         <WhereToMeetUsSection />
