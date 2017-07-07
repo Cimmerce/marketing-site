@@ -16,7 +16,7 @@ const LeadSection = () => {
       <img width="200" src={logoImageSrc} className={styles.logo} />
       <div className={styles.leadTextsContainer}>
         <div className={styles.bigLeadText}>
-          3D and Virtual Reality for ecommerce
+          The next level of ecommerce
         </div>
         <div className={styles.subLeadText}>
           Cimmerse lets your business increase conversion and decrease returns
