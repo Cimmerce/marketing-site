@@ -4,7 +4,7 @@
 .fullHeightSection {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(to bottom, rgb(249, 251, 252), rgb(44, 55, 64));
+  background: linear-gradient(to bottom, $contrast-text-color, $contrast-background-color);
   color: $headline-color;
 }
 
@@ -100,16 +100,14 @@
   }
 
   .subLeadText {
-    font-size: 1.5rem;
+    display: none;
   }
 
   .modelsContainer {
-    height: 45vh;
+    height: calc(100vh - 180px);
   }
 
   .signupContainer {
-    form {
-      margin-top: 10px;
-    }
+    display: none;
   }
 }
