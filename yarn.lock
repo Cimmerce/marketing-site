@@ -6622,6 +6622,14 @@ typedarray@^0.0.6:
   version "0.0.6"
   resolved "https://registry.yarnpkg.com/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
 
+typeface-montserrat@^0.0.31:
+  version "0.0.31"
+  resolved "https://registry.yarnpkg.com/typeface-montserrat/-/typeface-montserrat-0.0.31.tgz#4763e7675bff8c98de5617c0f0b42935a3295a7b"
+
+typeface-roboto-condensed@^0.0.31:
+  version "0.0.31"
+  resolved "https://registry.yarnpkg.com/typeface-roboto-condensed/-/typeface-roboto-condensed-0.0.31.tgz#2b66515b661fa05fbed061d412da2108ccc6a590"
+
 typography-normalize@^0.14.0:
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/typography-normalize/-/typography-normalize-0.14.0.tgz#1d77c1fe2aaf4a51b3673c4c85c85a65a2d4b573"

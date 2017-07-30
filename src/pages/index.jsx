@@ -9,6 +9,8 @@ import OurStory from '../components/OurStory'
 import WhereToMeetUsSection from '../components/WhereToMeetUsSection'
 import FooterSection from '../components/FooterSection'
 
+require('typeface-montserrat')
+require('typeface-roboto-condensed')
 import styles from '../styles/index.scss'
 
 const Index = () => {
