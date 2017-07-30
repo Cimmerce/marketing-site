@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
 import LeadSection from '../components/LeadSection'
 import ValuePropositionSection from '../components/ValuePropositionSection'
@@ -14,12 +15,12 @@ require('typeface-roboto-condensed')
 import styles from '../styles/index.scss'
 
 const Index = () => {
-//          <Helmet
-//          title={`${config.siteTitle} - ${config.siteDescription}`}
-//          meta={[{ name: 'description', content: config.siteDescription }]}
-//        />
   return (
     <div>
+      <Helmet
+        title="Cimmerse - 3D and Virtual Reality for ecommerce"
+        meta={[{ name: 'description', content: "3D and Virtual Reality for ecommerce" }]}
+      />
 
       <LeadSection />
 
