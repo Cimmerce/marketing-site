@@ -10,8 +10,8 @@ import eyeImageSrc from './eye.svg'
 import firefoxImageSrc from './firefox.svg'
 import safariImageSrc from './safari.svg'
 
-import sectionStyles from '../../styles/base/section.scss'
-import styles from './HowWeAreDifferentSection.scss'
+import sectionStyles from '../../styles/base/section.module.scss'
+import styles from './HowWeAreDifferentsection.module.scss'
 
 const HowWeAreDifferentSection = () => {
   return (

@@ -1,8 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
 
-import sectionStyles from '../../styles/base/section.scss'
-import styles from './OurStory.scss'
+import sectionStyles from '../../styles/base/section.module.scss'
+import styles from './OurStory.module.scss'
 
 const OurStory = () => {
   return (

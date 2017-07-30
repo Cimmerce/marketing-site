@@ -6,8 +6,8 @@ import copenxImage from './copenx.png'
 import shoptalkImage from './shoptalk-europe.png'
 import techBBQImage from './techbbq.png'
 
-import sectionStyles from '../../styles/base/section.scss'
-import styles from './WhereToMeetUsSection.scss'
+import sectionStyles from '../../styles/base/section.module.scss'
+import styles from './WhereToMeetUssection.module.scss'
 
 const WhereToMeetUsSection = () => {
   return (

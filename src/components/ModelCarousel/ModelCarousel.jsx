@@ -6,7 +6,7 @@ import fullCircleSrc from './circle.svg'
 import emptyCircleSrc from './circle-o.svg'
 
 import ModelViewer from '../ModelViewer'
-import styles from './ModelCarousel.scss'
+import styles from './ModelCarousel.module.scss'
 
 class ModelCarousel extends Component {
   constructor(props) {

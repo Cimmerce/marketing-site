@@ -3,8 +3,8 @@ import cx from 'classnames'
 
 import Email from '../Email'
 
-import sectionStyles from '../../styles/base/section.scss'
-import styles from './FooterSection.scss'
+import sectionStyles from '../../styles/base/section.module.scss'
+import styles from './Footersection.module.scss'
 
 const FooterSection = () => {
   return (

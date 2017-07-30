@@ -12,8 +12,8 @@ import daydreamImageSrc from './daydream.png'
 import oculusImageSrc from './oculus.png'
 import viveImageSrc from './vive.png'
 
-import sectionStyles from '../../styles/base/section.scss'
-import styles from './HowItWorksSection.scss'
+import sectionStyles from '../../styles/base/section.module.scss'
+import styles from './HowItWorkssection.module.scss'
 
 const HowItWorksSection = () => {
   return (

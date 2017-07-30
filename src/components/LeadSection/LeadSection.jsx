@@ -7,8 +7,8 @@ import Email from '../Email'
 
 import downArrowSrc from './angle-down.svg'
 import logoImageSrc from './logo.png'
-import sectionStyles from '../../styles/base/section.scss'
-import styles from './LeadSection.scss'
+import sectionStyles from '../../styles/base/section.module.scss'
+import styles from './Leadsection.module.scss'
 
 const LeadSection = () => {
   return (

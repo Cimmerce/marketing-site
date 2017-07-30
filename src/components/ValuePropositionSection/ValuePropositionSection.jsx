@@ -1,8 +1,8 @@
 import React from 'react'
 import cx from 'classnames'
 
-import sectionStyles from '../../styles/base/section.scss'
-import styles from './ValuePropositionSection.scss'
+import sectionStyles from '../../styles/base/section.module.scss'
+import styles from './ValuePropositionsection.module.scss'
 
 import lineChartIconSrc from './line-chart.svg'
 import magicIconSrc from './magic.svg'
