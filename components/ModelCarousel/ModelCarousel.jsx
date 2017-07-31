@@ -42,6 +42,7 @@ class ModelCarousel extends Component {
             >
               <ModelViewer
                 modelId={modelId}
+                autorotate={1}
                 onLoad={this.handleModelLoaded.bind(this, modelId)}
               />
             </div>
