@@ -2,14 +2,14 @@ import React from 'react'
 import Helmet from 'react-helmet'
 
 import ModelViewer from '../components/ModelViewer'
-import backgroundImage from '../images/pages/heitch-gallery-example-background.png'
-import styles from '../styles/pages/heitch-gallery-example.module.scss'
+import backgroundImage from '../images/pages/heitsch-gallery-example-background.png'
+import styles from '../styles/pages/heitsch-gallery-example.module.scss'
 
-const HeitchGalleryExample = () => {
+const HeitschGalleryExample = () => {
   return (
     <div className={styles.main}>
       <Helmet
-        title="Heitch Gallery example"
+        title="Heistch Gallery example"
       />
 
       <div className={styles.wrapper}>
@@ -22,4 +22,4 @@ const HeitchGalleryExample = () => {
   )
 }
 
-export default HeitchGalleryExample
+export default HeitschGalleryExample
