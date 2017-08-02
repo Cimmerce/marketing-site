@@ -79,6 +79,10 @@
 }
 
 @media screen and (max-width: $full-mobile-width-breakpoint) {
+  .fullHeightSection {
+    min-height: calc(100vh - 50px);
+  }
+
   .leadTextsContainer, .modelsContainer, .signupContainer {
     width: 100%;
     float: none;
@@ -104,7 +108,7 @@
   }
 
   .modelsContainer {
-    height: calc(100vh - 180px);
+    height: calc(100vh - 280px);
   }
 
   .signupContainer {
