@@ -1,0 +1,19 @@
+@import '../../styles/variables/breakpoints.scss';
+
+.embedFrame {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: $full-mobile-width-breakpoint) {
+  .embedFrame {
+    width: 260px;
+    height: 147px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .embedFrame {
+    width: 1280px;
+    height: 720px;
+  }
+}

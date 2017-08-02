@@ -11,7 +11,7 @@ import undoIconSrc from './undo.svg'
 
 const ValuePropositionSection = () => {
   return (
-    <section id="scrollTarget" className={sectionStyles.section}>
+    <section className={sectionStyles.section}>
       <div className={sectionStyles.inner}>
         <div className={sectionStyles.headline}>
           The future is now

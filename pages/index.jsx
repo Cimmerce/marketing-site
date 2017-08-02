@@ -5,6 +5,7 @@ import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 
 import LeadSection from '../components/LeadSection'
+import VideoSection from '../components/VideoSection'
 import ValuePropositionSection from '../components/ValuePropositionSection'
 import HowItWorksSection from '../components/HowItWorksSection'
 import HowToUseItSection from '../components/HowToUseItSection'
@@ -25,6 +26,9 @@ export default class Index extends Component {
         />
 
         <LeadSection />
+
+        <VideoSection />
+        <hr className={styles.separator} />
 
         <ValuePropositionSection />
         <hr className={styles.separator} />
