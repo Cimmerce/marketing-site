@@ -16,7 +16,7 @@ class ModelCarousel extends Component {
       currentModelId: props.modelIds[0]
     }
 
-    this.displaySeconds = props.displaySeconds || 10
+    this.displaySeconds = props.displaySeconds || 15
     this.carouselIsRunning = true
 
     this.bindMethods()
