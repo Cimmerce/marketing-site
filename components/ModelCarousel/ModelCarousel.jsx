@@ -13,8 +13,7 @@ class ModelCarousel extends Component {
     super(props)
 
     this.state = {
-      currentModelId: props.modelIds[0],
-      renderedModelIds: [props.modelIds[0]]
+      currentModelId: props.modelIds[0]
     }
 
     this.displaySeconds = props.displaySeconds || 10
@@ -32,23 +31,14 @@ class ModelCarousel extends Component {
   render() {
     return (
       <div className={styles.container}>
-        {this.state.renderedModelIds.map(modelId => {
-          return (
-            <div className={cx({
-                [styles.modelViewer]: true,
-                [styles.currentlyShownModel]: (modelId === this.state.currentModelId)
-              })}
-              key={modelId}
-            >
-              <ModelViewer
-                modelId={modelId}
-                autorotate={1}
-                onLoad={this.handleModelLoaded.bind(this, modelId)}
-              />
-            </div>
-           )
-          }
-        )}
+        <div className={styles.modelViewer}>
+          <ModelViewer
+            key={this.state.currentModelId}
+            modelId={this.state.currentModelId}
+            autorotate={1}
+            onLoad={this.handleModelLoaded.bind(this, this.state.currentModelId)}
+          />
+        </div>
 
         <ul className={styles.switcher}>
           {this.props.modelIds.map(modelId => {
@@ -69,8 +59,6 @@ class ModelCarousel extends Component {
   }
 
   handleModelLoaded(modelId) {
-    this.setState({ currentModelId: modelId })
-
     if(this.carouselIsRunning) {
       this.nextModelTimer = setTimeout(this.loadNextModel, this.displaySeconds * 1000)
     }
@@ -85,13 +73,7 @@ class ModelCarousel extends Component {
   }
 
   showModel(modelId) {
-    const renderedModelIds = this.state.renderedModelIds
-    if(renderedModelIds.indexOf(modelId) === -1) {
-      renderedModelIds.push(modelId)
-      this.setState({ renderedModelIds })
-    } else {
-      this.handleModelLoaded(modelId)
-    }
+    this.setState({ currentModelId: modelId })
   }
 
   handleSwithcerAnchorClicked(modelId) {
