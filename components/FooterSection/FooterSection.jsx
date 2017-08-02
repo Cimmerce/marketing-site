@@ -20,7 +20,7 @@ const FooterSection = () => {
 
         <div className={styles.contactContainer}>
           <p>
-            Cimmerce IVS<br />
+            Cimmerse IVS<br />
             Hauser Plads 16A<br />
             1127 Copenhagen K<br />
             Denmark
