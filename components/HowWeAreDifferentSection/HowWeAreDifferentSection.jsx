@@ -23,16 +23,6 @@ const HowWeAreDifferentSection = () => {
 
         <div className={sectionStyles.list}>
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
-            <img src={diamondImageSrc} className={sectionStyles.listIcon} />
-            <div className={sectionStyles.listItemHeader}>
-              True 3D models
-            </div>
-            <div className={sectionStyles.listItemBody}>
-              Other visualization solutions that claim to offer a "360 degree" view usually features a simple series of photos that offers 180 degree rotation without the ability to zoom or handle freely.
-            </div>
-          </div>
-
-          <div className={cx(sectionStyles.listItem, styles.listItem)}>
             <img src={cloudImageSrc} className={sectionStyles.listIcon} />
             <div className={sectionStyles.listItemHeader}>
               Web-based Virtual Reality
@@ -47,12 +37,22 @@ const HowWeAreDifferentSection = () => {
           </div>
 
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
-            <img src={eyeImageSrc} className={sectionStyles.listIcon} />
+            <img src={diamondImageSrc} className={sectionStyles.listIcon} />
             <div className={sectionStyles.listItemHeader}>
               Highest degree of realism
             </div>
             <div className={sectionStyles.listItemBody}>
               We are experts in photogrammetry and 3D digitizations. We don’t settle for computer-generated visuals. Our 3D models are so realistic people reach out to touch them.
+            </div>
+          </div>
+
+          <div className={cx(sectionStyles.listItem, styles.listItem)}>
+            <img src={eyeImageSrc} className={sectionStyles.listIcon} />
+            <div className={sectionStyles.listItemHeader}>
+              Analytics
+            </div>
+            <div className={sectionStyles.listItemBody}>
+              We collect valuable information about customer behaviour in 3D and VR and make it available to you.
             </div>
           </div>
 
