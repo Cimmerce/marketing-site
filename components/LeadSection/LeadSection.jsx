@@ -28,7 +28,7 @@ const LeadSection = () => {
       <div className={styles.modelsContainer}>
         <ModelCarousel modelIds={[
           '11130d3a-be12-480c-bb0e-29b0558a9197', // Gold chair
-          'bc64bb49-a8a6-4b28-a702-bb4238d418e7', // Handbag
+          'd6c87f85-e289-49c3-bd9b-cbd1a6d91328', // Handbag
           '8b1d41b3-220f-4ffc-811e-cb43c1b0b61a', // Egyptian head
           '1d2c1667-671d-437c-a13c-72a0414d11e0' // Chocolate cake
         ]} />
