@@ -23,8 +23,9 @@ class ModelCarousel extends Component {
   }
 
   bindMethods() {
-    this.handleModelLoaded = this.handleModelLoaded.bind(this)
     this.loadNextModel = this.loadNextModel.bind(this)
+    this.handleModelLoaded = this.handleModelLoaded.bind(this)
+    this.handleUserInteraction = this.handleUserInteraction.bind(this)
     this.handleSwithcerAnchorClicked = this.handleSwithcerAnchorClicked.bind(this)
   }
 
@@ -36,7 +37,8 @@ class ModelCarousel extends Component {
             key={this.state.currentModelId}
             modelId={this.state.currentModelId}
             autorotate={1}
-            onLoad={this.handleModelLoaded.bind(this, this.state.currentModelId)}
+            onLoad={this.handleModelLoaded}
+            onUserInteraction={this.handleUserInteraction}
           />
         </div>
 
@@ -58,9 +60,36 @@ class ModelCarousel extends Component {
     )
   }
 
-  handleModelLoaded(modelId) {
+  setNextModelTimer () {
+    this.nextModelTimer = setTimeout(this.loadNextModel, this.displaySeconds * 1000)
+  }
+
+  clearNextModelTimer () {
+    if(this.nextModelTimer) {
+      clearTimeout(this.nextModelTimer)
+      delete this.nextModelTimer
+    }
+  }
+
+  handleModelLoaded() {
     if(this.carouselIsRunning) {
-      this.nextModelTimer = setTimeout(this.loadNextModel, this.displaySeconds * 1000)
+      this.setNextModelTimer()
+    }
+  }
+
+  handleUserInteraction(event) {
+    if(this.carouselIsRunning) {
+      this.clearNextModelTimer()
+
+      if([
+        'start-rotating',
+        'start-zooming',
+        'start-panning'
+      ].indexOf(event) > -1) {
+        this.setNextModelTimer()
+      } else {
+        this.carouselIsRunning = false
+      }
     }
   }
 
@@ -78,11 +107,7 @@ class ModelCarousel extends Component {
 
   handleSwithcerAnchorClicked(modelId) {
     this.carouselIsRunning = false
-    if(this.nextModelTimer) {
-      clearTimeout(this.nextModelTimer)
-      delete this.nextModelTimer
-    }
-
+    this.clearNextModelTimer()
     this.showModel(modelId)
   }
 }

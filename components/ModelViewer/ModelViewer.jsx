@@ -42,8 +42,9 @@ class ModelViewer extends Component {
         modelId: this.props.modelId,
         container: `#${this.containerId}`,
         transparent: true,
+        autorotate: this.props.autorotate,
         onload: this.props.onLoad,
-        autorotate: this.props.autorotate
+        oninteraction: this.props.onUserInteraction
       })
     } else {
       // Clunky way of waiting for script, only relevant for development
@@ -54,8 +55,9 @@ class ModelViewer extends Component {
 
 ModelViewer.propTypes = {
   modelId: PropTypes.string.isRequired,
+  autorotate: PropTypes.number,
   onLoad: PropTypes.func,
-  autorotate: PropTypes.number
+  onUserInteraction: PropTypes.func
 }
 
 export default ModelViewer
