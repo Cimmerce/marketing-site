@@ -4,7 +4,7 @@
 .fullHeightSection {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(to bottom, $contrast-text-color, #7d9aa9);
+  background: linear-gradient(to bottom, rgb(249, 251, 252), rgb(183, 227, 233));
   color: $headline-color;
 }
 
@@ -22,7 +22,12 @@
 
 .bigLeadText {
   font-size: 5.0rem;
-  color: #3b5157;
+  color: $headline-color;
+}
+
+.leadtextInbetween {
+  font-size: 3.5rem;
+  color: $headline-color;
 }
 
 .subLeadText {
@@ -31,7 +36,13 @@
   line-height: 1.5em;
 }
 
-.bigLeadText, .subLeadText {
+.cheesy {
+  margin-top: 2rem;
+  font-size: 3rem;
+  font-style: italic;
+}
+
+.bigLeadText, .subLeadText, .leadtextInbetween, .cheesy {
   text-align: center;
 }
 

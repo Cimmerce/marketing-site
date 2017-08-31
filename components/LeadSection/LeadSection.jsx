@@ -6,22 +6,25 @@ import ModelCarousel from '../ModelCarousel'
 import Email from '../Email'
 
 import downArrowSrc from './angle-down.svg'
-import logoImageSrc from './logo.png'
+import logoImageSrc from './cimmerse_logo.svg'
 import sectionStyles from '../../styles/base/section.scss'
 import styles from './LeadSection.scss'
 
 const LeadSection = () => {
   return (
     <section className={cx([sectionStyles.section, sectionStyles.contrastSection, styles.fullHeightSection])}>
-      <img width="200" src={logoImageSrc} className={styles.logo} />
+      <img width="250" src={logoImageSrc} className={styles.logo} />
       <div className={styles.leadTextsContainer}>
-        <div className={styles.bigLeadText}>
-          Engage the immersive web!
-        </div>
+        <div className={styles.bigLeadText}>Sell more</div>
+        <div className={styles.leadtextInbetween}>with</div>
+        <div className={styles.bigLeadText}>3D VR AR</div>
         <div className={styles.subLeadText}>
-          Cimmerse lets your business increase conversion and decrease returns
-          with web-based 3D visualization and Virtual Reality that plugs right
+          Cimmerse increases conversion
+          with web-based 3D VR AR visualization that plugs right
           into your website.
+        </div>
+        <div className={styles.cheesy}>
+          Seeing is believing!
         </div>
       </div>
 
