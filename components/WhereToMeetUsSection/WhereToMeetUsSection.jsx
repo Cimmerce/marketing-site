@@ -1,6 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 
+import aweImage from './awe.png'
 import cphPostImage from './cphpost.png'
 import copenxImage from './copenx.png'
 import shoptalkImage from './shoptalk-europe.png'
@@ -37,10 +38,13 @@ const WhereToMeetUsSection = () => {
               <a href="https://www.techbbq.dk/" target="_new">
                 <img src={techBBQImage} width="120" className={styles.confLogo} />
               </a>
-
+              <div className={styles.confRole}>Speaker &amp; exhibitor</div>
+            </div>
+            <div className={sectionStyles.listItemBody}>
               <a href="http://copenx.com/" target="_new">
                 <img src={copenxImage} width="200" className={styles.confLogo} />
               </a>
+              <div className={styles.confRole}>Exhibitor</div>
             </div>
           </div>
 
@@ -52,6 +56,13 @@ const WhereToMeetUsSection = () => {
               <a href="https://shoptalkeurope.com/" target="_new">
                 <img src={shoptalkImage} width="150" className={styles.confLogo} />
               </a>
+              <div className={styles.confRole}>Speaker &amp; exhibitor</div>
+            </div>
+            <div className={sectionStyles.listItemBody}>
+              <a href="http://www.aweeu.com/" target="_new">
+                <img src={aweImage} width="100" className={styles.confLogo} />
+              </a>
+              <div className={styles.confRole}>Speaker</div>
             </div>
           </div>
         </div>
