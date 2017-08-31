@@ -108,13 +108,19 @@
   .leadTextsContainer {
     margin-top: 35px;
     padding: 20px;
+    text-align: center;
   }
 
-  .bigLeadText {
+  .bigLeadText, .leadtextInbetween {
     font-size: 2.5rem;
+    display: inline;
   }
 
-  .subLeadText {
+  .leadtextInbetween {
+    margin: 0 1rem;
+  }
+
+  .subLeadText, .cheesy {
     display: none;
   }
 
