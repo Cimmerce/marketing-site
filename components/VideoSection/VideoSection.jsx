@@ -13,7 +13,7 @@ const VideoSection = () => {
         <div>
           <iframe
             className={styles.embedFrame}
-            src="https://player.vimeo.com/video/228062724?color=ffffff"
+            src="https://player.vimeo.com/video/232151463?color=ffffff"
             width="640" height="360"
             frameBorder="0" allowFullScreen
           ></iframe>
