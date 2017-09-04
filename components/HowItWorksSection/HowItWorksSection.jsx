@@ -49,7 +49,16 @@ const HowItWorksSection = () => {
 
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
             <div className={sectionStyles.listItemHeader}>
-              Virtual Reality support
+              Perfect for mobile
+            </div>
+            <div className={sectionStyles.listItemBody}>
+              Cimmerse is designed and built for mobile use. Mobile phones, mobile AR, mobile VR. We love mobile!
+            </div>
+          </div>
+
+          <div className={cx(sectionStyles.listItem, styles.listItem)}>
+            <div className={sectionStyles.listItemHeader}>
+              Augmented & Virtual Reality support
             </div>
             <div className={sectionStyles.listItemBody}>
               Our platform can give your customers a brand new and completely immersive experience exploring your products in virtual reality.

@@ -25,10 +25,10 @@ const HowWeAreDifferentSection = () => {
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
             <img src={cloudImageSrc} className={sectionStyles.listIcon} />
             <div className={sectionStyles.listItemHeader}>
-              Web-based Virtual Reality
+              Web-based AR & VR
             </div>
             <div className={sectionStyles.listItemBody}>
-              Downloading an app is a major obstacle to conversion. Our instantly available web-based VR solution runs directly in the browser.
+              Downloading an app is a major obstacle to conversion. Our instantly available web-based AR & VR solution runs directly in the browser.
             </div>
             <img src={chromeImageSrc} className={sectionStyles.bottomIcon} />
             <img src={firefoxImageSrc} className={sectionStyles.bottomIcon} />
@@ -59,10 +59,10 @@ const HowWeAreDifferentSection = () => {
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
             <img src={cartImageSrc} className={sectionStyles.listIcon} />
             <div className={sectionStyles.listItemHeader}>
-              Buy from Virtual Reality
+              Buy from AR & VR
             </div>
             <div className={sectionStyles.listItemBody}>
-              Your customer can initiate and complete the checkout flow without ever leaving Virtual Reality.
+              Your customer can initiate and complete the checkout flow without ever leaving augmented or virtual reality.
             </div>
           </div>
         </div>

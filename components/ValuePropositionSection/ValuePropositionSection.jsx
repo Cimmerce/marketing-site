@@ -34,7 +34,7 @@ const ValuePropositionSection = () => {
               Experience
             </div>
             <div className={sectionStyles.listItemBody}>
-              Delight your customers with a fresh experience in 3D & VR.
+              Delight your customers with a fresh experience in 3D, AR & VR.
             </div>
           </div>
 
