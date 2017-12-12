@@ -37,8 +37,8 @@ class ModelViewer extends Component {
   }
 
   configureViewer() {
-    if(typeof(Cimmerce) === 'object') {
-      Cimmerce.configure({
+    if(typeof(Cimmerse) === 'object') {
+      Cimmerse.configure({
         modelId: this.props.modelId,
         container: `#${this.containerId}`,
         transparent: true,
