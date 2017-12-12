@@ -23,7 +23,7 @@ class ModelViewer extends Component {
       <div className={styles.container}>
         <Helmet>
           <script
-            src='https://embed.cimmerce.com/v1/embed.js'
+            src='https://embed.cimmerse.com/v1/embed.js'
             id={scriptId}
           ></script>
         </Helmet>
