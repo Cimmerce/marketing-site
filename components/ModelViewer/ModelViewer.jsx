@@ -43,6 +43,7 @@ class ModelViewer extends Component {
         container: `#${this.containerId}`,
         transparent: true,
         autorotate: this.props.autorotate,
+        visiblewhileloading: true,
         onload: this.props.onLoad,
         oninteraction: this.props.onUserInteraction
       })
