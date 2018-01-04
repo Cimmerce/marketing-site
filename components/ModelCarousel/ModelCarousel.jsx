@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
+import Helmet from 'react-helmet'
 
 import fullCircleSrc from './circle.svg'
 import emptyCircleSrc from './circle-o.svg'
 
-import ModelViewer from '../ModelViewer'
 import styles from './ModelCarousel.scss'
 
 class ModelCarousel extends Component {
@@ -29,17 +29,23 @@ class ModelCarousel extends Component {
     this.handleSwithcerAnchorClicked = this.handleSwithcerAnchorClicked.bind(this)
   }
 
+  componentDidMount() {
+    this.configureViewer()
+  }
+
   render() {
     return (
       <div className={styles.container}>
+        <Helmet>
+          <script async src='https://embed.cimmerse.com/v2/tenants/cimmerse-marketing-site.js'></script>
+        </Helmet>
         <div className={styles.modelViewer}>
-          <ModelViewer
-            key={this.state.currentModelId}
-            modelId={this.state.currentModelId}
-            autorotate={1}
-            onLoad={this.handleModelLoaded}
-            onUserInteraction={this.handleUserInteraction}
-          />
+          <div id="cimmerseViewerPlaceholder" className={styles.placeholder}>
+            <img
+              src="https://d31wrld7eatxzf.cloudfront.net/11130d3a-be12-480c-bb0e-29b0558a9197/meta/preview_image.png?origin=viewer.cimmerce.com"
+              className={styles.previewImage}
+            />
+          </div>
         </div>
 
         <ul className={styles.switcher}>
@@ -60,6 +66,33 @@ class ModelCarousel extends Component {
     )
   }
 
+  configureViewer () {
+    const self = this
+    window.getCimmerseTenantConfig = () => {
+      return {
+        modelId: '11130d3a-be12-480c-bb0e-29b0558a9197',
+        targetSelector: '#cimmerseViewerPlaceholder',
+        trackingLabel: 'marketingFrontpage',
+        visibleWhileLoading: true,
+        placeholderStyles: `
+        #CimmersePlaceholder {
+          position: relative;
+          width: 100%;
+          height: 100%
+      `,
+      }
+    }
+
+    window.getCimmerseViewerConfig = () => {
+      return {
+        transparentMode: true,
+        autorotateOverride: 1,
+        onLoadCallback: self.handleModelLoaded,
+        onUserInteractionCallback: self.handleUserInteraction
+      }
+    }
+  }
+
   setNextModelTimer () {
     this.nextModelTimer = setTimeout(this.loadNextModel, this.displaySeconds * 1000)
   }
@@ -78,7 +111,8 @@ class ModelCarousel extends Component {
   }
 
   handleUserInteraction(event) {
-    if(this.carouselIsRunning) {
+    // 'toggle-menu' is automatically dispatched when switching model, so ignore for now
+    if(this.carouselIsRunning && event !== 'toggle-menu') {
       this.clearNextModelTimer()
 
       if([
@@ -103,6 +137,7 @@ class ModelCarousel extends Component {
 
   showModel(modelId) {
     this.setState({ currentModelId: modelId })
+    window.Cimmerse.showModel(modelId)
   }
 
   handleSwithcerAnchorClicked(modelId) {
