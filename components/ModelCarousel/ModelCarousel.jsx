@@ -89,7 +89,7 @@ class ModelCarousel extends Component {
     }
 
     const script = document.createElement("script")
-    script.src = "http://localhost:4214/v2/tenants/cimmerse-marketing-site.js"
+    script.src = "https://embed.cimmerse.com/v2/tenants/cimmerse-marketing-site.js"
     script.async = true
     document.body.appendChild(script)
   }
