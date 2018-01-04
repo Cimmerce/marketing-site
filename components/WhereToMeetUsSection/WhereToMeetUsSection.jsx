@@ -67,7 +67,7 @@ const WhereToMeetUsSection = () => {
             </div>
             <div className={sectionStyles.listItemBody}>
               <a href="https://landingfestival.com/" target="_new">
-              <svg xmlns="http://www.w3.org/2000/svg" className={styles.confLogo} width="30" height="32" viewBox="0 0 30 32"><g fill-rule="nonzero"><path d="M0 0h4.37199955v15.4753633h8.08083065v3.9532081H0M16.4150943 0h13.018868v3.95320808h-8.7353957v3.95320808h8.0856555v3.95320804h-8.0856555v7.5689472h-4.2834723M0 28h30v4H0z"></path></g></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" className={styles.confLogo} width="30" height="32" viewBox="0 0 30 32"><g fillRule="nonzero"><path d="M0 0h4.37199955v15.4753633h8.08083065v3.9532081H0M16.4150943 0h13.018868v3.95320808h-8.7353957v3.95320808h8.0856555v3.95320804h-8.0856555v7.5689472h-4.2834723M0 28h30v4H0z"></path></g></svg>
               </a>
               <div className={styles.confRole}>Landing Festival</div>
               <div className={styles.confRole}>Speaker</div>
