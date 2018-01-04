@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Helmet from 'react-helmet'
 
 import fullCircleSrc from './circle.svg'
 import emptyCircleSrc from './circle-o.svg'
@@ -36,9 +35,6 @@ class ModelCarousel extends Component {
   render() {
     return (
       <div className={styles.container}>
-        <Helmet>
-          <script async src='https://embed.cimmerse.com/v2/tenants/cimmerse-marketing-site.js'></script>
-        </Helmet>
         <div className={styles.modelViewer}>
           <div id="cimmerseViewerPlaceholder" className={styles.placeholder}>
             <img
@@ -91,6 +87,11 @@ class ModelCarousel extends Component {
         onUserInteractionCallback: self.handleUserInteraction
       }
     }
+
+    const script = document.createElement("script")
+    script.src = "http://localhost:4214/v2/tenants/cimmerse-marketing-site.js"
+    script.async = true
+    document.body.appendChild(script)
   }
 
   setNextModelTimer () {
