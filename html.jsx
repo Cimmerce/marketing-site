@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import { prefixLink } from 'gatsby-helpers'
 import { TypographyStyle, GoogleFont } from 'react-typography'
 import typography from './utils/typography'
+import GoogleTagManager from './components/GoogleTagManager'
 
 const BUILD_TIME = new Date().getTime()
 
@@ -35,6 +36,7 @@ module.exports = React.createClass({
           {head.script.toComponent()}
         </head>
         <body>
+          <GoogleTagManager gtmId='UA-92817620-2' />
           <div id='react-mount' dangerouslySetInnerHTML={{ __html: this.props.body }} />
           <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
         </body>
