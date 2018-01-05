@@ -87,11 +87,6 @@ class ModelCarousel extends Component {
         onUserInteractionCallback: self.handleUserInteraction
       }
     }
-
-    const script = document.createElement("script")
-    script.src = "https://embed.cimmerse.com/v2/tenants/cimmerse-marketing-site.js"
-    script.async = true
-    document.body.appendChild(script)
   }
 
   setNextModelTimer () {
