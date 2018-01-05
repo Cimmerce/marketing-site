@@ -36,7 +36,7 @@ module.exports = React.createClass({
           {head.script.toComponent()}
         </head>
         <body>
-          <GoogleTagManager gtmId='UA-92817620-2' />
+          <GoogleTagManager gtmId='GTM-W62CRPZ' />
           <div id='react-mount' dangerouslySetInnerHTML={{ __html: this.props.body }} />
           <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
         </body>
