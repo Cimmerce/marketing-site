@@ -74,8 +74,10 @@ class ModelCarousel extends Component {
         #CimmersePlaceholder {
           position: relative;
           width: 100%;
-          height: 100%
-      `,
+          height: 100%;
+        }
+        `,
+        limitInteractionAreaOnMobile: true
       }
     }
 
