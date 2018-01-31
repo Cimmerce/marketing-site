@@ -1,11 +1,9 @@
 import React from 'react'
 import cx from 'classnames'
 
-import aweImage from './awe.png'
 import bizBoostImage from './bizboost.png'
 import cphPostImage from './cphpost.png'
-import shoptalkImage from './shoptalk-europe.png'
-import slushImage from './slush.png'
+import shoptalkImage from './shoptalk-2018.png'
 
 import sectionStyles from '../../styles/base/section.scss'
 import styles from './WhereToMeetUsSection.scss'
@@ -36,33 +34,6 @@ const WhereToMeetUsSection = () => {
 
           <div className={cx(sectionStyles.listItem, styles.listItem)}>
             <div className={sectionStyles.listItemHeader}>
-              October 2017
-            </div>
-            <div className={sectionStyles.listItemBody}>
-              <a href="https://shoptalkeurope.com/" target="_new">
-                <img src={shoptalkImage} width="150" className={styles.confLogo} />
-              </a>
-              <div className={styles.confRole}>Speaker &amp; exhibitor</div>
-            </div>
-            <div className={sectionStyles.listItemBody}>
-              <a href="https://www.youtube.com/watch?v=PfHRXll3B5Y" target="_new">
-                <img src={aweImage} width="100" className={styles.confLogo} />
-              </a>
-              <div className={styles.confRole}>Speaker</div>
-            </div>
-          </div>
-
-          <div className={cx(sectionStyles.listItem, styles.listItem)}>
-            <div className={sectionStyles.listItemHeader}>
-              November 2017
-            </div>
-            <div className={sectionStyles.listItemBody}>
-              <a href="http://www.slush.org/" target="_new">
-                <img src={slushImage} width="120" className={styles.confLogo} />
-              </a>
-            </div>
-            <div className={sectionStyles.listItemHeader}>
-              <br /><br />
               March 2018
             </div>
             <div className={sectionStyles.listItemBody}>
@@ -71,6 +42,12 @@ const WhereToMeetUsSection = () => {
               </a>
               <div className={styles.confRole}>Landing Festival</div>
               <div className={styles.confRole}>Speaker</div>
+            </div>
+            <div className={sectionStyles.listItemBody}>
+              <a href="https://shoptalk.com/" target="_new">
+                <img src={shoptalkImage} width="100" className={styles.confLogo} />
+              </a>
+              <div className={styles.confRole}>Exhibitor</div>
             </div>
           </div>
         </div>
