@@ -4,7 +4,8 @@
   "description": "Static marketing site based on Gatsby",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop -p 4213 -H 0.0.0.0 -o",
+    "develop": "gatsby develop -p 4213 -o",
+    "develop-h": "gatsby develop -p 4213 -H 0.0.0.0 -o",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
