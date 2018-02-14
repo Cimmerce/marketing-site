@@ -1,6 +1,0 @@
-{
-  "name": "GoogleTagManager",
-  "version": "0.0.0",
-  "private": true,
-  "main": "./GoogleTagManager.jsx"
-}

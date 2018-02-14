@@ -1,28 +1,7 @@
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
-const autoprefixer = require('autoprefixer')
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ */
 
-exports.modifyWebpackConfig = function (config, env) {
-  config.removeLoader('sass')
-
-  const cssModuleLoaderConfig = 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]&sourceMap&-minimize'
-
-  if (env === 'develop') {
-    config.loader('sass', {
-      test: /\.(sass|scss$)/,
-      loaders: ['style', cssModuleLoaderConfig, 'postcss', 'sass']
-    })
-  } else {
-    config.loader('sass', {
-      test: /\.(sass|scss)$/,
-      loader: ExtractTextPlugin.extract(
-        'style', [cssModuleLoaderConfig, 'postcss', 'sass']
-      )
-    })
-  }
-
-  config.merge({
-    postcss: [autoprefixer]
-  })
-
-  return config
-}
+ // You can delete this file if you're not using it
