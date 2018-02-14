@@ -19,11 +19,7 @@ const TemplateWrapper = ({ children }) => (
     />
 
     <Topbar />
-
-    <main className="main-content">
-      {children()}
-    </main>
-
+    {children()}
     <Footer />
   </div>
 )
