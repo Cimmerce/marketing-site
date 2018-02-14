@@ -1,35 +1,35 @@
 import React from 'react'
+import Link from 'gatsby-link'
+import {
+  Col,
+  Container,
+  Nav,
+  NavItem,
+  NavLink,
+  Row
+} from 'reactstrap'
+
 import logoSrc from '../../assets/cimmerse_logo.svg'
 
 const Footer = () => (
   <footer className="site-footer">
-    <div className="container">
-      <div className="row gap-y align-items-center">
-        <div className="col-12 col-lg-3">
+    <Container>
+      <Row className="gap-y align-items-center">
+        <Col className="col-12 col-lg-3">
           <p className="text-center text-lg-left">
             <a href="index.html"><img src={logoSrc} alt="logo" /></a>
           </p>
-        </div>
+        </Col>
 
-        <div className="col-12 col-lg-6">
-          <ul className="nav nav-primary nav-hero">
-            <li className="nav-item">
-              <a className="nav-link" href="index.html">Home</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="blog.html">Blog</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="block-feature.html">Features</a>
-            </li>
-            <li className="nav-item hidden-sm-down">
-              <a className="nav-link" href="page-pricing.html">Pricing</a>
-            </li>
-            <li className="nav-item hidden-sm-down">
-              <a className="nav-link" href="page-contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <Col className="col-12 col-lg-6">
+          <Nav className="nav-primary nav-hero">
+            <NavItem><NavLink tag={Link} to='/contact'>Contact</NavLink></NavItem>
+            <NavItem><NavLink tag={Link} to='/documentation'>Documentation</NavLink></NavItem>
+            <NavItem><NavLink tag={Link} to='/about'>About</NavLink></NavItem>
+            <NavItem><NavLink tag={Link} to='/privacy' className='hidden-sm-down'>Privacy policy</NavLink></NavItem>
+            <NavItem><NavLink tag={Link} to='/terms' className='hidden-sm-down'>Terms of use</NavLink></NavItem>
+          </Nav>
+        </Col>
 
         <div className="col-12 col-lg-3">
           <div className="social text-center text-lg-right">
@@ -39,8 +39,8 @@ const Footer = () => (
             <a className="social-dribbble" href="https://dribbble.com/thethemeio"><i className="fa fa-dribbble"></i></a>
           </div>
         </div>
-      </div>
-    </div>
+      </Row>
+    </Container>
   </footer>
 )
 
