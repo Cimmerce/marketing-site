@@ -7,6 +7,7 @@ https://github.com/gatsbyjs/gatsby/
 
 ## Folder structure
 
+- **assets** - assets shared between multiple components
 - **components** - React components
 - **pages** - all pages for the site
 - **layouts** - the template for the site
@@ -34,5 +35,5 @@ yarn
 ### Running
 
 ```
-yarn run develop
+yarn starts
 ```
