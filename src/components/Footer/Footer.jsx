@@ -1,5 +1,5 @@
 import React from 'react'
-import logoSrc from '../assets/cimmerse_logo.svg'
+import logoSrc from '../../assets/cimmerse_logo.svg'
 
 const Footer = () => (
   <footer className="site-footer">
