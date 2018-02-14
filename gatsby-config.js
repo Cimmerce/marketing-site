@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter',
+    title: 'Cimmerse: AR-enabled mobile web sales',
   },
   plugins: ['gatsby-plugin-react-helmet'],
 };

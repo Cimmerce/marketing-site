@@ -1,13 +1,38 @@
-# gatsby-starter-default
-The default Gatsby starter
+# Cimmerse marketing site
 
-For an overview of the project structure please refer to the [Gatsby documentation - Building with Components](https://www.gatsbyjs.org/docs/building-with-components/)
+This project generates HTML and javascript for the static marketing site at cimmerse.com.
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
+It is based on Gatsby, a React.js static site generator:
+https://github.com/gatsbyjs/gatsby/
+
+## Folder structure
+
+- **components** - React components
+- **pages** - all pages for the site
+- **layouts** - the template for the site
+- **config.toml** - configuration file
+- **gatsby-node.js** - webpack configuration overrides
+
+## Development
+
+### Prerequisites
+
+yarn must be installed:
+
 ```
-gatsby new gatsby-example-site
+brew install yarn
 ```
 
-## Deploy
+### Installation
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
+Install packages:
+
+```
+yarn
+```
+
+### Running
+
+```
+yarn run develop
+```

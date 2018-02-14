@@ -8,10 +8,10 @@ import './index.css'
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Cimmerse: AR-enabled mobile web sales"
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'description', content: 'Augmented reality for mobile ecommerce websites' },
+        { name: 'keywords', content: 'AR, mobile AR, augmented reality, WebAR, VR, virtual reality, 3D, ecommerce' },
       ]}
     />
     <Header />

@@ -1,8 +1,7 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "cimmerse-marketing-site",
+  "description": "Cimmerse Marketing Site",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^1.9.158",
     "gatsby-link": "^1.6.34",
@@ -16,7 +15,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby develop -p4213",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
