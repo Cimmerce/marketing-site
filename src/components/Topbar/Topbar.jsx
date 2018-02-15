@@ -9,6 +9,7 @@ import {
 } from 'reactstrap'
 
 import logoSrc from '../../assets/cimmerse_logo.svg'
+import logoLightSrc from '../../assets/cimmerse_logo_light.svg'
 import styles from './Topbar.module.scss'
 
 class Topbar extends Component {
@@ -45,9 +46,9 @@ class Topbar extends Component {
 
           <div className="topbar-left">
             <button className="topbar-toggler" onClick={this.handleTogglerClick}>&#9776;</button>
-            <a className="topbar-brand" href="index.html">
+            <a className="topbar-brand" href="/">
               <img className="logo-default" src={logoSrc} alt="logo" />
-              <img className="logo-inverse" src={logoSrc} alt="logo" />
+              <img className="logo-inverse" src={logoLightSrc} alt="logo" />
             </a>
           </div>
 
