@@ -1,9 +1,11 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import cx from 'classnames'
 
 import videoPosterSrc from '../assets/testvideo.jpg'
 import videoMp4Src from '../assets/testvideo.mp4'
 import videoWebMSrc from '../assets/testvideo.webm'
+import styles from './index.module.scss'
 
 
 const IndexPage = () => (
@@ -14,7 +16,7 @@ const IndexPage = () => (
         <source src={videoWebMSrc} type="video/webm" />
       </video>
 
-      <div className="container text-center">
+      <div className={cx('container', 'text-center', styles.test)}>
 
         <div className="row h-full">
           <div className="col-12 col-lg-8 offset-lg-2 align-self-center pt-150">
