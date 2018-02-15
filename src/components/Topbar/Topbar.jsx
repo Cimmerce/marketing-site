@@ -12,9 +12,19 @@ import logoSrc from '../../assets/cimmerse_logo.svg'
 import styles from './Topbar.module.scss'
 
 class Topbar extends Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
+    this.bindMethods()
+
+    this.state = {
+      isTopbarRevealed: false
+    }
+  }
+
+  bindMethods () {
     this.handleScroll = this.handleScroll.bind(this)
+    this.handleTogglerClick = this.handleTogglerClick.bind(this)
+    this.handleBackdropClick = this.handleBackdropClick.bind(this)
   }
 
   componentDidMount() {
@@ -27,10 +37,14 @@ class Topbar extends Component {
   render () {
     return (
       <nav className="topbar topbar-inverse topbar-expand-md topbar-sticky">
+        {
+          this.state.isTopbarRevealed &&
+            <div className="topbar-backdrop" onClick={this.handleBackdropClick}></div>
+        }
         <Container>
 
           <div className="topbar-left">
-            <button className="topbar-toggler">&#9776;</button>
+            <button className="topbar-toggler" onClick={this.handleTogglerClick}>&#9776;</button>
             <a className="topbar-brand" href="index.html">
               <img className="logo-default" src={logoSrc} alt="logo" />
               <img className="logo-inverse" src={logoSrc} alt="logo" />
@@ -69,6 +83,23 @@ class Topbar extends Component {
     return window.pageYOffset ||
       document.documentElement.scrollTop ||
       document.body.scrollTop || 0
+  }
+
+  handleTogglerClick () {
+    const body = document.body
+    if ( !body || !body.classList ) { return }
+
+    body.classList.toggle('topbar-reveal')
+    const isTopbarRevealed = body.classList.contains('topbar-reveal')
+    this.setState({ isTopbarRevealed })
+  }
+
+  handleBackdropClick () {
+    const body = document.body
+    if ( !body || !body.classList ) { return }
+
+    body.classList.remove('topbar-reveal')
+    this.setState({ isTopbarRevealed: false })
   }
 }
 
