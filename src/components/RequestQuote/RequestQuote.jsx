@@ -40,9 +40,20 @@ class RequestQuote extends Component {
 
   render () {
     return (
-      <Modal isOpen={this.props.isOpen} toggle={this.props.onToggle}>
-        {this.renderCurrentStep()}
-      </Modal>
+      <div>
+        <form name="requestQuote" netlify netlify-honeypot="bot-field" className="d-none">
+          <input type="text" name="selectedDigitizationOptions" />
+          <input type="text" name="websiteUrl" />
+          <input type="text" name="companyName" />
+          <input type="text" name="contactName" />
+          <input type="text" name="contactEmail" />
+          <input type="text" name="contactPhone" />
+          <input type="text" name="comments" />
+        </form>
+        <Modal isOpen={this.props.isOpen} toggle={this.props.onToggle}>
+          {this.renderCurrentStep()}
+        </Modal>
+      </div>
     )
   }
 
