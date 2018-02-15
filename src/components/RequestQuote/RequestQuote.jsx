@@ -26,13 +26,14 @@ class RequestQuote extends Component {
       contactName: '',
       contactEmail: '',
       contactPhone: '',
-      comments: ''
+      comments: '',
+      isSubmitting: false
     }
   }
 
   bindMethods () {
     this.gotoStep = this.gotoStep.bind(this)
-    this.submitRequest = this.submitRequest.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
     this.onDigitizationOptionToggled = this.onDigitizationOptionToggled.bind(this)
     this.handleFormFieldChange = this.handleFormFieldChange.bind(this)
   }
@@ -51,6 +52,8 @@ class RequestQuote extends Component {
         return this.renderDigitizationStep()
       case 'details':
         return this.renderDetailsStep()
+      case 'submitted':
+        return this.renderSubmitted()
       default:
         return this.renderIntroStep()
     }
@@ -116,58 +119,83 @@ class RequestQuote extends Component {
 
   renderDetailsStep () {
     return (
-      <div>
+      <Form
+        method="post"
+        action="/thanks/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        onSubmit={this.handleSubmit}
+      >
         <ModalHeader toggle={this.props.onToggle}>Where do you want to promote your products?</ModalHeader>
         <ModalBody>
-          <Form>
-            <FormGroup>
-              <Input
-                placeholder="Ecommerce website url"
-                value={this.state.websiteUrl}
-                onChange={this.handleFormFieldChange.bind(this, 'websiteUrl')}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Input
-                placeholder="Company name"
-                value={this.state.companyName}
-                onChange={this.handleFormFieldChange.bind(this, 'companyName')}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Input
-                placeholder="Your name"
-                value={this.state.contactName}
-                onChange={this.handleFormFieldChange.bind(this, 'contactName')}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Input
-                placeholder="Your email address"
-                value={this.state.contactEmail}
-                onChange={this.handleFormFieldChange.bind(this, 'contactEmail')}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Input
-                placeholder="Your phone number"
-                value={this.state.contactPhone}
-                onChange={this.handleFormFieldChange.bind(this, 'contactPhone')}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Input
-                type='textarea'
-                placeholder="Details, comments, questions?"
-                value={this.state.comments}
-                onChange={this.handleFormFieldChange.bind(this, 'comments')}
-              />
-            </FormGroup>
-          </Form>
+          <Input
+            name="bot-field"
+            className="d-none"
+          />
+          <FormGroup>
+            <Input
+              placeholder="Ecommerce website url"
+              value={this.state.websiteUrl}
+              type="url"
+              onChange={this.handleFormFieldChange.bind(this, 'websiteUrl')}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Input
+              placeholder="Company name"
+              value={this.state.companyName}
+              onChange={this.handleFormFieldChange.bind(this, 'companyName')}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Input
+              placeholder="Your name"
+              value={this.state.contactName}
+              onChange={this.handleFormFieldChange.bind(this, 'contactName')}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Input
+              placeholder="Your email address"
+              value={this.state.contactEmail}
+              type="email"
+              onChange={this.handleFormFieldChange.bind(this, 'contactEmail')}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Input
+              placeholder="Your phone number"
+              value={this.state.contactPhone}
+              type="phone"
+              onChange={this.handleFormFieldChange.bind(this, 'contactPhone')}
+            />
+          </FormGroup>
+          <FormGroup>
+            <Input
+              type='textarea'
+              placeholder="Details, comments, questions?"
+              value={this.state.comments}
+              onChange={this.handleFormFieldChange.bind(this, 'comments')}
+            />
+          </FormGroup>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={this.submitRequest}>Finish</Button>{' '}
+          <Button color="primary" type="submit" disabled={this.state.isSubmitting}>Finish</Button>{' '}
           <Button color="secondary" onClick={this.gotoStep.bind(this, 'digitization')}>Go back</Button>
+        </ModalFooter>
+      </Form>
+    )
+  }
+
+  renderSubmitted () {
+    return (
+      <div>
+        <ModalHeader toggle={this.props.onToggle}>Thank you!</ModalHeader>
+        <ModalBody>
+          <p>We will get back to you within 1 business day.</p>
+        </ModalBody>
+        <ModalFooter>
+          <Button color="primary" onClick={this.props.onToggle}>Close</Button>
         </ModalFooter>
       </div>
     )
@@ -197,8 +225,30 @@ class RequestQuote extends Component {
     this.setState({ [fieldName]: event.target.value })
   }
 
-  submitRequest () {
-    // TODO
+  handleSubmit (e) {
+    this.setState({ isSubmitting: true })
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: this.encode({ "form-name": "requestQuote", ...this.state })
+    })
+    .then(() => {
+      this.setState({ isSubmitting: false })
+      this.gotoStep('submitted')
+    })
+    .catch(error => {
+      this.setState({ isSubmitting: false })
+      console.error(error)
+    })
+
+    e.preventDefault()
+  }
+
+  encode(data) {
+    return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
   }
 }
 
