@@ -6,6 +6,7 @@ import Topbar from '../components/Topbar'
 import Footer from '../components/Footer'
 
 import './bootstrap/bootstrap.scss'
+import './fonts/themify/themify-icons.css'
 import './theme/theme.scss'
 
 const TemplateWrapper = ({ children }) => (
