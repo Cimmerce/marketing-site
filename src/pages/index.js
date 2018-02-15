@@ -26,8 +26,8 @@ const IndexPage = () => (
 
         <Row className="h-full">
           <Col className="col-12 col-lg-8 offset-lg-2 align-self-center pt-150">
-            <h1 className="display-4 fw-100 hidden-sm-down"> Augmented Reality for lifestyle ecommerce</h1>
-            <h2 className="fw-100 hidden-md-up">Cimmerse AR technology assists your clients meaningful decisions.</h2>
+            <h1 className="display-4 fw-100 hidden-sm-down">Augmented Reality for lifestyle ecommerce</h1>
+            <h2 className="fw-100 hidden-md-up">Instant web and mobile AR for your business.</h2>
             <br />
             <button className="btn btn-small btn-primary">
               <a className={styles.getStarted} href="#">Get started</a>
