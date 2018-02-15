@@ -48,16 +48,16 @@ const IndexPage = () => (
 
     <main className="main-content">
 
-    <section className="section">
+      <section className="section">
         <Container className="">
           <header className="section-header">
             <h2>How it Works</h2>
-            <hr/>
+            <hr />
           </header>
 
           <Row className="gap-y">
             <Col className="col-12 offset-md-2 col-md-8 mb-30">
-              <img src="http://thetheme.io/thesaas/assets/img/feature-tablet.png" alt="..." data-aos="fade-up" data-aos-duration="2000"/>
+              <img src="http://thetheme.io/thesaas/assets/img/feature-tablet.png" alt="..." data-aos="fade-up" data-aos-duration="2000" />
             </Col>
             <Col className="col-12 col-md-6 col-xl-3">
               <div className="flexbox gap-items-4">
@@ -66,21 +66,8 @@ const IndexPage = () => (
                 </div>
 
                 <div>
-                  <h5>Photorealistic 3D scans </h5>
+                  <h5>Photorealistic 3D</h5>
                   <p>We help you digitize your products into highly realistic, true 3D models.</p>
-                </div>
-              </div>
-            </Col>
-
-            <Col className="col-12 col-md-6 col-xl-3">
-              <div className="flexbox gap-items-4">
-                <div>
-                  <i className="fa fa-wrench fs-25 pt-4 text-secondary"></i>
-                </div>
-
-                <div>
-                  <h5>3D on any device</h5>
-                  <p>We provide the platform that lets your customers see your products in 3D on any device with a web browser</p>
                 </div>
               </div>
             </Col>
@@ -101,11 +88,24 @@ const IndexPage = () => (
             <Col className="col-12 col-md-6 col-xl-3">
               <div className="flexbox gap-items-4">
                 <div>
+                  <i className="fa fa-wrench fs-25 pt-4 text-secondary"></i>
+                </div>
+
+                <div>
+                  <h5>3D on any device</h5>
+                  <p>We provide the platform that lets your customers see your products in 3D on any device with a web browser</p>
+                </div>
+              </div>
+            </Col>
+
+            <Col className="col-12 col-md-6 col-xl-3">
+              <div className="flexbox gap-items-4">
+                <div>
                   <i className="fa fa-code fs-25 pt-4 text-secondary"></i>
                 </div>
 
                 <div>
-                  <h5>Augmented & Virtual Reality support</h5>
+                  <h5>AR & VR support</h5>
                   <p>Our platform can give your customers a brand new and completely immersive experience exploring your products in virtual reality.</p>
                 </div>
               </div>
@@ -121,7 +121,7 @@ const IndexPage = () => (
           <header className="section-header">
             <small>In The News</small>
             <h2>Press Coverage</h2>
-            <hr/>
+            <hr />
             <p className="lead">Read all the news, reports and stories that published about our startup.</p>
           </header>
 
@@ -130,9 +130,9 @@ const IndexPage = () => (
             <Col className="col-12 col-lg-6">
               <a href="https://www.business.dk/vaekst/her-er-de-15-der-slap-gennem-elevator-testen-i-berlingske-business-boost" class="card card-bordered card-hover-shadow text-center">
                 <div className="card-block">
-                  <br/>
-                  <p><img src="https://imgur.com/O2bBM12"/></p>
-                  <br/>
+                  <br />
+                  <p><img src="https://imgur.com/O2bBM12" /></p>
+                  <br />
                   <h4 className="card-title">"B2B platform for web-based solutions in 3D, Virtual Reality and Augmented Reality"</h4>
                   <small>November 2017</small>
                 </div>
@@ -142,9 +142,9 @@ const IndexPage = () => (
             <Col className="col-12 col-lg-6">
               <a href="http://cphpost.dk/news/goggle-me-up-scotty-this-is-the-final-frontier.html" class="card card-bordered card-hover-shadow text-center">
                 <div className="card-block">
-                  <br/>
-                  <p><img src="https://imgur.com/O2bBM12"/></p>
-                  <br/>
+                  <br />
+                  <p><img src="https://imgur.com/O2bBM12" /></p>
+                  <br />
                   <h4 className="card-title">"The platform aims to make high-resolution, interactive models of physical objects available through a web browser, both on mobile as well as PC"</h4>
                   <small>July 2017</small>
                 </div>
