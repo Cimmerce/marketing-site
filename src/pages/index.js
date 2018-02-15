@@ -8,9 +8,9 @@ import {
 } from 'reactstrap'
 
 
-import videoPosterSrc from '../assets/testvideo.jpg'
-import videoMp4Src from '../assets/testvideo.mp4'
-import videoWebMSrc from '../assets/testvideo.webm'
+import videoPosterSrc from '../assets/video/frontpageloop.jpg'
+import videoMp4Src from '../assets/video/frontpageloop.mp4'
+import videoWebMSrc from '../assets/video/frontpageloop.webm'
 import styles from './index.module.scss'
 
 
@@ -34,7 +34,7 @@ const IndexPage = () => (
             </button>
             <br />
             <br />
-            <p className="fs-12"><span className="opacity-60 mr-8">Or</span> 
+            <p className="fs-12"><span className="opacity-60 mr-8">Or</span>
               <a className="text-white mark-border" href="#">Learn More</a>
             </p>
           </Col>
@@ -54,7 +54,7 @@ const IndexPage = () => (
             <h2>How it Works</h2>
             <hr/>
           </header>
-     
+
           <Row className="gap-y">
             <Col className="col-12 offset-md-2 col-md-8 mb-30">
               <img src="http://thetheme.io/thesaas/assets/img/feature-tablet.png" alt="..." data-aos="fade-up" data-aos-duration="2000"/>
@@ -110,7 +110,7 @@ const IndexPage = () => (
                 </div>
               </div>
             </Col>
-            
+
           </Row>
         </Container>
       </section>
