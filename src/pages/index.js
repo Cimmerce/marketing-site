@@ -16,7 +16,7 @@ import styles from './index.module.scss'
 
 const IndexPage = () => (
   <div>
-    <header className="header header-inverse h-fullscreen p-0 overflow-hidden" data-overlay="7">
+    <header className="header header-inverse h-fullscreen p-0 overflow-hidden" data-overlay="4">
       <video className="bg-video" poster={videoPosterSrc} autoPlay loop>
         <source src={videoMp4Src} type="video/mp4" />
         <source src={videoWebMSrc} type="video/webm" />
