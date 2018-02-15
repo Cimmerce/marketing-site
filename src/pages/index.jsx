@@ -128,7 +128,7 @@ const IndexPage = () => (
           <Row className="gap-y">
 
             <Col className="col-12 col-lg-6">
-              <a href="https://www.business.dk/vaekst/her-er-de-15-der-slap-gennem-elevator-testen-i-berlingske-business-boost" class="card card-bordered card-hover-shadow text-center">
+              <a href="https://www.business.dk/vaekst/her-er-de-15-der-slap-gennem-elevator-testen-i-berlingske-business-boost" className="card card-bordered card-hover-shadow text-center">
                 <div className="card-block">
                   <br />
                   <p><img src="https://imgur.com/O2bBM12" /></p>
@@ -140,7 +140,7 @@ const IndexPage = () => (
             </Col>
 
             <Col className="col-12 col-lg-6">
-              <a href="http://cphpost.dk/news/goggle-me-up-scotty-this-is-the-final-frontier.html" class="card card-bordered card-hover-shadow text-center">
+              <a href="http://cphpost.dk/news/goggle-me-up-scotty-this-is-the-final-frontier.html" className="card card-bordered card-hover-shadow text-center">
                 <div className="card-block">
                   <br />
                   <p><img src="https://imgur.com/O2bBM12" /></p>

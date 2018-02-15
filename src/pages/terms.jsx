@@ -9,12 +9,12 @@ import {
 
 const TermsPage = () => (
     <main className="main-content">
-        <section class="section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-12 offset-lg-4">
+        <section className="section">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12 col-lg-12 offset-lg-4">
                         <h1>Terms and Agreements</h1>
-                        <p class="fs-20 opacity-70">Last update: Feb 15, 2018</p>
+                        <p className="fs-20 opacity-70">Last update: Feb 15, 2018</p>
                     </div>
                 </div>
 
