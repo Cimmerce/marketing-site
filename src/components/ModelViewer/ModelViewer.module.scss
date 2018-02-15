@@ -1,0 +1,30 @@
+@import "../../layouts/theme/mixins";
+
+.container, .modelViewer, .placeholder {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.modelViewer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.previewImage {
+  height: 80%;
+  margin: 10% auto;
+  display: block;
+}
+
+@include media-down(xs) {
+  .container {
+    min-height: 300px;
+  }
+}

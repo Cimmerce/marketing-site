@@ -7,12 +7,11 @@ import {
   Col
 } from 'reactstrap'
 
-
+import ModelViewer from '../components/ModelViewer'
 import videoPosterSrc from '../assets/video/frontpageloop.jpg'
 import videoMp4Src from '../assets/video/frontpageloop.mp4'
 import videoWebMSrc from '../assets/video/frontpageloop.webm'
 import styles from './index.module.scss'
-
 
 const IndexPage = () => (
   <div>
@@ -57,7 +56,8 @@ const IndexPage = () => (
 
           <Row className="gap-y">
             <Col className="col-12 offset-md-2 col-md-8 mb-30">
-              <img src="http://thetheme.io/thesaas/assets/img/feature-tablet.png" alt="..." data-aos="fade-up" data-aos-duration="2000" />
+              <ModelViewer modelId="11130d3a-be12-480c-bb0e-29b0558a9197" />
+              {/*<img src="http://thetheme.io/thesaas/assets/img/feature-tablet.png" alt="..." data-aos="fade-up" data-aos-duration="2000" /> */}
             </Col>
             <Col className="col-12 col-md-6 col-xl-3">
               <div className="flexbox gap-items-4">
