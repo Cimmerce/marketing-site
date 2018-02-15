@@ -20,7 +20,7 @@ const NotFoundPage = () => (
         </header>
 
         <br />
-        <p class="text-center"><a class="btn btn-primary" href="index.html">Retrun home</a></p>
+        <p class="text-center"><a class="btn btn-primary" href="index.html">Return home</a></p>
 
       </div>
     </section>
