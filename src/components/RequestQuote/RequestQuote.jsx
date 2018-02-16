@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {
   Button, Container, Col, Row,
-  Form, FormGroup, FormText, Label, Input,
+  Form, FormGroup, FormText, Label,
+  Input, InputGroup, InputGroupAddon,
   Modal, ModalHeader, ModalBody, ModalFooter
 } from 'reactstrap'
 
@@ -178,27 +179,37 @@ class RequestQuote extends Component {
                 <FormGroup tag="fieldset">
                   <legend className={styles.formLegend}>Your business</legend>
                   <FormGroup>
-                    <Input
-                      placeholder="Company name"
-                      value={this.state.formFields.companyName}
-                      onChange={this.handleFormFieldChange.bind(this, 'companyName')}
-                    />
+                    <InputGroup>
+                      <Input
+                        placeholder="Company name"
+                        value={this.state.formFields.companyName}
+                        onChange={this.handleFormFieldChange.bind(this, 'companyName')}
+                      />
+                      <InputGroupAddon addonType="addon" className="p-2"><i className="ti-home" /></InputGroupAddon>
+                    </InputGroup>
                   </FormGroup>
                   <FormGroup>
-                    <Input
-                      placeholder="Ecommerce website url"
-                      value={this.state.formFields.websiteUrl}
-                      type="text"
-                      onChange={this.handleFormFieldChange.bind(this, 'websiteUrl')}
-                    />
+                    <InputGroup>
+                      <Input
+                        placeholder="Ecommerce website url"
+                        value={this.state.formFields.websiteUrl}
+                        type="text"
+                        onChange={this.handleFormFieldChange.bind(this, 'websiteUrl')}
+                      />
+                      <InputGroupAddon addonType="addon" className="p-2"><i className="ti-layout" /></InputGroupAddon>
+                    </InputGroup>
                   </FormGroup>
                   <FormGroup>
-                    <Input
-                      type='textarea'
-                      placeholder="How can we help you?"
-                      value={this.state.formFields.comments}
-                      onChange={this.handleFormFieldChange.bind(this, 'comments')}
-                    />
+                    <InputGroup>
+                      <Input
+                        type='textarea'
+                        placeholder="How can we help you?"
+                        value={this.state.formFields.comments}
+                        onChange={this.handleFormFieldChange.bind(this, 'comments')}
+                        rows={3}
+                      />
+                      <InputGroupAddon addonType="addon" className="p-2"><i className="ti-comment" /></InputGroupAddon>
+                    </InputGroup>
                   </FormGroup>
                 </FormGroup>
               </div>
@@ -206,28 +217,36 @@ class RequestQuote extends Component {
                 <FormGroup tag="fieldset">
                   <legend className={styles.formLegend}>Your contact details</legend>
                   <FormGroup>
-                    <Input
-                      placeholder="Your name"
-                      value={this.state.formFields.contactName}
-                      onChange={this.handleFormFieldChange.bind(this, 'contactName')}
-                    />
+                    <InputGroup>
+                      <Input
+                        placeholder="Your name"
+                        value={this.state.formFields.contactName}
+                        onChange={this.handleFormFieldChange.bind(this, 'contactName')}
+                      />
+                      <InputGroupAddon addonType="addon" className="p-2"><i className="ti-user" /></InputGroupAddon>
+                    </InputGroup>
                   </FormGroup>
                   <FormGroup>
-                    <Input
-                      placeholder="Your email address"
-                      value={this.state.formFields.contactEmail}
-                      type="email"
-                      onChange={this.handleFormFieldChange.bind(this, 'contactEmail')}
-                      valid={this.state.validFields.contactEmail}
-                    />
+                    <InputGroup className={this.validationClassName(this.state.validFields.contactEmail)}>
+                      <Input
+                        placeholder="Your email address"
+                        value={this.state.formFields.contactEmail}
+                        type="email"
+                        onChange={this.handleFormFieldChange.bind(this, 'contactEmail')}
+                      />
+                      <InputGroupAddon addonType="addon" className="p-2"><i className="ti-email" /></InputGroupAddon>
+                    </InputGroup>
                   </FormGroup>
                   <FormGroup>
-                    <Input
-                      placeholder="Your phone number"
-                      value={this.state.formFields.contactPhone}
-                      type="phone"
-                      onChange={this.handleFormFieldChange.bind(this, 'contactPhone')}
-                    />
+                    <InputGroup>
+                      <Input
+                        placeholder="Your phone number"
+                        value={this.state.formFields.contactPhone}
+                        type="phone"
+                        onChange={this.handleFormFieldChange.bind(this, 'contactPhone')}
+                      />
+                      <InputGroupAddon addonType="addon" className="p-2"><i className="ti-mobile" /></InputGroupAddon>
+                    </InputGroup>
                   </FormGroup>
                 </FormGroup>
               </div>
@@ -345,6 +364,14 @@ class RequestQuote extends Component {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
+  }
+
+  validationClassName (isValid) {
+    switch(isValid) {
+      case true: return 'border-success'
+      case false: return 'border-danger'
+      default: return null
+    }
   }
 }
 
