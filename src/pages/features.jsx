@@ -10,6 +10,10 @@ import {
 import styles from './index.module.scss'
 
 
+import digitizationPicSrc from '../assets/images/digitize1.jpg' 
+import embedPicSrc from '../assets/images/embedsample.jpg' 
+
+
 const FeaturesPage = () => (
   <main className="main-content">
     <section className="section py-100">
@@ -19,8 +23,8 @@ const FeaturesPage = () => (
         <Row className="">
           <Col className="col-12 col-lg-8 offset-lg-2">
 
-            <h1>Our Product</h1>
-            <p className="fs-20 opacity-70">Our platform helps reatailers sell more using the latest in Augemented and Virtual Reality technology</p>
+            <h1>Our Process</h1>
+            <p className="fs-20 opacity-70">Our platform helps retailers sell more using the latest in Augemented and Virtual Reality technology</p>
           </Col>
         </Row>
 
@@ -32,18 +36,18 @@ const FeaturesPage = () => (
 
         <Row className="gap-y align-items-center mb-90">
           <Col className="col-12 col-md-6 text-center hidden-sm-down">
-            <img src="assets/img/demo/slack/tools.png" alt="..." />
+            <img src={digitizationPicSrc} alt="..." />
           </Col>
 
           <Col className="col-12 col-md-5 offset-md-1 text-center text-md-left">
             <p className="fs-60 fw-900 opacity-10">01</p>
             <h3 className="fw-300">Digitization</h3>
             <ul>
-              <li>Rig</li>
-              <li>Hand Tailered</li>
-              <li>3D from Images</li>
+              <li>High quality 3D Scanning (you ship your products to us or we bring our scanning rig to you)</li>
+              <li>Custom built models (our 3D artists help design and create high quality models)              </li>
+              <li>3D CAD model support (send us your models .obj .fbx .dwg)              </li>
+              <li>3D from 2D images (send us your product photos and we convert to 3D)              </li>
             </ul>
-            <p>(For the image, perhaps an image of our rig or something else to represent digitization)</p>
           </Col>
         </Row>
 
@@ -51,11 +55,11 @@ const FeaturesPage = () => (
           <Col className="col-12 col-md-5 text-center text-md-left">
             <p className="fs-60 fw-900 opacity-10">02</p>
             <h3 className="fw-300">3D</h3>
-            <p>Embedd a 3D model on your website with only one line of code (for the image, we should have an example of an emmbeded model)</p>
+            <p>Embedd a 3D model on your website with only one line of code</p>
           </Col>
 
           <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
-            <img src="assets/img/demo/slack/drag.png" alt="..." />
+            <img src={embedPicSrc} alt="..." />
           </Col>
         </Row>
 
