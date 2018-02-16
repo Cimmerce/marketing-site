@@ -83,7 +83,7 @@ class ModelViewer extends Component {
     const isSelected = index === this.state.currentModelIndex
 
     return (
-      <Col className="col-6 col-md-12 col-xl-12 p-0">
+      <Col className="col-6 col-md-12 col-xl-12 p-0" key={modelId}>
         <Card
           className={cx([
             'card-bordered',
