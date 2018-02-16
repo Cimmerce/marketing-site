@@ -41,7 +41,7 @@ const AboutPage = () => (
 
                 <Row className="">
 
-                    <Col className="col-12 col-lg-12 pl-50 pr-80" >
+                    <Col className={cx('col-12 col-lg-12 pl-50 pr-80"', styles.centerAbout)} >
                         <h2 className="text-center">Our Vision</h2>
                         <p className="lead">
                             The Web is one of the most significant inventions to modern humans and ushered in the Information Age. Since it's inception the user interface has been 2D, until now.
@@ -129,7 +129,7 @@ const AboutPage = () => (
                     <small>In The News</small>
                     <h2>Press Coverage</h2>
                     <hr />
-                    <p className="lead">Read all the news, reports and stories that published about our startup.</p>
+                    <p className="lead">Read all the news, reports and stories published about our startup.</p>
                 </header>
 
                 <Row className="gap-y">
@@ -168,7 +168,7 @@ const AboutPage = () => (
                 <header className="section-header">
                     <h2>Where to Meet Us</h2>
                     <hr />
-                    <p className="lead">Conferences and events where we'll be demoing our product.</p>
+                    <p className="lead">Conferences and events where we'll be exhibiting our product.</p>
                 </header>
 
                 <Row className="gap-y">
