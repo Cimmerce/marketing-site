@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import {
-  Button,
+  Button, Container, Col, Row,
   Form, FormGroup, FormText, Label, Input,
   Modal, ModalHeader, ModalBody, ModalFooter
 } from 'reactstrap'
@@ -63,7 +63,11 @@ class RequestQuote extends Component {
           <input type="text" name="bot-field" />
         </form>
 
-        <Modal isOpen={this.props.isOpen} toggle={this.props.onToggle}>
+        <Modal
+          isOpen={this.props.isOpen}
+          toggle={this.props.onToggle}
+          className={styles.modal}
+        >
           {this.renderCurrentStep()}
         </Modal>
       </div>
@@ -106,32 +110,44 @@ class RequestQuote extends Component {
       <div>
         <ModalHeader toggle={this.props.onToggle}>How would you like to us digitize your products?</ModalHeader>
         <ModalBody>
-          <Form>
-            <DigitizationOption
-              onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'scan')}
-              isSelected={this.isDigitizationOptionSelected('scan')}
-              label='3D scanning'
-              helpText='We handle digitization by coming to you, or having your products shipped to us. Our highest quality option.'
-            />
-            <DigitizationOption
-              onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'cad')}
-              isSelected={this.isDigitizationOptionSelected('cad')}
-              label='3D CAD model based'
-              helpText='Using your CAD, FBX, OBJ files as starting point. For good quality without handling physical products.'
-            />
-            <DigitizationOption
-              onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'image')}
-              isSelected={this.isDigitizationOptionSelected('image')}
-              label='Image based'
-              helpText='Using your CAD, FBX, OBJ files as starting point. For high volume with reasonable quality.'
-            />
-            <DigitizationOption
-              onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'handbuilt')}
-              isSelected={this.isDigitizationOptionSelected('handbuilt')}
-              label='Hand built custom models'
-              helpText='We custom build a 3D model from scratch according to your wishes.'
-            />
-          </Form>
+          <Container>
+            <Row>
+              <Col>
+                <DigitizationOption
+                  onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'scan')}
+                  isSelected={this.isDigitizationOptionSelected('scan')}
+                  label='3D scanning'
+                  helpText='Our highest quality option. We digitize our products in our studio or come to you.'
+                />
+              </Col>
+              <Col>
+                <DigitizationOption
+                  onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'cad')}
+                  isSelected={this.isDigitizationOptionSelected('cad')}
+                  label='3D file based'
+                  helpText='Using your CAD, FBX, OBJ files as starting point.'
+                />
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <DigitizationOption
+                  onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'image')}
+                  isSelected={this.isDigitizationOptionSelected('image')}
+                  label='Image based'
+                  helpText='Using your CAD, FBX, OBJ files as starting point. For high volume with reasonable quality.'
+                />
+              </Col>
+              <Col>
+                <DigitizationOption
+                  onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'handbuilt')}
+                  isSelected={this.isDigitizationOptionSelected('handbuilt')}
+                  label='Hand built custom models'
+                  helpText='We custom build a 3D model from scratch according to your wishes.'
+                />
+              </Col>
+            </Row>
+          </Container>
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={this.gotoStep.bind(this, 'details')}>Continue</Button>{' '}
@@ -156,59 +172,67 @@ class RequestQuote extends Component {
             name="bot-field"
             className="d-none"
           />
-          <FormGroup tag="fieldset">
-            <legend className={styles.formLegend}>Your business</legend>
-            <FormGroup>
-              <Input
-                placeholder="Company name"
-                value={this.state.formFields.companyName}
-                onChange={this.handleFormFieldChange.bind(this, 'companyName')}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Input
-                placeholder="Ecommerce website url"
-                value={this.state.formFields.websiteUrl}
-                type="text"
-                onChange={this.handleFormFieldChange.bind(this, 'websiteUrl')}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Input
-                type='textarea'
-                placeholder="How can we help you?"
-                value={this.state.formFields.comments}
-                onChange={this.handleFormFieldChange.bind(this, 'comments')}
-              />
-            </FormGroup>
-          </FormGroup>
-          <FormGroup tag="fieldset">
-            <legend className={styles.formLegend}>Your contact details</legend>
-            <FormGroup>
-              <Input
-                placeholder="Your name"
-                value={this.state.formFields.contactName}
-                onChange={this.handleFormFieldChange.bind(this, 'contactName')}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Input
-                placeholder="Your email address"
-                value={this.state.formFields.contactEmail}
-                type="email"
-                onChange={this.handleFormFieldChange.bind(this, 'contactEmail')}
-                valid={this.state.validFields.contactEmail}
-              />
-            </FormGroup>
-            <FormGroup>
-              <Input
-                placeholder="Your phone number"
-                value={this.state.formFields.contactPhone}
-                type="phone"
-                onChange={this.handleFormFieldChange.bind(this, 'contactPhone')}
-              />
-            </FormGroup>
-          </FormGroup>
+          <Container>
+            <Row>
+              <div className="col-sm">
+                <FormGroup tag="fieldset">
+                  <legend className={styles.formLegend}>Your business</legend>
+                  <FormGroup>
+                    <Input
+                      placeholder="Company name"
+                      value={this.state.formFields.companyName}
+                      onChange={this.handleFormFieldChange.bind(this, 'companyName')}
+                    />
+                  </FormGroup>
+                  <FormGroup>
+                    <Input
+                      placeholder="Ecommerce website url"
+                      value={this.state.formFields.websiteUrl}
+                      type="text"
+                      onChange={this.handleFormFieldChange.bind(this, 'websiteUrl')}
+                    />
+                  </FormGroup>
+                  <FormGroup>
+                    <Input
+                      type='textarea'
+                      placeholder="How can we help you?"
+                      value={this.state.formFields.comments}
+                      onChange={this.handleFormFieldChange.bind(this, 'comments')}
+                    />
+                  </FormGroup>
+                </FormGroup>
+              </div>
+              <div className="col-sm">
+                <FormGroup tag="fieldset">
+                  <legend className={styles.formLegend}>Your contact details</legend>
+                  <FormGroup>
+                    <Input
+                      placeholder="Your name"
+                      value={this.state.formFields.contactName}
+                      onChange={this.handleFormFieldChange.bind(this, 'contactName')}
+                    />
+                  </FormGroup>
+                  <FormGroup>
+                    <Input
+                      placeholder="Your email address"
+                      value={this.state.formFields.contactEmail}
+                      type="email"
+                      onChange={this.handleFormFieldChange.bind(this, 'contactEmail')}
+                      valid={this.state.validFields.contactEmail}
+                    />
+                  </FormGroup>
+                  <FormGroup>
+                    <Input
+                      placeholder="Your phone number"
+                      value={this.state.formFields.contactPhone}
+                      type="phone"
+                      onChange={this.handleFormFieldChange.bind(this, 'contactPhone')}
+                    />
+                  </FormGroup>
+                </FormGroup>
+              </div>
+            </Row>
+          </Container>
         </ModalBody>
         <ModalFooter>
           <Button color="primary" type="submit" disabled={this.state.isSubmitting}>Finish</Button>{' '}

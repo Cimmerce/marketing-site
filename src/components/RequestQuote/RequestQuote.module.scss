@@ -1,6 +1,28 @@
 @import "../../layouts/bootstrap/functions";
+@import "../../layouts/bootstrap/mixins";
 @import "../../layouts/bootstrap/variables";
+
+// Scale up the modal
+@include media-breakpoint-up(sm) {
+  .modal {
+    max-width: 700px;
+  }
+}
 
 .formLegend {
   font-size: $font-size-sm;
+}
+
+.digiOptionContainer {
+  cursor: pointer;
+  min-height: 14em;
+  margin-bottom: 1em;
+}
+
+.digiOptionSelected {
+  border-color: $success;
+}
+
+.selectButton {
+  width: 10em;
 }

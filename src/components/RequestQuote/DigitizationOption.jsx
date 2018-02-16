@@ -1,8 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import cx from 'classnames'
 import {
-  FormGroup, FormText, Label, Input
+  Card, CardImg, CardText, CardBody, CardTitle, CardFooter,
+  Button
 } from 'reactstrap'
+
+import styles from './RequestQuote.module.scss'
 
 const propTypes = {
   onDigitizationOptionToggled: PropTypes.func.isRequired,
@@ -11,20 +15,28 @@ const propTypes = {
   helpText: PropTypes.string.isRequired
 }
 
-
 const DigitizationOption = props => (
-  <FormGroup check>
-    <Label check>
-      <Input
-        type="checkbox"
-        onChange={props.onDigitizationOptionToggled}
-        checked={props.isSelected}
-      />{` ${props.label}`}
-    </Label>
-    <FormText color="muted">
-      {props.helpText}
-    </FormText>
-  </FormGroup>
+  <Card
+    className={cx({
+      'card-bordered': true,
+      'card-hover-shadow': true,
+      [styles.digiOptionContainer]: true,
+      [styles.digiOptionSelected]: props.isSelected
+    })}
+    onClick={props.onDigitizationOptionToggled}
+  >
+    <CardBody>
+      <CardTitle>{props.label}</CardTitle>
+      <CardText><small>{props.helpText}</small></CardText>
+    </CardBody>
+    <CardFooter className='text-center'>
+      <Button
+        active={props.isSelected}
+        color='success'
+        className={styles.selectButton}
+      >{props.isSelected ? <span className='ti-check'></span> : 'Select'}</Button>
+  </CardFooter>
+</Card>
 )
 
 DigitizationOption.propTypes = propTypes
