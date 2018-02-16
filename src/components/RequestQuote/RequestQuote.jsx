@@ -7,6 +7,9 @@ import {
 } from 'reactstrap'
 
 import DigitizationOption from './DigitizationOption'
+import styles from './RequestQuote.module.scss'
+
+const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
 
 class RequestQuote extends Component {
   static propTypes = {
@@ -20,13 +23,16 @@ class RequestQuote extends Component {
 
     this.state = {
       currentStep: 'intro',
-      selectedDigitizationOptions: [],
-      websiteUrl: '',
-      companyName: '',
-      contactName: '',
-      contactEmail: '',
-      contactPhone: '',
-      comments: '',
+      formFields: {
+        selectedDigitizationOptions: [],
+        websiteUrl: '',
+        companyName: '',
+        contactName: '',
+        contactEmail: '',
+        contactPhone: '',
+        comments: ''
+      },
+      validFields: {},
       isSubmitting: false
     }
   }
@@ -41,20 +47,22 @@ class RequestQuote extends Component {
   render () {
     return (
       <div>
+        {/* This form code is here so Netlify can pick it up */}
         <form name="requestQuote"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           className="d-none"
         >
-          <input type="text" name="bot-field" />
-          <input type="text" name="selectedDigitizationOptions" />
-          <input type="text" name="websiteUrl" />
-          <input type="text" name="companyName" />
           <input type="text" name="contactName" />
           <input type="text" name="contactEmail" />
           <input type="text" name="contactPhone" />
+          <input type="text" name="companyName" />
+          <input type="text" name="websiteUrl" />
+          <input type="text" name="selectedDigitizationOptions" />
           <input type="text" name="comments" />
+          <input type="text" name="bot-field" />
         </form>
+
         <Modal isOpen={this.props.isOpen} toggle={this.props.onToggle}>
           {this.renderCurrentStep()}
         </Modal>
@@ -142,57 +150,64 @@ class RequestQuote extends Component {
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
       >
-        <ModalHeader toggle={this.props.onToggle}>Where do you want to promote your products?</ModalHeader>
+        <ModalHeader toggle={this.props.onToggle}>How can we help you?</ModalHeader>
         <ModalBody>
           <Input
             name="bot-field"
             className="d-none"
           />
-          <FormGroup>
-            <Input
-              placeholder="Ecommerce website url"
-              value={this.state.websiteUrl}
-              type="url"
-              onChange={this.handleFormFieldChange.bind(this, 'websiteUrl')}
-            />
+          <FormGroup tag="fieldset">
+            <legend className={styles.formLegend}>Your business</legend>
+            <FormGroup>
+              <Input
+                placeholder="Company name"
+                value={this.state.formFields.companyName}
+                onChange={this.handleFormFieldChange.bind(this, 'companyName')}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Input
+                placeholder="Ecommerce website url"
+                value={this.state.formFields.websiteUrl}
+                type="text"
+                onChange={this.handleFormFieldChange.bind(this, 'websiteUrl')}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Input
+                type='textarea'
+                placeholder="How can we help you?"
+                value={this.state.formFields.comments}
+                onChange={this.handleFormFieldChange.bind(this, 'comments')}
+              />
+            </FormGroup>
           </FormGroup>
-          <FormGroup>
-            <Input
-              placeholder="Company name"
-              value={this.state.companyName}
-              onChange={this.handleFormFieldChange.bind(this, 'companyName')}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Input
-              placeholder="Your name"
-              value={this.state.contactName}
-              onChange={this.handleFormFieldChange.bind(this, 'contactName')}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Input
-              placeholder="Your email address"
-              value={this.state.contactEmail}
-              type="email"
-              onChange={this.handleFormFieldChange.bind(this, 'contactEmail')}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Input
-              placeholder="Your phone number"
-              value={this.state.contactPhone}
-              type="phone"
-              onChange={this.handleFormFieldChange.bind(this, 'contactPhone')}
-            />
-          </FormGroup>
-          <FormGroup>
-            <Input
-              type='textarea'
-              placeholder="Details, comments, questions?"
-              value={this.state.comments}
-              onChange={this.handleFormFieldChange.bind(this, 'comments')}
-            />
+          <FormGroup tag="fieldset">
+            <legend className={styles.formLegend}>Your contact details</legend>
+            <FormGroup>
+              <Input
+                placeholder="Your name"
+                value={this.state.formFields.contactName}
+                onChange={this.handleFormFieldChange.bind(this, 'contactName')}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Input
+                placeholder="Your email address"
+                value={this.state.formFields.contactEmail}
+                type="email"
+                onChange={this.handleFormFieldChange.bind(this, 'contactEmail')}
+                valid={this.state.validFields.contactEmail}
+              />
+            </FormGroup>
+            <FormGroup>
+              <Input
+                placeholder="Your phone number"
+                value={this.state.formFields.contactPhone}
+                type="phone"
+                onChange={this.handleFormFieldChange.bind(this, 'contactPhone')}
+              />
+            </FormGroup>
           </FormGroup>
         </ModalBody>
         <ModalFooter>
@@ -222,11 +237,12 @@ class RequestQuote extends Component {
   }
 
   isDigitizationOptionSelected (optionValue) {
-    return this.state.selectedDigitizationOptions.indexOf(optionValue) > -1
+    return this.state.formFields.selectedDigitizationOptions.indexOf(optionValue) > -1
   }
 
   onDigitizationOptionToggled (optionValue) {
-    const selectedDigitizationOptions = this.state.selectedDigitizationOptions
+    const formFields = this.state.formFields
+    const selectedDigitizationOptions = formFields.selectedDigitizationOptions
     const index = selectedDigitizationOptions.indexOf(optionValue)
     if(index > -1) {
       selectedDigitizationOptions.splice(index, 1)
@@ -234,31 +250,71 @@ class RequestQuote extends Component {
       selectedDigitizationOptions.push(optionValue)
     }
 
-    this.setState({ selectedDigitizationOptions })
+    formFields.selectedDigitizationOptions = selectedDigitizationOptions
+    this.setState({ formFields })
   }
 
   handleFormFieldChange (fieldName, event) {
-    this.setState({ [fieldName]: event.target.value })
+    const formFields = this.state.formFields
+    formFields[fieldName] = event.target.value
+
+    const validFields = this.state.validFields
+    if(fieldName === 'contactEmail' && typeof(validFields.contactEmail) !== 'undefined') {
+      this.isFormValid()
+    }
+
+    this.setState({ formFields })
   }
 
   handleSubmit (e) {
-    this.setState({ isSubmitting: true })
+    if(this.isFormValid()) {
+      this.setState({ isSubmitting: true })
+      const formFields = this.ensureValidFields()
 
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: this.encode({ "form-name": "requestQuote", ...this.state })
-    })
-    .then(() => {
-      this.setState({ isSubmitting: false })
-      this.gotoStep('submitted')
-    })
-    .catch(error => {
-      this.setState({ isSubmitting: false })
-      console.error(error)
-    })
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: this.encode({ "form-name": "requestQuote", ...formFields })
+      })
+      .then(() => {
+        this.setState({ isSubmitting: false })
+        this.gotoStep('submitted')
+      })
+      .catch(error => {
+        this.setState({ isSubmitting: false })
+        console.error(error)
+      })
+    }
 
     e.preventDefault()
+  }
+
+  isFormValid () {
+    const validFields = this.state.validFields
+
+    const contactEmail = this.state.formFields.contactEmail
+    if(contactEmail === '' || !contactEmail.match(emailRegex)) {
+      validFields.contactEmail = false
+    } else {
+      validFields.contactEmail = true
+    }
+
+    this.setState({ validFields })
+
+    return validFields.contactEmail
+  }
+
+  ensureValidFields () {
+    const formFields = this.state.formFields
+
+    if(
+      formFields.websiteUrl !== '' &&
+      formFields.websiteUrl.indexOf('://') === -1
+    ) {
+      formFields.websiteUrl = `http://${formFields.websiteUrl}`
+    }
+
+    return formFields
   }
 
   encode(data) {
