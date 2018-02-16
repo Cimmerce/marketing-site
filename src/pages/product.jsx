@@ -7,14 +7,13 @@ import {
   Col
 } from 'reactstrap'
 
+import GetStartedButton from '../components/GetStartedButton/GetStartedButton'
 import styles from './index.module.scss'
 
+import digitizationPicSrc from '../assets/images/digitize1.jpg'
+import embedPicSrc from '../assets/images/embedsample.jpg'
 
-import digitizationPicSrc from '../assets/images/digitize1.jpg' 
-import embedPicSrc from '../assets/images/embedsample.jpg' 
-
-
-const FeaturesPage = () => (
+const ProductPage = () => (
   <main className="main-content">
     <section className="section py-100">
 
@@ -108,9 +107,7 @@ const FeaturesPage = () => (
 
         <Row className="gap-y align-items-center mb-90">
           <Col className="col-12 align-self-center text-center hidden-sm-down">
-            <button className="btn btn-small btn-primary">
-              <a className={styles.getStarted} href="#">Get started</a>
-            </button>
+            <GetStartedButton />
           </Col>
         </Row>
 
@@ -165,4 +162,4 @@ const FeaturesPage = () => (
   </main>
 )
 
-export default FeaturesPage
+export default ProductPage

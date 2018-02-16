@@ -8,6 +8,7 @@ import {
 } from 'reactstrap'
 
 import ModelViewer from '../components/ModelViewer'
+import GetStartedButton from '../components/GetStartedButton/GetStartedButton'
 import videoPosterSrc from '../assets/video/frontpageloop.jpg'
 import videoMp4Src from '../assets/video/frontpageloop.mp4'
 import videoWebMSrc from '../assets/video/frontpageloop.webm'
@@ -28,9 +29,7 @@ const IndexPage = () => (
             <h1 className="display-4 fw-600 hidden-sm-down">Augmented Reality for lifestyle ecommerce</h1>
             <h2 className="fw-300 hidden-md-up">Instant web and mobile AR for your business.</h2>
             <br />
-            <button className="btn btn-small btn-primary">
-              <a className={styles.getStarted} href="#">Get started</a>
-            </button>
+            <GetStartedButton />
             <br />
             <br />
             <p className="fs-12"><span className="opacity-60 mr-8">Or</span>

@@ -60,11 +60,12 @@ class Topbar extends Component {
             <div className="topbar-right">
               <Nav className="topbar-nav">
                 <NavItem><NavLink tag={Link} to='/'>Home</NavLink></NavItem>
-                <NavItem><NavLink tag={Link} to='/features'>Product</NavLink></NavItem>
+                <NavItem><NavLink tag={Link} to='/product'>Product</NavLink></NavItem>
                 <NavItem><NavLink tag={Link} to='/pricing'>Pricing</NavLink></NavItem>
                 <NavItem><NavLink tag={Link} to='/cases'>Cases</NavLink></NavItem>
                 <NavItem>
                   <Button
+                    id="getStartedButton"
                     color='primary'
                     className={styles.getStartedButton}
                     onClick={this.handleRequestQuoteModalToggled}
