@@ -2,7 +2,7 @@
 .form-control {
   border-color: $color-divider-dark;
   border-radius: 2px;
-  color: $color-text-secondary;
+  color: $color-dark;
   padding: 5px 12px;
   font-size: 14px;
   line-height: inherit;
@@ -29,7 +29,7 @@
   @include placeholder-color($color-text-placeholder);
 
   option {
-    font-weight: 300;
+    font-weight: 400;
   }
 
 }
@@ -127,7 +127,7 @@ textarea.form-control-sm {
   border: none;
   color: $color-text-placeholder;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
   border-radius: 2px;
 
   .custom-control {
