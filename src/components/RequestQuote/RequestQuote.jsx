@@ -113,7 +113,7 @@ class RequestQuote extends Component {
         <ModalBody>
           <Container>
             <Row>
-              <Col>
+              <Col className="d-flex align-items-stretch">
                 <DigitizationOption
                   onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'scan')}
                   isSelected={this.isDigitizationOptionSelected('scan')}
