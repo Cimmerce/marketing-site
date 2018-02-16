@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import cx from 'classnames'
 import Link from 'gatsby-link'
 import {
   Button,
@@ -14,6 +16,10 @@ import styles from './Topbar.module.scss'
 import RequestQuote from '../RequestQuote/RequestQuote';
 
 class Topbar extends Component {
+  static propTypes = {
+    location: PropTypes.object.isRequired
+  }
+
   constructor (props) {
     super(props)
     this.bindMethods()
@@ -39,9 +45,14 @@ class Topbar extends Component {
   }
 
   render () {
+    const navClasses = cx([
+      'topbar', 'topbar-expand-md', 'topbar-sticky',
+      { 'topbar-inverse': this.props.location.pathname === '/' }
+    ])
+
     return (
       <div>
-        <nav className="topbar topbar-inverse topbar-expand-md topbar-sticky">
+        <nav className={navClasses}>
           {
             this.state.isTopbarRevealed &&
               <div className="topbar-backdrop" onClick={this.handleBackdropClick}></div>
