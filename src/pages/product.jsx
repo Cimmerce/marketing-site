@@ -8,10 +8,13 @@ import {
 } from 'reactstrap'
 
 import GetStartedButton from '../components/GetStartedButton/GetStartedButton'
-import styles from './index.module.scss'
+import styles from './product.module.scss'
 
 import digitizationPicSrc from '../assets/images/digitize1.jpg'
 import embedPicSrc from '../assets/images/embedsample.jpg'
+import fashionPicSrc from '../assets/images/lvbag.png'
+import artPicSrc from '../assets/images/art.png'
+import interiorPicSrc from '../assets/images/chair.png'
 
 const ProductPage = () => (
   <main className="main-content">
@@ -120,7 +123,6 @@ const ProductPage = () => (
           <h2>We work with all types of business</h2>
           <hr />
           <p className="lead"> Here are just a few examples of products and companies we've worked with in the past</p>
-          <p> (For images, we can use the icons from the Cimmerse deck) </p>
         </header>
 
         <Row className="row gap-y text-center">
@@ -130,7 +132,7 @@ const ProductPage = () => (
               <p>Shoes, accessories, jewlery, clothing</p>
             </div>
             <div className="px-20 mt-auto">
-              <img className="shadow-4 opacity-80" src="assets/img/header-color.jpg" alt="..." data-aos="slide-up" data-aos-delay="300" />
+              <img className={cx('shadow-4 opacity-80"', styles.imageHeight)} src={fashionPicSrc} alt="..." data-aos="slide-up" data-aos-delay="300" />
             </div>
           </Col>
 
@@ -140,7 +142,7 @@ const ProductPage = () => (
               <p>Furniture, lamps, home decorations</p>
             </div>
             <div className="mt-auto">
-              <img className="shadow-6" src="assets/img/header-gradient.jpg" alt="..." data-aos="slide-up" />
+              <img className={cx('shadow-4 opacity-80"', styles.imageHeight)} src={interiorPicSrc} alt="..." data-aos="slide-up" />
             </div>
           </Col>
 
@@ -150,7 +152,7 @@ const ProductPage = () => (
               <p>Galleries, auction houses, museums</p>
             </div>
             <div className="px-20 mt-auto">
-              <img className="shadow-4 opacity-80" src="assets/img/header-typing.jpg" alt="..." data-aos="slide-up" data-aos-delay="600" />
+              <img className={cx('shadow-4 opacity-80"', styles.imageHeight)} src={artPicSrc} alt="..." data-aos="slide-up" data-aos-delay="600" />
             </div>
           </Col>
 
