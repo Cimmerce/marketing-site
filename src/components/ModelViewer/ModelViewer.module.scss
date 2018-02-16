@@ -23,6 +23,14 @@
   display: block;
 }
 
+.cardPreview {
+  cursor: pointer;
+}
+
+.cardPreviewImage {
+  height: 4em;
+}
+
 @include media-down(xs) {
   .container {
     min-height: 300px;

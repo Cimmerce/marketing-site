@@ -53,11 +53,15 @@ const IndexPage = () => (
             <hr />
           </header>
 
+          <ModelViewer modelIds={[
+            '11130d3a-be12-480c-bb0e-29b0558a9197', // Gold chair
+            '9b285fc4-b892-421d-9856-c90d2016d425', // LV handbag
+            '0c0b7508-02d6-4ec0-af7b-404faad43be8', // Muuce
+            '4bbe458d-c287-43b5-9c78-4d36956ee7b1' // Sneaker
+          ]} />
+          {/*<img src="http://thetheme.io/thesaas/assets/img/feature-tablet.png" alt="..." data-aos="fade-up" data-aos-duration="2000" /> */}
+
           <Row className="gap-y">
-            <Col className="col-12 offset-md-2 col-md-8 mb-30">
-              <ModelViewer modelId="11130d3a-be12-480c-bb0e-29b0558a9197" />
-              {/*<img src="http://thetheme.io/thesaas/assets/img/feature-tablet.png" alt="..." data-aos="fade-up" data-aos-duration="2000" /> */}
-            </Col>
             <Col className="col-12 col-md-6 col-xl-3">
               <div className="flexbox gap-items-4">
                 <div>

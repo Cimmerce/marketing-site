@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import {
-  Card, CardImg, CardText, CardBody, CardTitle, CardFooter,
+  Card, CardText, CardBody, CardTitle, CardFooter,
   Button
 } from 'reactstrap'
 
