@@ -41,7 +41,12 @@ class RequestQuote extends Component {
   render () {
     return (
       <div>
-        <form name="requestQuote" netlify="" netlify-honeypot="bot-field" className="d-none">
+        <form name="requestQuote"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          className="d-none"
+        >
+          <input type="text" name="bot-field" />
           <input type="text" name="selectedDigitizationOptions" />
           <input type="text" name="websiteUrl" />
           <input type="text" name="companyName" />
