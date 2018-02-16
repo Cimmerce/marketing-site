@@ -11,7 +11,7 @@ import {
 const NotFoundPage = () => (
   <main className="main-content">
     <section className="section py-100">
-      <div className="container">
+      <Container className="">
         <header className="section-header">
           <small>Oops</small>
           <h2>Page Not Found!</h2>
@@ -22,7 +22,7 @@ const NotFoundPage = () => (
         <br />
         <p className="text-center"><a className="btn btn-primary" href="index.html">Return home</a></p>
 
-      </div>
+      </Container>
     </section>
 
 
