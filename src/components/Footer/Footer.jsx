@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'gatsby-link'
+import cx from 'classnames'
 import {
   Col,
   Container,
@@ -10,6 +11,7 @@ import {
 } from 'reactstrap'
 
 import logoSrc from '../../assets/cimmerse_logo.svg'
+import styles from './footer.module.scss'
 
 const Footer = () => (
   <footer className="site-footer">
@@ -21,24 +23,19 @@ const Footer = () => (
           </p>
         </Col>
 
-        <Col className="col-12 col-lg-6">
+        <Col className="col-12 col-lg-8">
           <Nav className="nav-primary nav-hero">
             <NavItem><NavLink tag={Link} to='/contact'>Contact</NavLink></NavItem>
             <NavItem><NavLink tag={Link} to='/documentation'>Documentation</NavLink></NavItem>
             <NavItem><NavLink tag={Link} to='/about'>About</NavLink></NavItem>
             <NavItem><NavLink tag={Link} to='/privacy' className='hidden-sm-down'>Privacy policy</NavLink></NavItem>
             <NavItem><NavLink tag={Link} to='/terms' className='hidden-sm-down'>Terms of use</NavLink></NavItem>
+            <a className="social-twitter" href="https://twitter.com/cimmerse_com" target="blank">
+              <i className={cx('ti ti-twitter', styles.twitterIcon)}></i>
+            </a>
           </Nav>
         </Col>
 
-        <div className="col-12 col-lg-3">
-          <div className="social text-center text-lg-right">
-            <a className="social-facebook" href="https://www.facebook.com/thethemeio"><i className="fa fa-facebook"></i></a>
-            <a className="social-twitter" href="https://twitter.com/thethemeio"><i className="fa fa-twitter"></i></a>
-            <a className="social-instagram" href="https://www.instagram.com/thethemeio/"><i className="fa fa-instagram"></i></a>
-            <a className="social-dribbble" href="https://dribbble.com/thethemeio"><i className="fa fa-dribbble"></i></a>
-          </div>
-        </div>
       </Row>
     </Container>
   </footer>
