@@ -114,46 +114,6 @@ const IndexPage = () => (
           </Row>
         </Container>
       </section>
-
-      <section className="section bg-gray">
-        <Container className="">
-
-          <header className="section-header">
-            <small>In The News</small>
-            <h2>Press Coverage</h2>
-            <hr />
-            <p className="lead">Read all the news, reports and stories that published about our startup.</p>
-          </header>
-
-          <Row className="gap-y">
-
-            <Col className="col-12 col-lg-6">
-              <a href="https://www.business.dk/vaekst/her-er-de-15-der-slap-gennem-elevator-testen-i-berlingske-business-boost" className="card card-bordered card-hover-shadow text-center">
-                <div className="card-block">
-                  <br />
-                  <p><img src="https://imgur.com/O2bBM12" /></p>
-                  <br />
-                  <h4 className="card-title">"B2B platform for web-based solutions in 3D, Virtual Reality and Augmented Reality"</h4>
-                  <small>November 2017</small>
-                </div>
-              </a>
-            </Col>
-
-            <Col className="col-12 col-lg-6">
-              <a href="http://cphpost.dk/news/goggle-me-up-scotty-this-is-the-final-frontier.html" className="card card-bordered card-hover-shadow text-center">
-                <div className="card-block">
-                  <br />
-                  <p><img src="https://imgur.com/O2bBM12" /></p>
-                  <br />
-                  <h4 className="card-title">"The platform aims to make high-resolution, interactive models of physical objects available through a web browser, both on mobile as well as PC"</h4>
-                  <small>July 2017</small>
-                </div>
-              </a>
-            </Col>
-
-          </Row>
-        </Container>
-      </section>
     </main>
   </div>
 )
