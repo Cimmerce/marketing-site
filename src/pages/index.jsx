@@ -6,6 +6,9 @@ import {
   Row,
   Col
 } from 'reactstrap'
+import {
+  Element, Link as ScrollLink
+} from 'react-scroll'
 
 import ModelViewer from '../components/ModelViewer'
 import GetStartedButton from '../components/GetStartedButton/GetStartedButton'
@@ -33,11 +36,25 @@ const IndexPage = () => (
             <br />
             <br />
             <p className="fs-12"><span className="opacity-60 mr-8">Or</span>
-              <a className="text-white mark-border" href="#">Learn More</a>
+              <ScrollLink
+                href="#mainContent"
+                to="mainContent"
+                className="text-white mark-border"
+                smooth={true} duration={500}
+              >
+                Learn More
+              </ScrollLink>
             </p>
           </Col>
           <div className="col-12 align-self-end text-center pb-50">
-            <a className="scroll-down-1 scroll-down-inverse" href="#" data-scrollto="section-intro"><span></span></a>
+            <ScrollLink
+              href="#mainContent"
+              to="mainContent"
+              className="scroll-down-1 scroll-down-inverse"
+              smooth={true} duration={500}
+            >
+              <span></span>
+            </ScrollLink>
           </div>
 
         </Row>
@@ -45,7 +62,7 @@ const IndexPage = () => (
     </header>
 
     <main className="main-content">
-
+    <Element name="mainContent"></Element>
       <section className="section">
         <Container className="">
           <header className="section-header">
