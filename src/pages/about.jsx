@@ -119,7 +119,7 @@ const AboutPage = () => (
                         <small>Head of Sales</small>
                         <br />
                         <div className="social social-boxed social-rounded social-gray">
-                            <a className="social-linkedin" href="" target="blank"><i className="ti ti-linkedin"></i></a>
+                            <a className="social-linkedin" href="https://www.linkedin.com/in/henri-g-lee-6a36b5b5/" target="blank"><i className="ti ti-linkedin"></i></a>
                         </div>
                     </Col>
                 </Row>
