@@ -1,11 +1,14 @@
 @import "../../layouts/bootstrap/functions";
 @import "../../layouts/bootstrap/mixins";
 @import "../../layouts/bootstrap/variables";
+@import "../../layouts/theme/variables";
+@import "../../layouts/theme/mixins";
+@import "../../layouts/theme/utility/color";
 
 // Scale up the modal
 @include media-breakpoint-up(sm) {
   .modal {
-    max-width: 700px;
+    max-width: 700px !important;
   }
 }
 
@@ -15,7 +18,7 @@
 
 .digiOptionContainer {
   cursor: pointer;
-  min-height: 14em;
+  min-height: 12em;
   margin-bottom: 1em;
 }
 
@@ -25,4 +28,9 @@
 
 .selectButton {
   width: 10em;
+}
+
+.helpText {
+  font-size: 80%;
+  color: $color-text;
 }

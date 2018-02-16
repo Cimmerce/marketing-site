@@ -99,7 +99,7 @@ class RequestQuote extends Component {
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={this.gotoStep.bind(this, 'digitization')}>OK, let's go</Button>{' '}
-          <Button color="secondary" onClick={this.props.onToggle}>Later</Button>
+          <Button color="secondary" onClick={this.props.onToggle}>Learn more</Button>
         </ModalFooter>
       </div>
     )
@@ -116,16 +116,16 @@ class RequestQuote extends Component {
                 <DigitizationOption
                   onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'scan')}
                   isSelected={this.isDigitizationOptionSelected('scan')}
-                  label='3D scanning'
-                  helpText='Our highest quality option. We digitize our products in our studio or come to you.'
+                  label='High quality 3D Scanning'
+                  helpText='Our highest quality option. We digitize your products in our studio or come to you.'
                 />
               </Col>
               <Col>
                 <DigitizationOption
                   onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'cad')}
                   isSelected={this.isDigitizationOptionSelected('cad')}
-                  label='3D file based'
-                  helpText='Using your CAD, FBX, OBJ files as starting point.'
+                  label='Your 3D files'
+                  helpText='We process your existing 3D models. CAD, FBX, DWG, OBJ and many more supported.'
                 />
               </Col>
             </Row>
@@ -134,16 +134,16 @@ class RequestQuote extends Component {
                 <DigitizationOption
                   onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'image')}
                   isSelected={this.isDigitizationOptionSelected('image')}
-                  label='Image based'
-                  helpText='Using your CAD, FBX, OBJ files as starting point. For high volume with reasonable quality.'
+                  label='3D from 2D images'
+                  helpText='Send us your product photos and we convert them to 3D.'
                 />
               </Col>
               <Col>
                 <DigitizationOption
                   onDigitizationOptionToggled={this.onDigitizationOptionToggled.bind(this, 'handbuilt')}
                   isSelected={this.isDigitizationOptionSelected('handbuilt')}
-                  label='Hand built custom models'
-                  helpText='We custom build a 3D model from scratch according to your wishes.'
+                  label='Custom built models'
+                  helpText='Our 3D artists help design and create high quality models.'
                 />
               </Col>
             </Row>

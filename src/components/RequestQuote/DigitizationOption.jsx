@@ -27,7 +27,7 @@ const DigitizationOption = props => (
   >
     <CardBody>
       <CardTitle>{props.label}</CardTitle>
-      <CardText><small>{props.helpText}</small></CardText>
+      <CardText className={styles.helpText}>{props.helpText}</CardText>
     </CardBody>
     <CardFooter className='text-center'>
       <Button
