@@ -26,7 +26,7 @@ const Footer = () => (
         <Col className="col-12 col-lg-8">
           <Nav className="nav-primary nav-hero">
             <NavItem><NavLink tag={Link} to='/contact'>Contact</NavLink></NavItem>
-            <NavItem><a href="https://embed.cimmerse.com/v2/integration_guide.pdf" target="blank"> <NavLink>Documentation</NavLink></a></NavItem>
+            <NavItem><NavLink href="https://embed.cimmerse.com/v2/integration_guide.pdf" target="blank">Documentation</NavLink></NavItem>
             <NavItem><NavLink tag={Link} to='/about'>About</NavLink></NavItem>
             <NavItem><NavLink tag={Link} to='/privacy' className='hidden-sm-down'>Privacy policy</NavLink></NavItem>
             <NavItem><NavLink tag={Link} to='/terms' className='hidden-sm-down'>Terms of use</NavLink></NavItem>
