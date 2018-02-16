@@ -36,14 +36,13 @@ const AboutPage = () => (
             </Container>
         </section>
 
-        <section className="section py-50">
+        <section className={cx('section py-50', styles.gradientBackground)}>
             <Container className="">
 
                 <Row className="">
 
-                    <Col className="col-12 col-lg-6 pl-50 pr-80">
-                        <h2>Our Vision</h2>
-                        <p> (We need an image to the right) </p>
+                    <Col className="col-12 col-lg-12 pl-50 pr-80" >
+                        <h2 className="text-center">Our Vision</h2>
                         <p className="lead">
                             The Web is one of the most significant inventions to modern humans and ushered in the Information Age. Since it's inception the user interface has been 2D, until now.
                         <br /> <br />
@@ -54,10 +53,6 @@ const AboutPage = () => (
                         <br /> <br />
                             We are futurist and visionaries realiging this amazing opportunity today! We look forward to finding likeminded partners to add to our journey in becoming the next web leader.
                         </p>
-                    </Col>
-
-                    <Col className="col-lg-6 hidden-md-down align-self-center">
-                        <img className="shadow-3" src="assets/img/about-us.jpg" alt="..." data-aos="fade-left" data-aos-duration="1500" />
                     </Col>
 
                 </Row>

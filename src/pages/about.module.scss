@@ -8,3 +8,10 @@
     margin-bottom: 2rem;
     height: 15rem
 }
+
+.gradientBackground {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at center, #fff 0%, #505e72 100%);
+    margin: 0;
+    overflow-x: hidden;
+}
