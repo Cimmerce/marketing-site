@@ -2,9 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import cx from 'classnames'
 import {
-  Container,
-  Row,
-  Col
+  Container, Row, Col,
+  Card, CardText, CardBody, CardTitle,
 } from 'reactstrap'
 import {
   Element, Link as ScrollLink
@@ -62,11 +61,12 @@ const IndexPage = () => (
     </header>
 
     <main className="main-content">
-    <Element name="mainContent"></Element>
+      <Element name="mainContent"></Element>
+
       <section className="section">
-        <Container className="">
+        <Container>
           <header className="section-header">
-            <h2>How it Works</h2>
+            <h2>Try it for yourself</h2>
             <hr />
           </header>
 
@@ -76,59 +76,64 @@ const IndexPage = () => (
             '0c0b7508-02d6-4ec0-af7b-404faad43be8', // Muuce
             '4bbe458d-c287-43b5-9c78-4d36956ee7b1' // Sneaker
           ]} />
-          {/*<img src="http://thetheme.io/thesaas/assets/img/feature-tablet.png" alt="..." data-aos="fade-up" data-aos-duration="2000" /> */}
+        </Container>
+      </section>
+
+      <section className="section bg-gray">
+        <Container>
+          <header className="section-header">
+            <h2>How it Works</h2>
+            <hr />
+          </header>
 
           <Row className="gap-y">
-            <Col className="col-12 col-md-6 col-xl-3">
-              <div className="flexbox gap-items-4">
-                <div>
-                  <i className="fa fa-tv fs-25 pt-4 text-secondary"></i>
-                </div>
+            <Col className="col-12">
+            <blockquote class="blockquote">
+              <p className="lead">
+                Cimmerse tech seamlessly integrates your 2D product photo with a highly realistic interactive 3D model. With any mobile device and a tap of an icon, customers can place your products in the same room with them and experience real-time Augmented Reality.
+              </p>
+              <p>
+                Shopping online has never been more convenient and detailed to actually see products instantly from a website anywhere and all the time!
+              </p>
+              </blockquote>
+            </Col>
+          </Row>
 
-                <div>
-                  <h5>Photorealistic 3D</h5>
-                  <p>We help you digitize your products into highly realistic, true 3D models.</p>
-                </div>
-              </div>
+          <Row className="gap-y">
+            <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
+              <Card className="gap-items-4 card-bordered card-shadowed">
+                <CardBody>
+                  <CardTitle>Photorealistic 3D</CardTitle>
+                  <CardText>We help you digitize your products into highly realistic, true 3D models.</CardText>
+                </CardBody>
+              </Card>
             </Col>
 
-            <Col className="col-12 col-md-6 col-xl-3">
-              <div className="flexbox gap-items-4">
-                <div>
-                  <i className="fa fa-cubes fs-25 pt-4 text-secondary"></i>
-                </div>
-
-                <div>
-                  <h5>Perfect for mobile</h5>
-                  <p>Cimmerse is designed and built for mobile use. Mobile phones, mobile AR, mobile VR. We love mobile!</p>
-                </div>
-              </div>
+            <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
+              <Card className="gap-items-4 card-bordered card-shadowed">
+                <CardBody>
+                  <CardTitle>Perfect for mobile</CardTitle>
+                  <CardText>Cimmerse is designed and built for mobile use. Mobile phones, mobile AR, mobile VR. We love mobile!</CardText>
+                </CardBody>
+              </Card>
             </Col>
 
-            <Col className="col-12 col-md-6 col-xl-3">
-              <div className="flexbox gap-items-4">
-                <div>
-                  <i className="fa fa-wrench fs-25 pt-4 text-secondary"></i>
-                </div>
-
-                <div>
-                  <h5>3D on any device</h5>
-                  <p>We provide the platform that lets your customers see your products in 3D on any device with a web browser</p>
-                </div>
-              </div>
+            <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
+              <Card className="gap-items-4 card-bordered card-shadowed">
+                <CardBody>
+                  <CardTitle>3D on any device</CardTitle>
+                  <CardText>We provide the platform that lets your customers see your products in 3D on any device with a web browser</CardText>
+                </CardBody>
+              </Card>
             </Col>
 
-            <Col className="col-12 col-md-6 col-xl-3">
-              <div className="flexbox gap-items-4">
-                <div>
-                  <i className="fa fa-code fs-25 pt-4 text-secondary"></i>
-                </div>
-
-                <div>
-                  <h5>AR & VR support</h5>
-                  <p>Our platform can give your customers a brand new and completely immersive experience exploring your products in virtual reality.</p>
-                </div>
-              </div>
+            <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
+              <Card className="gap-items-4 card-bordered card-shadowed">
+                <CardBody>
+                  <CardTitle>AR & VR support</CardTitle>
+                  <CardText>Our platform can give your customers a brand new and completely immersive experience exploring your products in virtual reality.</CardText>
+                </CardBody>
+              </Card>
             </Col>
 
           </Row>
