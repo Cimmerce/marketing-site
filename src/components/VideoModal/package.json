@@ -1,0 +1,6 @@
+{
+  "name": "VideoModal",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./VideoModal.jsx"
+}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import cx from 'classnames'
 import {
@@ -17,132 +17,166 @@ import videoMp4Src from '../assets/video/frontpageloop.mp4'
 import videoWebMSrc from '../assets/video/frontpageloop.webm'
 import styles from './index.module.scss'
 import './index.scss'
+import VideoModal from '../components/VideoModal/VideoModal';
 
-const IndexPage = () => (
-  <div>
-    <header className="header header-inverse h-fullscreen p-0 overflow-hidden" data-overlay="4">
-      <video className="bg-video" poster={videoPosterSrc} autoPlay loop muted>
-        <source src={videoMp4Src} type="video/mp4" />
-        <source src={videoWebMSrc} type="video/webm" />
-      </video>
+class IndexPage extends Component {
+  constructor (props) {
+    super(props)
+    this.bindMethods()
 
-      <Container className={cx('text-center', styles.test)}>
+    this.state = {
+      is1MinuteVideoPlaying: false
+    }
+  }
 
-        <Row className="h-full">
-          <Col className="col-12 col-lg-8 offset-lg-2 align-self-center pt-150">
-            <h1 className="display-4 fw-600 hidden-sm-down">Augmented Reality for lifestyle ecommerce</h1>
-            <h2 className="fw-300 hidden-md-up">Instant web and mobile AR for your business.</h2>
-            <br />
-            <GetStartedButton />
-            <br />
-            <br />
-            <p className="fs-12"><span className="opacity-60 mr-8">Or</span>
-              <ScrollLink
-                href="#mainContent"
-                to="mainContent"
-                className="text-white mark-border"
-                smooth={true} duration={500}
-              >
-                Learn More
-              </ScrollLink>
-            </p>
-          </Col>
-          <div className="col-12 align-self-end text-center pb-50">
-            <ScrollLink
-              href="#mainContent"
-              to="mainContent"
-              className="scroll-down-1 scroll-down-inverse"
-              smooth={true} duration={500}
-            >
-              <span></span>
-            </ScrollLink>
-          </div>
+  bindMethods () {
+    this.handle1MinuteVideoModalToggled = this.handle1MinuteVideoModalToggled.bind(this)
+  }
 
-        </Row>
-      </Container>
-    </header>
+  render() {
+    return (
+      <div>
+        <header className="header header-inverse h-fullscreen p-0 overflow-hidden" data-overlay="4">
+          <video className="bg-video" poster={videoPosterSrc} autoPlay loop muted>
+            <source src={videoMp4Src} type="video/mp4" />
+            <source src={videoWebMSrc} type="video/webm" />
+          </video>
 
-    <main className="main-content">
-      <Element name="mainContent"></Element>
+          <Container className={cx('text-center', styles.test)}>
 
-      <section className="section">
-        <Container>
-          <header className="section-header">
-            <h2>Try it for yourself</h2>
-            <hr />
-          </header>
+            <Row className="h-full">
+              <Col className="col-12 col-lg-8 offset-lg-2 align-self-center pt-150">
+                <h1 className="display-4 fw-600 hidden-sm-down">Augmented Reality for lifestyle ecommerce</h1>
+                <h2 className="fw-300 hidden-md-up">Instant web and mobile AR for your business.</h2>
+                <br />
+                <GetStartedButton />
+                <br />
+                <br />
+                <p className="fs-12"><span className="opacity-60 mr-8">Or</span>
+                  <ScrollLink
+                    href="#mainContent"
+                    to="mainContent"
+                    className="text-white mark-border"
+                    smooth={true} duration={500}
+                  >
+                    Learn More
+                  </ScrollLink>
+                </p>
+              </Col>
+              <div className="col-12 align-self-end text-center pb-50">
+                <ScrollLink
+                  href="#mainContent"
+                  to="mainContent"
+                  className="scroll-down-1 scroll-down-inverse"
+                  smooth={true} duration={500}
+                >
+                  <span></span>
+                </ScrollLink>
+              </div>
 
-          <ModelViewer modelIds={[
-            '11130d3a-be12-480c-bb0e-29b0558a9197', // Gold chair
-            '9b285fc4-b892-421d-9856-c90d2016d425', // LV handbag
-            '0c0b7508-02d6-4ec0-af7b-404faad43be8', // Muuce
-            '4bbe458d-c287-43b5-9c78-4d36956ee7b1' // Sneaker
-          ]} />
-        </Container>
-      </section>
+            </Row>
+          </Container>
+        </header>
 
-      <section className="section bg-gray">
-        <Container>
-          <header className="section-header">
-            <h2>How it Works</h2>
-            <hr />
-          </header>
+        <main className="main-content">
+          <Element name="mainContent"></Element>
 
-          <Row className="gap-y">
-            <Col className="col-12">
-            <blockquote class="blockquote">
-              <p className="lead">
-                Cimmerse tech seamlessly integrates your 2D product photo with a highly realistic interactive 3D model. With any mobile device and a tap of an icon, customers can place your products in the same room with them and experience real-time Augmented Reality.
-              </p>
-              <p>
-                Shopping online has never been more convenient and detailed to actually see products instantly from a website anywhere and all the time!
-              </p>
-              </blockquote>
-            </Col>
-          </Row>
+          <section className="section">
+            <Container>
+              <header className="section-header">
+                <h2>Try it for yourself</h2>
+                <hr />
+              </header>
 
-          <Row className="gap-y">
-            <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
-              <Card className="gap-items-4 card-bordered card-shadowed">
-                <CardBody>
-                  <CardTitle>Photorealistic 3D</CardTitle>
-                  <CardText>We help you digitize your products into highly realistic, true 3D models.</CardText>
-                </CardBody>
-              </Card>
-            </Col>
+              <ModelViewer modelIds={[
+                '11130d3a-be12-480c-bb0e-29b0558a9197', // Gold chair
+                '9b285fc4-b892-421d-9856-c90d2016d425', // LV handbag
+                '0c0b7508-02d6-4ec0-af7b-404faad43be8', // Muuce
+                '4bbe458d-c287-43b5-9c78-4d36956ee7b1' // Sneaker
+              ]} />
+            </Container>
+          </section>
 
-            <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
-              <Card className="gap-items-4 card-bordered card-shadowed">
-                <CardBody>
-                  <CardTitle>Perfect for mobile</CardTitle>
-                  <CardText>Cimmerse is designed and built for mobile use. Mobile phones, mobile AR, mobile VR. We love mobile!</CardText>
-                </CardBody>
-              </Card>
-            </Col>
+          <section className="section bg-gray">
+            <Container>
+              <header className="section-header">
+                <h2>How it Works</h2>
+                <hr />
+                <Button
+                  size="lg" className="btn-circular" color="primary"
+                  onClick={this.handle1MinuteVideoModalToggled}
+                >
+                  &nbsp;
+                  <i className="ti-control-play"></i>
+                </Button>
+                <p><small>Cimmerse in 1 minute</small></p>
+                <VideoModal
+                  isOpen={this.state.is1MinuteVideoPlaying}
+                  onToggle={this.handle1MinuteVideoModalToggled}
+                />
+              </header>
 
-            <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
-              <Card className="gap-items-4 card-bordered card-shadowed">
-                <CardBody>
-                  <CardTitle>3D on any device</CardTitle>
-                  <CardText>We provide the platform that lets your customers see your products in 3D on any device with a web browser</CardText>
-                </CardBody>
-              </Card>
-            </Col>
+              <Row className="gap-y">
+                <Col className="col-12">
+                  <blockquote className="blockquote">
+                    <p className="lead">
+                      Cimmerse tech seamlessly integrates your 2D product photo with a highly realistic interactive 3D model. With any mobile device and a tap of an icon, customers can place your products in the same room with them and experience real-time Augmented Reality.
+                  </p>
+                    <p>
+                      Shopping online has never been more convenient and detailed to actually see products instantly from a website anywhere and all the time!
+                  </p>
+                  </blockquote>
+                </Col>
+              </Row>
 
-            <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
-              <Card className="gap-items-4 card-bordered card-shadowed">
-                <CardBody>
-                  <CardTitle>AR & VR support</CardTitle>
-                  <CardText>Our platform can give your customers a brand new and completely immersive experience exploring your products in virtual reality.</CardText>
-                </CardBody>
-              </Card>
-            </Col>
+              <Row className="gap-y">
+                <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
+                  <Card className="gap-items-4 card-bordered card-shadowed">
+                    <CardBody>
+                      <CardTitle>Photorealistic 3D</CardTitle>
+                      <CardText>We help you digitize your products into highly realistic, true 3D models.</CardText>
+                    </CardBody>
+                  </Card>
+                </Col>
 
-          </Row>
-        </Container>
-      </section>
-    </main>
-  </div>
-)
+                <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
+                  <Card className="gap-items-4 card-bordered card-shadowed">
+                    <CardBody>
+                      <CardTitle>Perfect for mobile</CardTitle>
+                      <CardText>Cimmerse is designed and built for mobile use. Mobile phones, mobile AR, mobile VR. We love mobile!</CardText>
+                    </CardBody>
+                  </Card>
+                </Col>
+
+                <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
+                  <Card className="gap-items-4 card-bordered card-shadowed">
+                    <CardBody>
+                      <CardTitle>3D on any device</CardTitle>
+                      <CardText>We provide the platform that lets your customers see your products in 3D on any device with a web browser</CardText>
+                    </CardBody>
+                  </Card>
+                </Col>
+
+                <Col className="col-12 col-md-6 col-xl-3 d-flex align-items-stretch">
+                  <Card className="gap-items-4 card-bordered card-shadowed">
+                    <CardBody>
+                      <CardTitle>AR & VR support</CardTitle>
+                      <CardText>Our platform can give your customers a brand new and completely immersive experience exploring your products in virtual reality.</CardText>
+                    </CardBody>
+                  </Card>
+                </Col>
+
+              </Row>
+            </Container>
+          </section>
+        </main>
+      </div>
+    )
+  }
+
+  handle1MinuteVideoModalToggled () {
+    this.setState({ is1MinuteVideoPlaying: !this.state.is1MinuteVideoPlaying })
+  }
+}
 
 export default IndexPage
