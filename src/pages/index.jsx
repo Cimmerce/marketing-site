@@ -20,7 +20,7 @@ import './index.scss'
 import VideoModal from '../components/VideoModal/VideoModal';
 
 class IndexPage extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.bindMethods()
 
@@ -29,7 +29,7 @@ class IndexPage extends Component {
     }
   }
 
-  bindMethods () {
+  bindMethods() {
     this.handle1MinuteVideoModalToggled = this.handle1MinuteVideoModalToggled.bind(this)
   }
 
@@ -167,6 +167,22 @@ class IndexPage extends Component {
                 </Col>
 
               </Row>
+
+              <Row className="gap-y">
+                <Col className="col-12 col-md-12">
+                  <p className="text-center py-3">
+                    <GetStartedButton />
+                    <span className="ml-2 mr-2">or</span>
+                    <Link
+                      to="/product"
+                      className="mark-border"
+                    >
+                      Learn More
+                    </Link>
+                  </p>
+                </Col>
+
+              </Row>
             </Container>
           </section>
         </main>
@@ -174,7 +190,7 @@ class IndexPage extends Component {
     )
   }
 
-  handle1MinuteVideoModalToggled () {
+  handle1MinuteVideoModalToggled() {
     this.setState({ is1MinuteVideoPlaying: !this.state.is1MinuteVideoPlaying })
   }
 }
