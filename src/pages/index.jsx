@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'gatsby-link'
 import cx from 'classnames'
 import {
+  Button,
   Container, Row, Col,
   Card, CardText, CardBody, CardTitle,
 } from 'reactstrap'
@@ -15,11 +16,12 @@ import videoPosterSrc from '../assets/video/frontpageloop.jpg'
 import videoMp4Src from '../assets/video/frontpageloop.mp4'
 import videoWebMSrc from '../assets/video/frontpageloop.webm'
 import styles from './index.module.scss'
+import './index.scss'
 
 const IndexPage = () => (
   <div>
     <header className="header header-inverse h-fullscreen p-0 overflow-hidden" data-overlay="4">
-      <video className="bg-video" poster={videoPosterSrc} autoPlay loop>
+      <video className="bg-video" poster={videoPosterSrc} autoPlay loop muted>
         <source src={videoMp4Src} type="video/mp4" />
         <source src={videoWebMSrc} type="video/webm" />
       </video>

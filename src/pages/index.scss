@@ -1,0 +1,7 @@
+@import "../layouts/bootstrap/functions";
+@import "../layouts/bootstrap/mixins";
+@import "../layouts/bootstrap/variables";
+
+@include media-breakpoint-down(md) {
+  .h-fullscreen { height: 90vh; }
+}
