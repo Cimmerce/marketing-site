@@ -60,7 +60,7 @@ const ClientsPage = () => (
               <a className="portfolio-1">
                 <img src={poshtelSrc}/>
                 <div className="portfolio-details">
-                  <h5>Poshtell</h5>
+                  <h5>Poshtel</h5>
                   <p className={styles.testimonial}>“It’s too awesome, we will be able to put our clients in any location we have in the world.”</p>
                 </div>
               </a>
