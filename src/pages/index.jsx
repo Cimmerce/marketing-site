@@ -10,6 +10,7 @@ import {
 import {
   Element, Link as ScrollLink
 } from 'react-scroll'
+import Waypoint from 'react-waypoint'
 
 import ModelViewer from '../components/ModelViewer'
 import GetStartedButton from '../components/GetStartedButton/GetStartedButton'
@@ -18,7 +19,7 @@ import videoMp4Src from '../assets/video/frontpageloop.mp4'
 import videoWebMSrc from '../assets/video/frontpageloop.webm'
 import styles from './index.module.scss'
 import './index.scss'
-import VideoModal from '../components/VideoModal/VideoModal';
+import VideoModal from '../components/VideoModal/VideoModal'
 
 class IndexPage extends Component {
   constructor(props) {
@@ -26,58 +27,63 @@ class IndexPage extends Component {
     this.bindMethods()
 
     this.state = {
+      isHeaderVideoPlaying: true,
       is1MinuteVideoPlaying: false
     }
   }
 
   bindMethods() {
     this.handle1MinuteVideoModalToggled = this.handle1MinuteVideoModalToggled.bind(this)
+    this.playHeaderVideo = this.playHeaderVideo.bind(this)
+    this.pauseHeaderVideo = this.pauseHeaderVideo.bind(this)
   }
 
   render() {
     return (
       <div>
-        <header className="header header-inverse h-fullscreen p-0 overflow-hidden" data-overlay="4">
-          <video className="bg-video" poster={videoPosterSrc} autoPlay loop muted>
-            <source src={videoMp4Src} type="video/mp4" />
-            <source src={videoWebMSrc} type="video/webm" />
-          </video>
+        <Waypoint onEnter={this.playHeaderVideo} onLeave={this.pauseHeaderVideo}>
+          <header className="header header-inverse h-fullscreen p-0 overflow-hidden">
+            <video className="bg-video" poster={videoPosterSrc} autoPlay loop={this.state.isHeaderVideoPlaying} muted>
+              <source src={videoMp4Src} type="video/mp4" />
+              <source src={videoWebMSrc} type="video/webm" />
+            </video>
 
-          <Container className={cx('text-center', styles.test)}>
+            <Container className={cx('text-center', styles.test)}>
 
-            <Row className="h-full">
-              <Col className="col-12 col-lg-8 offset-lg-2 align-self-center pt-150">
-                <h1 className="display-4 fw-600 hidden-sm-down">Augmented Reality for lifestyle ecommerce</h1>
-                <h2 className="fw-300 hidden-md-up">Instant web and mobile AR for your business.</h2>
-                <br />
-                <GetStartedButton />
-                <br />
-                <br />
-                <p className="fs-12"><span className="opacity-60 mr-8">Or</span>
+              <Row className="h-full">
+                <Col className="col-12 col-lg-8 offset-lg-2 align-self-center pt-150">
+                  <h1 className="display-4 fw-600 hidden-sm-down">Augmented Reality for lifestyle ecommerce</h1>
+                  <h2 className="fw-300 hidden-md-up">Instant web and mobile AR for your business.</h2>
+                  <br />
+                  <GetStartedButton />
+                  <br />
+                  <br />
+                  <p className="fs-12"><span className="opacity-60 mr-8">Or</span>
+                    <ScrollLink
+                      href="#mainContent"
+                      to="mainContent"
+                      className="text-white mark-border"
+                      smooth={true} duration={500}
+                    >
+                      Learn More
+                    </ScrollLink>
+                  </p>
+                </Col>
+                <div className="col-12 align-self-end text-center pb-50">
                   <ScrollLink
                     href="#mainContent"
                     to="mainContent"
-                    className="text-white mark-border"
+                    className="scroll-down-1 scroll-down-inverse"
                     smooth={true} duration={500}
                   >
-                    Learn More
+                    <span></span>
                   </ScrollLink>
-                </p>
-              </Col>
-              <div className="col-12 align-self-end text-center pb-50">
-                <ScrollLink
-                  href="#mainContent"
-                  to="mainContent"
-                  className="scroll-down-1 scroll-down-inverse"
-                  smooth={true} duration={500}
-                >
-                  <span></span>
-                </ScrollLink>
-              </div>
+                </div>
 
-            </Row>
-          </Container>
-        </header>
+              </Row>
+            </Container>
+          </header>
+        </Waypoint>
 
         <main className="main-content">
           <Element name="mainContent"></Element>
@@ -195,8 +201,16 @@ class IndexPage extends Component {
     )
   }
 
-  handle1MinuteVideoModalToggled() {
+  handle1MinuteVideoModalToggled () {
     this.setState({ is1MinuteVideoPlaying: !this.state.is1MinuteVideoPlaying })
+  }
+
+  playHeaderVideo () {
+    this.setState({ isHeaderVideoPlaying: true })
+  }
+
+  pauseHeaderVideo () {
+    this.setState({ isHeaderVideoPlaying: false })
   }
 }
 

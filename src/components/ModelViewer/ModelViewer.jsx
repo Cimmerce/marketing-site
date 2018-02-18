@@ -5,6 +5,7 @@ import {
   Col, Row,
   Card, CardBody
 } from 'reactstrap'
+import Waypoint from 'react-waypoint'
 
 import styles from './ModelViewer.module.scss'
 
@@ -19,35 +20,39 @@ class ModelViewer extends Component {
     this.state = {
       currentModelIndex: 0
     }
+
+    this.bindMethods()
   }
 
-  componentDidMount() {
-    this.bootstrapViewer()
+  bindMethods () {
+    this.bootstrapViewer = this.bootstrapViewer.bind(this)
   }
 
   render () {
     const modelId = this.props.modelIds[this.state.currentModelIndex]
 
     return (
-      <Row className="gap-y">
-        <Col className="col-12 col-md-8 col-lg-10">
-          <div className={styles.container}>
-            <div className={styles.modelViewer}>
-              <div id="cimmerseViewerPlaceholder" className={styles.placeholder}>
-                <img
-                  src={this.getModelPreviewUrl(modelId)}
-                  className={styles.previewImage}
-                />
+      <Waypoint onEnter={this.bootstrapViewer}>
+        <div className="row gap-y">
+          <Col className="col-12 col-md-8 col-lg-10">
+            <div className={styles.container}>
+              <div className={styles.modelViewer}>
+                <div id="cimmerseViewerPlaceholder" className={styles.placeholder}>
+                  <img
+                    src={this.getModelPreviewUrl(modelId)}
+                    className={styles.previewImage}
+                  />
+                </div>
               </div>
             </div>
-          </div>
-        </Col>
-        <Col className="col-12 col-md-4 col-lg-2">
-          <Row>
-            {this.props.modelIds.map((modelId, index) => { return this.renderModelPreview(modelId, index) })}
-          </Row>
-        </Col>
-      </Row>
+          </Col>
+          <Col className="col-12 col-md-4 col-lg-2">
+            <Row>
+              {this.props.modelIds.map((modelId, index) => { return this.renderModelPreview(modelId, index) })}
+            </Row>
+          </Col>
+        </div>
+      </Waypoint>
     )
   }
 
