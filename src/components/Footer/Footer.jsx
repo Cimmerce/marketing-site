@@ -10,6 +10,7 @@ import {
   Row
 } from 'reactstrap'
 
+import FooterLinks from './FooterLinks'
 import logoSrc from '../../assets/cimmerse_logo.svg'
 import thinkLogoSrc from './think_logo.png'
 import styles from './footer.module.scss'
@@ -23,12 +24,8 @@ const Footer = () => (
         </Col>
 
         <Col className="col-12 col-md-8">
-          <Nav className="nav-primary nav-hero">
-            <NavItem><NavLink tag={Link} to='/contact'>Contact</NavLink></NavItem>
-            <NavItem><NavLink href="https://embed.cimmerse.com/v2/integration_guide.pdf" target="blank">Documentation</NavLink></NavItem>
-            <NavItem><NavLink tag={Link} to='/about'>About</NavLink></NavItem>
-            <NavItem><NavLink tag={Link} to='/privacy' className='hidden-sm-down'>Privacy policy</NavLink></NavItem>
-            <NavItem><NavLink tag={Link} to='/terms' className='hidden-sm-down'>Terms of use</NavLink></NavItem>
+          <Nav className="nav-primary nav-hero d-none d-lg-flex">
+            <FooterLinks />
             <a className="social-twitter" href="https://twitter.com/cimmerse_com" target="blank">
               <i className={cx('ti ti-twitter', styles.twitterIcon)}></i>
             </a>

@@ -14,7 +14,8 @@ import { withRouter } from 'react-router'
 import logoSrc from '../../assets/cimmerse_logo.svg'
 import logoLightSrc from '../../assets/cimmerse_logo_light.svg'
 import styles from './Topbar.module.scss'
-import RequestQuote from '../RequestQuote/RequestQuote';
+import RequestQuote from '../RequestQuote/RequestQuote'
+import FooterLinks from '../Footer/FooterLinks'
 
 class Topbar extends Component {
   static propTypes = {
@@ -80,7 +81,10 @@ class Topbar extends Component {
                 <NavItem><NavLink tag={Link} to='/product'>Product</NavLink></NavItem>
                 <NavItem><NavLink tag={Link} to='/pricing'>Pricing</NavLink></NavItem>
                 <NavItem><NavLink tag={Link} to='/clients'>Clients</NavLink></NavItem>
-                <NavItem>
+                <div class="d-lg-none">
+                  <FooterLinks />
+                </div>
+                <NavItem className="ml-lg-4">
                   <Button
                     id="getStartedButton"
                     color='primary'
