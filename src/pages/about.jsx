@@ -37,9 +37,7 @@ const AboutPage = () => (
 
         <Row className="gap-y">
           <Col className="col-6 col-md-3 team-2">
-            <a href="#">
-              <img className={styles.teamPicture} src={ericPic1Src} alt="..." />
-            </a>
+            <img className={styles.teamPicture} src={ericPic1Src} alt="..." />
             <h5>Eric Prince</h5>
             <small>Co-Founder & CEO</small>
             <br />
@@ -49,9 +47,7 @@ const AboutPage = () => (
           </Col>
 
           <Col className="col-6 col-md-3 team-2">
-            <a href="#">
-              <img className={styles.teamPicture} src={casperPic1Src} alt="..." />
-            </a>
+            <img className={styles.teamPicture} src={casperPic1Src} alt="..." />
             <h5>Casper Fabricius</h5>
             <small>Co-Founder & CTO</small>
             <br />
@@ -61,9 +57,7 @@ const AboutPage = () => (
           </Col>
 
           <Col className="col-6 col-md-3 team-2">
-            <a href="#">
-              <img className={styles.teamPicture} src={yoniPic1Src} alt="..." />
-            </a>
+            <img className={styles.teamPicture} src={yoniPic1Src} alt="..." />
             <h5>Yoni Binstock</h5>
             <small>Senior Web AR/VR Engineer</small>
             <br />
@@ -73,9 +67,7 @@ const AboutPage = () => (
           </Col>
 
           <Col className="col-6 col-md-3 team-2">
-            <a href="#">
-              <img className={styles.teamPicture} src={henriPic1Src} alt="..." />
-            </a>
+            <img className={styles.teamPicture} src={henriPic1Src} alt="..." />
             <h5>Henri Lee</h5>
             <small>Head of Sales</small>
             <br />
