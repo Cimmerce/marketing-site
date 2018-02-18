@@ -146,8 +146,9 @@ const ProductPage = () => (
     <section className="section pb-0 overflow-hidden">
       <Container className="">
         <header className="section-header">
-          <h2>We work with all types of lifestyle businesses</h2>
+          <h2>We work with all types of lifestyles businesses</h2>
           <hr />
+          <p className="lead"> Increase conversion, reduce returns, sell more with AR today!</p>
         </header>
 
         <Row className="row gap-y text-center">
