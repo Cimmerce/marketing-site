@@ -5,6 +5,7 @@ import {
   Button,
   Container, Row, Col,
   Card, CardText, CardBody, CardTitle,
+  UncontrolledTooltip
 } from 'reactstrap'
 import {
   Element, Link as ScrollLink
@@ -105,6 +106,7 @@ class IndexPage extends Component {
                 <Button
                   size="lg" className="btn-circular" color="primary"
                   onClick={this.handle1MinuteVideoModalToggled}
+                  id="PlayVideoButton"
                 >
                   &nbsp;
                   <i className="ti-control-play"></i>
@@ -114,6 +116,9 @@ class IndexPage extends Component {
                   isOpen={this.state.is1MinuteVideoPlaying}
                   onToggle={this.handle1MinuteVideoModalToggled}
                 />
+                <UncontrolledTooltip placement="top" target="PlayVideoButton">
+                  Play product video
+                </UncontrolledTooltip>
               </header>
 
               <Row className="gap-y">
