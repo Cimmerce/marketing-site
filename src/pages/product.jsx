@@ -12,6 +12,8 @@ import styles from './product.module.scss'
 
 import digitizationPicSrc from '../assets/images/digitize1.jpg'
 import embedPicSrc from '../assets/images/embedsample.jpg'
+import vrPicSrc from '../assets/images/VR_graphic.png'
+import arPicSrc from '../assets/images/ar_graphic.jpg'
 import fashionPicSrc from '../assets/images/lvbag.png'
 import artPicSrc from '../assets/images/art.png'
 import interiorPicSrc from '../assets/images/chair.png'
@@ -45,10 +47,10 @@ const ProductPage = () => (
             <p className="fs-60 fw-900 opacity-10">01</p>
             <h3 className="fw-300">Digitization: We create your products into highly realistic 3D </h3>
             <ul>
-              <li>High quality 3D Scanning (you ship your products to us or we bring our scanning rig to you)       </li>
-              <li>Custom built models (our 3D artists help design and create high quality models)              </li>
-              <li>3D CAD model support (send us your models .obj .fbx .dwg)              </li>
-              <li>3D from 2D images (send us your product photos and we convert to 3D)              </li>
+              <li>High quality 3D Scanning (you ship your products to us or we bring our scanning rig to you) </li>
+              <li>Custom built models (our 3D artists help design and create high quality models)</li>
+              <li>3D CAD model support (send us your models .obj .fbx .dwg) </li>
+              <li>3D from 2D images (send us your product photos and we convert to 3D) </li>
             </ul>
           </Col>
         </Row>
@@ -59,12 +61,12 @@ const ProductPage = () => (
             <h3 className="fw-300">CimmersePlatform</h3>
             <ul>
               <li>Upload, light and stage your 3D models. </li>
-              <li>Custom built models (our 3D artists help design and create high quality models)              </li>
-              <li>Customize information about your products and features for easy usability.
-              All the information your customer needs to make a decision to purchase at their fingertips.              </li>
-              <li>One of the first VR/AR check out that ties into your existing payment solution.              </li>
+              <li>Custom built models (our 3D artists help design and create high quality models) </li>
+              <li>Customize information about your products and features for easy usability. 
+              All the information your customer needs to make a decision to purchase at their fingertips.  </li>
+              <li>One of the first VR/AR check out that ties into your existing payment solution. </li>
             </ul>
-            <p> One of the first VR/AR check out that ties into your existing payment solution.            </p>
+            <p> One of the first VR/AR check out that ties into your existing payment solution. </p>
           </Col>
 
           <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
@@ -74,16 +76,16 @@ const ProductPage = () => (
 
         <Row className="gap-y align-items-center mb-90">
           <Col className="col-12 col-md-6 text-center hidden-sm-down">
-            <img src="assets/img/demo/slack/everywhere.png" alt="..." />
+            <img src={vrPicSrc} alt="..." />
           </Col>
 
           <Col className="col-12 col-md-5 offset-md-1 text-center text-md-left">
             <p className="fs-60 fw-900 opacity-10">03</p>
             <h3 className="fw-300">VR</h3>
-            <p>Headsets (HMD) supported in VR (Rift, Vive, GearVR and Daydream.)             </p>
+            <p>Headsets (HMD) supported in VR (Rift, Vive, GearVR and Daydream.)</p>
             <ul>
-              <li>The VR Experience from anywhere your customer chooses to be.              </li>
-              <li>Make available all of your inventory in your retail store without having the actual items on the showroom floor.              </li>
+              <li>The VR Experience from anywhere your customer chooses to be. </li>
+              <li>Make available all of your inventory in your retail store without having the actual items on the showroom floor. </li>
            </ul>
           </Col>
         </Row>
@@ -96,12 +98,10 @@ const ProductPage = () => (
             <br />
               No installs, no expensive headsets, and no 3rd party platforms.
             </p>
-            <p>(I'm not sure how to represent AR with an image. Should it be a picture of our AR tool or a common
-          AR icon/image that people will instantly recognize?) </p>
           </Col>
 
           <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
-            <img src="assets/img/demo/slack/cta.png" alt="..." />
+            <img src={arPicSrc} alt="..." />
           </Col>
         </Row>
 
@@ -114,7 +114,6 @@ const ProductPage = () => (
             <p className="fs-60 fw-900 opacity-10">05</p>
             <h3 className="fw-300">Analytics</h3>
             <p>We collect user data and provide valuable insights back to you to help you convert your visitors to customers.</p>
-            <p> (probably a chart/graph for the image or something else that seems "analtyicly")</p>
           </Col>
         </Row>
 
