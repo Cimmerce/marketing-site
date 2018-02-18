@@ -63,7 +63,7 @@ const ProductPage = () => (
             <h3 className="fw-300">Cimmerse Platform</h3>
             <ul>
               <li>Upload, light and stage your 3D models. </li>
-              <li>Customize information about your products and features for easy usability. 
+              <li>Customize information about your products and features for easy usability.
               All the information your customer needs to make a decision to purchase at their fingertips.  </li>
               <li>One of the first VR/AR check out that ties into your existing payment solution. </li>
             </ul>
@@ -87,7 +87,7 @@ const ProductPage = () => (
             <ul>
               <li>The VR Experience from anywhere your customer chooses to be. </li>
               <li>Make available all of your inventory in your retail store without having the actual items on the showroom floor. </li>
-           </ul>
+            </ul>
           </Col>
         </Row>
 
@@ -95,10 +95,12 @@ const ProductPage = () => (
           <Col className="col-12 col-md-5 text-center text-md-left">
             <p className="fs-60 fw-900 opacity-10">04</p>
             <h3 className="fw-300">AR</h3>
-            <p>Our breakthrough product allows anyone to view your product in AR <strong> straight through the browser</strong>.
-            <br />
-              No installs, no expensive headsets, and no 3rd party platforms.
-            </p>
+            <p>View your products in AR straight through the browser. </p>
+            <ul>
+              <li>No Apps or installs. </li>
+              <li>This allows customers to browser your products and place them right in the room with them instantly. </li>
+              <li>All mobile devices supported (IOS,Android,...)</li>
+            </ul>
           </Col>
 
           <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
@@ -119,25 +121,25 @@ const ProductPage = () => (
         </Row>
 
         <Row className="gap-y align-items-center">
-        <Col className="col-12 col-md-5 text-center text-md-left">
-          <p className="fs-60 fw-900 opacity-10">06</p>
-          <h3 className="fw-300">Embedd</h3>
-          <p>Our breakthrough product allows anyone to view your product in AR <strong> straight through the browser</strong>.
-          <br />
-            No installs, no expensive headsets, and no 3rd party platforms.
+          <Col className="col-12 col-md-5 text-center text-md-left">
+            <p className="fs-60 fw-900 opacity-10">06</p>
+            <h3 className="fw-300">Embedd</h3>
+            <p>Our breakthrough product allows anyone to view your product in AR <strong> straight through the browser</strong>.
+              <br/>
+              You integrate the tech into your ecommerce solution with one line of code.
           </p>
-        </Col>
+          </Col>
 
-        <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
-          <img src={embedPicSrc} alt="..." />
-        </Col>
-      </Row>
+          <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
+            <img src={embedPicSrc} alt="..." />
+          </Col>
+        </Row>
 
-      <Row className="gap-y align-items-center mb-90">
-      <Col className="col-12 align-self-center text-center hidden-sm-down">
-        <GetStartedButton />
-      </Col>
-    </Row>
+        <Row className="gap-y align-items-center mb-90">
+          <Col className="col-12 align-self-center text-center hidden-sm-down">
+            <GetStartedButton />
+          </Col>
+        </Row>
 
 
       </Container>
