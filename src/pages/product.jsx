@@ -17,7 +17,7 @@ import arPicSrc from '../assets/images/ar_graphic.jpg'
 import fashionPicSrc from '../assets/images/lvbag.png'
 import artPicSrc from '../assets/images/art.png'
 import interiorPicSrc from '../assets/images/chair.png'
-import analyticsPicSrc from '../assets/images/analytics.png'
+import analyticsPicSrc from '../assets/images/analytics1.png'
 import CimmersePlatformPicSrc from '../assets/images/product_process.jpg'
 
 const ProductPage = () => (
