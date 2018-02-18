@@ -123,7 +123,7 @@ const ProductPage = () => (
         <Row className="gap-y align-items-center">
           <Col className="col-12 col-md-5 text-center text-md-left">
             <p className="fs-60 fw-900 opacity-10">06</p>
-            <h3 className="fw-300">Embedd</h3>
+            <h3 className="fw-300">Embed</h3>
             <p>Our breakthrough product allows anyone to view your product in AR <strong> straight through the browser</strong>.
               <br/>
               You integrate the tech into your ecommerce solution with one line of code.
