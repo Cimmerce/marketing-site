@@ -67,7 +67,7 @@ class Topbar extends Component {
           <Container>
 
             <div className="topbar-left">
-              <button className="topbar-toggler" onClick={this.handleTogglerClick}>&#9776;</button>
+              <button className={cx('topbar-toggler', styles.topbarToggler)} onClick={this.handleTogglerClick}>&#9776;</button>
               <NavLink tag={Link} to='/' className="topbar-brand">
                 <img className="logo-default" src={logoSrc} alt="logo" />
                 <img className="logo-inverse" src={logoLightSrc} alt="logo" />
