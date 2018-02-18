@@ -81,7 +81,7 @@ class Topbar extends Component {
                 <NavItem><NavLink tag={Link} to='/product'>Product</NavLink></NavItem>
                 <NavItem><NavLink tag={Link} to='/pricing'>Pricing</NavLink></NavItem>
                 <NavItem><NavLink tag={Link} to='/clients'>Clients</NavLink></NavItem>
-                <div class="d-lg-none">
+                <div className="d-lg-none">
                   <FooterLinks />
                 </div>
                 <NavItem className="ml-lg-4">
