@@ -11,19 +11,18 @@ import {
 } from 'reactstrap'
 
 import logoSrc from '../../assets/cimmerse_logo.svg'
+import thinkLogoSrc from './think_logo.png'
 import styles from './footer.module.scss'
 
 const Footer = () => (
   <footer className="site-footer">
     <Container>
       <Row className="gap-y align-items-center">
-        <Col className="col-12 col-lg-3">
-          <p className="text-center text-lg-left">
-            <a href="index.html"><img src={logoSrc} alt="logo" /></a>
-          </p>
+        <Col className="col-12 col-md-3 text-center">
+          <NavLink tag={Link} to='/'><img src={logoSrc} alt="Cimmerse logo" className={styles.cimmerseLogo} /></NavLink>
         </Col>
 
-        <Col className="col-12 col-lg-8">
+        <Col className="col-12 col-md-8">
           <Nav className="nav-primary nav-hero">
             <NavItem><NavLink tag={Link} to='/contact'>Contact</NavLink></NavItem>
             <NavItem><NavLink href="https://embed.cimmerse.com/v2/integration_guide.pdf" target="blank">Documentation</NavLink></NavItem>
@@ -35,7 +34,22 @@ const Footer = () => (
             </a>
           </Nav>
         </Col>
+      </Row>
 
+      <Row>
+        <Col className="col-0 col-md-6"></Col>
+        <Col className="col-12 col-md-6">
+          <div class="d-flex flex-row align-items-center">
+            <div class="p-2 col-4 text-right">
+              <a href="https://www.thinkaccelerate.com/" target="_blank">
+                <img src={thinkLogoSrc} className={styles.thinkLogo} alt="THINK Accelerate logo" />
+              </a>
+            </div>
+            <div class="p-2 col-8">
+              <small>Supported by THINK Accelerate in Helsingborg, Sweden</small>
+            </div>
+          </div>
+        </Col>
       </Row>
     </Container>
   </footer>
