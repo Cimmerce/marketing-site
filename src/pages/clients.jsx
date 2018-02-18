@@ -7,8 +7,8 @@ import {
   Card, CardHeader, CardText, CardBody, CardTitle
 } from 'reactstrap'
 
+import GetStartedButton from '../components/GetStartedButton/GetStartedButton'
 import styles from './clients.module.scss'
-
 
 import metaluxSrc from '../assets/images/metalux.png'
 import muuceSrc from '../assets/images/muuce.jpg'
@@ -163,10 +163,22 @@ const ClientsPage = () => (
             </Card>
           </Col>
         </Row>
-
       </Container>
     </section>
 
+    <section className="section bg-gray">
+      <div className="container">
+        <div className="row gap-y align-items-center">
+          <div className="col-12 col-md-9 text-center text-md-left">
+            <h4 className="mb-0">Get a piece of the AR advantage today</h4>
+          </div>
+
+          <div className="col-12 col-md-3 text-center text-md-right">
+            <GetStartedButton />
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 )
