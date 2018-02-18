@@ -44,7 +44,7 @@ const AboutPage = () => (
                     <Col className={cx('col-12 col-lg-12 pl-50 pr-80"', styles.centerAbout)} >
                         <h2 className="text-center">Our Vision</h2>
                         <p className="lead">
-                            The Web is one of the most significant inventions to modern humans and ushered in the Information Age. Since it's inception the user interface has been 2D, until now.
+                            The internet is one of the most significant inventions to modern humans and ushered in the Information Age. Since it's inception the user interface has been 2D, until now.
                         <br /> <br />
                             We are entering the next paradign shift with volumetric computing. A 3D mixed reality interface available in real time whevere the web is accesible.
                             With new satellite internet technologies and current infrastructure making it omnipresent.
