@@ -55,7 +55,7 @@ const PricingPage = () => (
               <h3 className="fw-300">Integration</h3>
             </div>
             <ul>
-              <li>We put our products on the Cimmerse platform.</li>
+              <li>We put your products on the Cimmerse platform.</li>
               <li>You integrate the tech into your ecommerce solution with one line of code.</li>
               <li>We can customize the integration to your exact needs for a fee.</li>
               <li>

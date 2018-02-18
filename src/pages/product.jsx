@@ -17,6 +17,8 @@ import arPicSrc from '../assets/images/ar_graphic.jpg'
 import fashionPicSrc from '../assets/images/lvbag.png'
 import artPicSrc from '../assets/images/art.png'
 import interiorPicSrc from '../assets/images/chair.png'
+import analyticsPicSrc from '../assets/images/analytics.png'
+import CimmersePlatformPicSrc from '../assets/images/product_process.jpg'
 
 const ProductPage = () => (
   <main className="main-content">
@@ -58,10 +60,9 @@ const ProductPage = () => (
         <Row className="gap-y align-items-center mb-90">
           <Col className="col-12 col-md-5 text-center text-md-left">
             <p className="fs-60 fw-900 opacity-10">02</p>
-            <h3 className="fw-300">CimmersePlatform</h3>
+            <h3 className="fw-300">Cimmerse Platform</h3>
             <ul>
               <li>Upload, light and stage your 3D models. </li>
-              <li>Custom built models (our 3D artists help design and create high quality models) </li>
               <li>Customize information about your products and features for easy usability. 
               All the information your customer needs to make a decision to purchase at their fingertips.  </li>
               <li>One of the first VR/AR check out that ties into your existing payment solution. </li>
@@ -70,7 +71,7 @@ const ProductPage = () => (
           </Col>
 
           <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
-            <img src={embedPicSrc} alt="..." />
+            <img src={CimmersePlatformPicSrc} alt="..." />
           </Col>
         </Row>
 
@@ -107,7 +108,7 @@ const ProductPage = () => (
 
         <Row className="gap-y align-items-center mb-90">
           <Col className="col-12 col-md-6 text-center hidden-sm-down">
-            <img src="assets/img/demo/slack/everywhere.png" alt="..." />
+            <img src={analyticsPicSrc} alt="..." />
           </Col>
 
           <Col className="col-12 col-md-5 offset-md-1 text-center text-md-left">
@@ -117,11 +118,27 @@ const ProductPage = () => (
           </Col>
         </Row>
 
-        <Row className="gap-y align-items-center mb-90">
-          <Col className="col-12 align-self-center text-center hidden-sm-down">
-            <GetStartedButton />
-          </Col>
-        </Row>
+        <Row className="gap-y align-items-center">
+        <Col className="col-12 col-md-5 text-center text-md-left">
+          <p className="fs-60 fw-900 opacity-10">06</p>
+          <h3 className="fw-300">Embedd</h3>
+          <p>Our breakthrough product allows anyone to view your product in AR <strong> straight through the browser</strong>.
+          <br />
+            No installs, no expensive headsets, and no 3rd party platforms.
+          </p>
+        </Col>
+
+        <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
+          <img src={embedPicSrc} alt="..." />
+        </Col>
+      </Row>
+
+      <Row className="gap-y align-items-center mb-90">
+      <Col className="col-12 align-self-center text-center hidden-sm-down">
+        <GetStartedButton />
+      </Col>
+    </Row>
+
 
       </Container>
     </section>
@@ -129,13 +146,12 @@ const ProductPage = () => (
     <section className="section pb-0 overflow-hidden">
       <Container className="">
         <header className="section-header">
-          <h2>We work with all types of business</h2>
+          <h2>We work with all types of lifestyle businesses</h2>
           <hr />
-          <p className="lead"> Here are just a few examples of products and companies we've worked with in the past</p>
         </header>
 
         <Row className="row gap-y text-center">
-          <Col className="col-md-4 d-flex flex-column">
+          <Col className="col-md-4 col-12 d-flex flex-column">
             <div className="mb-60">
               <p className={cx('text-info fs-50 mb-0', styles.blueText)}>Fashion</p>
               <p>Shoes, accessories, jewlery, clothing</p>
@@ -145,7 +161,7 @@ const ProductPage = () => (
             </div>
           </Col>
 
-          <Col className="col-md-4 d-flex flex-column">
+          <Col className="col-md-4 col-12 d-flex flex-column">
             <div className="mb-7">
               <p className={cx('text-info fs-50 mb-0', styles.blueText)}>Interior</p>
               <p>Furniture, lamps, home decorations</p>
@@ -155,7 +171,7 @@ const ProductPage = () => (
             </div>
           </Col>
 
-          <Col className="col-md-4 d-flex flex-column">
+          <Col className="col-md-4 col-12 d-flex flex-column">
             <div className="mb-7">
               <p className={cx('text-info fs-50 mb-0', styles.blueText)}>Art</p>
               <p>Galleries, auction houses, museums</p>
