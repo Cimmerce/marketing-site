@@ -8,7 +8,7 @@ import {
     Col
 } from 'reactstrap'
 
-import styles from './cases.module.scss'
+import styles from './clients.module.scss'
 
 
 import metaluxSrc from '../assets/images/metalux.png'
@@ -17,7 +17,7 @@ import poshtelSrc from '../assets/images/poshtel.png'
 import vtexSrc from '../assets/images/VTEX.png'
 
 
-const CasesPage = () => (
+const ClientsPage = () => (
     <main className="main-content">
     <section className="section py-50">
 
@@ -31,7 +31,7 @@ const CasesPage = () => (
         </Row>
     </Container>
 </section>
-        
+
         <section className="section">
         <Container className="">
 
@@ -91,7 +91,7 @@ const CasesPage = () => (
         </div>
 
         <Row className="gap-y gap-2 text-center">
-          
+
           <Col className="col-12 col-lg-4">
               <h5>74% of consumers expect AR </h5>
               <p className="small">"Almost three quarters of consumers say they now expect retailers to offer
@@ -101,7 +101,7 @@ const CasesPage = () => (
 
           <Col className="col-12 col-lg-4">
               <h5>75% of consumers prefer web based AR</h5>
-              <p className="small">"Only 17% of consumers think AR would work best for a retailer via a dedicated app, 
+              <p className="small">"Only 17% of consumers think AR would work best for a retailer via a dedicated app,
               compared to the 75% who think it would work best integrated directily into
               a retailer's website" </p>
               <p className={styles.citation}>http://digitalbridge.eu/app/uploads/2017/09/DB-ChangingUKRetail_v2.pdf</p>
@@ -117,7 +117,7 @@ const CasesPage = () => (
         </Row>
 
         <Row className="gap-y gap-2 text-center">
-          
+
           <Col className="col-12 col-lg-4">
               <h5>Conversions up 30% </h5>
               <p className="small">"Golfsmith found 30% higher conversion rates amongst products
@@ -128,7 +128,7 @@ const CasesPage = () => (
           <Col className="col-12 col-lg-4">
               <h5>Online sales up 263%</h5>
               <p class="small">"The technology added value to online shopping integrating VR, thus
-              allowing customers to test products in the virtual environment before 
+              allowing customers to test products in the virtual environment before
               committing to purchase"</p>
               <p className={styles.citation}>https://www.vrfocus.com/2017/08/suning-commerce-group-uses-vr-and-ar-as-part-of-shopping-festival/</p>
           </Col>
@@ -148,4 +148,4 @@ const CasesPage = () => (
     </main>
 )
 
-export default CasesPage
+export default ClientsPage

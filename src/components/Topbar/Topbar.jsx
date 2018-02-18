@@ -79,7 +79,7 @@ class Topbar extends Component {
                 <NavItem><NavLink tag={Link} to='/'>Home</NavLink></NavItem>
                 <NavItem><NavLink tag={Link} to='/product'>Product</NavLink></NavItem>
                 <NavItem><NavLink tag={Link} to='/pricing'>Pricing</NavLink></NavItem>
-                <NavItem><NavLink tag={Link} to='/cases'>Cases</NavLink></NavItem>
+                <NavItem><NavLink tag={Link} to='/clients'>Clients</NavLink></NavItem>
                 <NavItem>
                   <Button
                     id="getStartedButton"
