@@ -43,7 +43,7 @@ class IndexPage extends Component {
       <div>
         <Waypoint onEnter={this.playHeaderVideo} onLeave={this.pauseHeaderVideo}>
           <header className="header header-inverse h-fullscreen p-0 overflow-hidden">
-            <video className="bg-video" poster={videoPosterSrc} autoPlay loop={this.state.isHeaderVideoPlaying} muted>
+            <video className="bg-video" poster={videoPosterSrc} autoPlay loop={this.state.isHeaderVideoPlaying} muted playsInline preload="metadata">
               <source src={videoMp4Src} type="video/mp4" />
               <source src={videoWebMSrc} type="video/webm" />
             </video>
