@@ -91,7 +91,7 @@ const ProductPage = () => (
             <ul>
               <li>No Apps or installs. </li>
               <li>This allows customers to browser your products and place them right in the room with them instantly. </li>
-              <li>All mobile devices supported (IOS,Android,...)</li>
+              <li>All mobile devices supported (IOS, Android,...)</li>
             </ul>
           </Col>
 
