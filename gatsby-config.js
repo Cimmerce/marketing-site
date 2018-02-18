@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Cimmerse: AR-enabled mobile web sales',
+    title: 'Augmented Reality for lifestyle ecommerce - Cimmerse',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

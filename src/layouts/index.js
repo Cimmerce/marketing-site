@@ -12,9 +12,9 @@ import './theme/theme.scss'
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Cimmerse: AR-enabled mobile web sales"
+      title="Augmented Reality for lifestyle ecommerce - Cimmerse"
       meta={[
-        { name: 'description', content: 'Augmented reality for mobile ecommerce websites' },
+        { name: 'description', content: 'Instant web and mobile AR for your business.' },
         { name: 'keywords', content: 'AR, mobile AR, augmented reality, WebAR, VR, virtual reality, 3D, ecommerce' },
       ]}
     />
