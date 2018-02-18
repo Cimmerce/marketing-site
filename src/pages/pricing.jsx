@@ -112,7 +112,7 @@ const PricingPage = () => (
               <h2 className={styles.pricingSize}>€100</h2>
               <br />
               <h6>One 3D scanned product</h6>
-              <h6>3 months subscription</h6>
+              <h6>3 months subscription included</h6>
               <h6>Unlimited support</h6>
               <br />
             </div>
