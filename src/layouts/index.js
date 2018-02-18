@@ -9,7 +9,7 @@ import './bootstrap/bootstrap.scss'
 import './fonts/themify/themify-icons.css'
 import './theme/theme.scss'
 
-const TemplateWrapper = ({ location, children }) => (
+const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
       title="Cimmerse: AR-enabled mobile web sales"
@@ -19,7 +19,7 @@ const TemplateWrapper = ({ location, children }) => (
       ]}
     />
 
-    <Topbar location={location} />
+    <Topbar />
     {children()}
     <Footer />
   </div>

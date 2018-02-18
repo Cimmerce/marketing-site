@@ -9,6 +9,7 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap'
+import { withRouter } from 'react-router'
 
 import logoSrc from '../../assets/cimmerse_logo.svg'
 import logoLightSrc from '../../assets/cimmerse_logo_light.svg'
@@ -17,6 +18,7 @@ import RequestQuote from '../RequestQuote/RequestQuote';
 
 class Topbar extends Component {
   static propTypes = {
+    history: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired
   }
 
@@ -35,13 +37,17 @@ class Topbar extends Component {
     this.handleTogglerClick = this.handleTogglerClick.bind(this)
     this.handleBackdropClick = this.handleBackdropClick.bind(this)
     this.handleRequestQuoteModalToggled = this.handleRequestQuoteModalToggled.bind(this)
+    this.handleRouteChanged = this.handleRouteChanged.bind(this)
   }
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
+    this.removeHistoryEventListener = this.props.history.listen(this.handleRouteChanged)
   }
+
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
+    this.removeHistoryEventListener()
   }
 
   render () {
@@ -61,10 +67,10 @@ class Topbar extends Component {
 
             <div className="topbar-left">
               <button className="topbar-toggler" onClick={this.handleTogglerClick}>&#9776;</button>
-              <a className="topbar-brand" href="/">
+              <NavLink tag={Link} to='/' className="topbar-brand">
                 <img className="logo-default" src={logoSrc} alt="logo" />
                 <img className="logo-inverse" src={logoLightSrc} alt="logo" />
-              </a>
+              </NavLink>
             </div>
 
 
@@ -114,6 +120,14 @@ class Topbar extends Component {
       document.body.scrollTop || 0
   }
 
+  hideTopbar () {
+    const body = document.body
+    if ( !body || !body.classList ) { return }
+
+    body.classList.remove('topbar-reveal')
+    this.setState({ isTopbarRevealed: false })
+  }
+
   handleTogglerClick () {
     const body = document.body
     if ( !body || !body.classList ) { return }
@@ -124,16 +138,16 @@ class Topbar extends Component {
   }
 
   handleBackdropClick () {
-    const body = document.body
-    if ( !body || !body.classList ) { return }
-
-    body.classList.remove('topbar-reveal')
-    this.setState({ isTopbarRevealed: false })
+    this.hideTopbar()
   }
 
   handleRequestQuoteModalToggled () {
     this.setState({ isRequestQuoteModalOpen: !this.state.isRequestQuoteModalOpen })
   }
+
+  handleRouteChanged(_location, _action) {
+    this.hideTopbar()
+  }
 }
 
-export default Topbar
+export default withRouter(Topbar)
