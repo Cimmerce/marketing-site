@@ -22,10 +22,10 @@ class ModelViewer extends Component {
   }
 
   componentDidMount() {
-    this.configureViewer()
+    this.bootstrapViewer()
   }
 
-  render() {
+  render () {
     const modelId = this.props.modelIds[this.state.currentModelIndex]
 
     return (
@@ -49,6 +49,14 @@ class ModelViewer extends Component {
         </Col>
       </Row>
     )
+  }
+
+  bootstrapViewer () {
+    if(window.Cimmerse) {
+      window.Cimmerse.bootstrap()
+    } else {
+      this.configureViewer ()
+    }
   }
 
   configureViewer () {
