@@ -16,7 +16,7 @@ import styles from './pricing.module.scss'
 const PricingPage = () => (
   <main className="main-content">
 
-    <section className="section py-100">
+    <section className="section py-50">
 
       <Container>
 

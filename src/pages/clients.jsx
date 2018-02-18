@@ -19,14 +19,13 @@ import vtexSrc from '../assets/images/VTEX.png'
 
 const ClientsPage = () => (
     <main className="main-content">
-    <section className="section py-50">
+    <section className="section py-100">
 
     <Container className="text-center">
         <Row className="">
             <Col className="col-12 col-lg-8 offset-lg-2">
-                <header className="section-header">
+                
                     <h1>Our Customers</h1>
-                </header>
             </Col>
         </Row>
     </Container>
@@ -34,8 +33,6 @@ const ClientsPage = () => (
 
         <section className="section">
         <Container className="">
-
-          <h5 className="mb-20">Related Projects</h5>
 
           <Row className="gap-y gap-2">
 
