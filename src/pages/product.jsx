@@ -22,24 +22,16 @@ import CimmersePlatformPicSrc from '../assets/images/product_process.jpg'
 
 const ProductPage = () => (
   <main className="main-content">
-    <section className="section py-100">
+    <section className="section">
+      <Container>
 
-      <Container className="text-center">
-
-        <Row className="">
+        <Row className="text-center mb-50">
           <Col className="col-12 col-lg-8 offset-lg-2">
 
             <h1>Our Process</h1>
             <p className="fs-20 opacity-70">Our platform helps retailers sell more using the latest in Augemented and Virtual Reality technology</p>
           </Col>
         </Row>
-
-      </Container>
-    </section>
-
-    <section className="section">
-      <Container className="">
-
         <Row className="gap-y align-items-center mb-90">
           <Col className="col-12 col-md-6 text-center hidden-sm-down">
             <img src={digitizationPicSrc} alt="..." />
@@ -49,10 +41,10 @@ const ProductPage = () => (
             <p className="fs-60 fw-900 opacity-10">01</p>
             <h3 className="fw-300">Digitization: We create your products into highly realistic 3D </h3>
             <ul>
-              <li>High quality 3D Scanning (you ship your products to us or we bring our scanning rig to you) </li>
-              <li>Custom built models (our 3D artists help design and create high quality models)</li>
-              <li>3D CAD model support (send us your models .obj .fbx .dwg) </li>
-              <li>3D from 2D images (send us your product photos and we convert to 3D) </li>
+              <li>High quality 3D Scanning: We digitize your products in our studio or come to you.</li>
+              <li>Your 3D files: We process your existing 3D models. CAD, FBX, DWG, OBJ and many more supported.</li>
+              <li>3D from 2D images: Send us your product photos and we convert them to 3D.</li>
+              <li>Custom built models: Our 3D artists help design and create high quality models.</li>
             </ul>
           </Col>
         </Row>
@@ -125,7 +117,7 @@ const ProductPage = () => (
             <p className="fs-60 fw-900 opacity-10">06</p>
             <h3 className="fw-300">Embed</h3>
             <p>Our breakthrough product allows anyone to view your product in AR <strong> straight through the browser</strong>.
-              <br/>
+              <br />
               You integrate the tech into your ecommerce solution with one line of code.
           </p>
           </Col>
