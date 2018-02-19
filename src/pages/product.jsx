@@ -50,6 +50,9 @@ const ProductPage = () => (
         </Row>
 
         <Row className="gap-y align-items-center mb-90">
+          <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down order-md-12">
+            <img src={CimmersePlatformPicSrc} alt="..." />
+          </Col>
           <Col className="col-12 col-md-5 text-center text-md-left">
             <p className="fs-60 fw-900 opacity-10">02</p>
             <h3 className="fw-300">Cimmerse Platform</h3>
@@ -59,10 +62,6 @@ const ProductPage = () => (
               All the information your customer needs to make a decision to purchase at their fingertips.  </li>
               <li>One of the first VR/AR check out that ties into your existing payment solution. </li>
             </ul>
-          </Col>
-
-          <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
-            <img src={CimmersePlatformPicSrc} alt="..." />
           </Col>
         </Row>
 
@@ -83,6 +82,9 @@ const ProductPage = () => (
         </Row>
 
         <Row className="gap-y align-items-center">
+          <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down order-md-12">
+            <img src={arPicSrc} alt="..." />
+          </Col>
           <Col className="col-12 col-md-5 text-center text-md-left">
             <p className="fs-60 fw-900 opacity-10">04</p>
             <h3 className="fw-300">AR</h3>
@@ -92,10 +94,6 @@ const ProductPage = () => (
               <li>This allows customers to browser your products and place them right in the room with them instantly. </li>
               <li>All mobile devices supported (IOS, Android,...)</li>
             </ul>
-          </Col>
-
-          <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
-            <img src={arPicSrc} alt="..." />
           </Col>
         </Row>
 
@@ -112,6 +110,9 @@ const ProductPage = () => (
         </Row>
 
         <Row className="gap-y align-items-center">
+          <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down order-md-12">
+            <img src={embedPicSrc} alt="..." />
+          </Col>
           <Col className="col-12 col-md-5 text-center text-md-left">
             <p className="fs-60 fw-900 opacity-10">06</p>
             <h3 className="fw-300">Embed</h3>
@@ -120,13 +121,9 @@ const ProductPage = () => (
               You integrate the tech into your ecommerce solution with one line of code.
           </p>
           </Col>
-
-          <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
-            <img src={embedPicSrc} alt="..." />
-          </Col>
         </Row>
 
-        <Row className="gap-y align-items-center">
+        <Row className="gap-y align-items-center mt-20">
           <Col className="col-12 align-self-center text-center hidden-sm-down">
             <GetStartedButton />
           </Col>
