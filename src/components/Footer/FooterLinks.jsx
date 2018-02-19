@@ -6,7 +6,6 @@ import {
 } from 'reactstrap'
 
 const FooterLinks = () => [
-  <NavItem key="about"><NavLink tag={Link} to='/about'>About</NavLink></NavItem>,
   <NavItem key="contact"><NavLink tag={Link} to='/contact'>Contact</NavLink></NavItem>,
   <NavItem key="docs"><NavLink href="https://embed.cimmerse.com/v2/integration_guide.pdf" target="blank">Documentation</NavLink></NavItem>,
   <NavItem key="privacy"><NavLink tag={Link} to='/privacy' className='hidden-sm-down'>Privacy policy</NavLink></NavItem>,
