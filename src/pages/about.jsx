@@ -88,15 +88,15 @@ const AboutPage = () => (
           <Col className={cx('col-12 col-lg-12 pl-50 pr-80"', styles.centerAbout)} >
             <h2 className="text-center">Our Vision</h2>
             <p className="lead">
-              The internet is one of the most significant inventions to modern humans and ushered in the Information Age. Since it's inception the user interface has been 2D, until now.
-                        <br /> <br />
+              The Internet is one of the most significant inventions to modern humans and ushered in the Information Age. Since it's inception the user interface has been 2D, until now.
+              <br /> <br />
               We are entering the next paradign shift with volumetric computing. A 3D mixed reality interface available in real time whevere the web is accesible.
-              With new satellite internet technologies and current infrastructure making it omnipresent.
-                        <br /> <br />
+              With new satellite Internet technologies and current infrastructure making it omnipresent.
+              <br /> <br />
               Cimmerse is using its vision and expertise to realize the no barrier, democratization of knowledge, industry, and ubiquitous real time computing.
-                        <br /> <br />
+              <br /> <br />
               We are futurist and visionaries realiging this amazing opportunity today! We look forward to finding likeminded partners to add to our journey in becoming the next web leader.
-                        </p>
+            </p>
           </Col>
 
         </Row>
