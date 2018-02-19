@@ -28,8 +28,8 @@ const ProductPage = () => (
         <Row className="text-center mb-50">
           <Col className="col-12 col-lg-8 offset-lg-2">
 
-            <h1>Our Process</h1>
-            <p className="fs-20 opacity-70">Our platform helps retailers sell more using the latest in Augemented and Virtual Reality technology</p>
+            <h1>Product</h1>
+            <p className="fs-20 opacity-70">Our platform helps retailers sell more using the latest in Augmented and Virtual Reality technology</p>
           </Col>
         </Row>
         <Row className="gap-y align-items-center mb-90">
@@ -59,7 +59,6 @@ const ProductPage = () => (
               All the information your customer needs to make a decision to purchase at their fingertips.  </li>
               <li>One of the first VR/AR check out that ties into your existing payment solution. </li>
             </ul>
-            <p> One of the first VR/AR check out that ties into your existing payment solution. </p>
           </Col>
 
           <Col className="col-12 col-md-6 offset-md-1 text-center hidden-sm-down">
@@ -127,7 +126,7 @@ const ProductPage = () => (
           </Col>
         </Row>
 
-        <Row className="gap-y align-items-center mb-90">
+        <Row className="gap-y align-items-center">
           <Col className="col-12 align-self-center text-center hidden-sm-down">
             <GetStartedButton />
           </Col>
@@ -137,10 +136,10 @@ const ProductPage = () => (
       </Container>
     </section>
 
-    <section className="section pb-0 overflow-hidden">
-      <Container className="">
+    <section className="section py-0 overflow-hidden">
+      <Container>
         <header className="section-header">
-          <h2>We work with all types of lifestyles businesses</h2>
+          <h2>We work with all types of lifestyle businesses</h2>
           <hr />
           <p className="lead"> Increase conversion, reduce returns, sell more with AR today!</p>
         </header>
