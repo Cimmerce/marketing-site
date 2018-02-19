@@ -1,3 +1,17 @@
 .getStarted {
   color: white;
 }
+
+.playVideoContainer {
+  background-image: url('../assets/images/1minvideo.jpg');
+  background-size: 100%;
+  width: 30em;
+  height: 16.8em;
+  margin: 0 auto;
+  padding-top: 6em;
+  cursor: pointer;
+}
+
+.leadText  {
+  font-weight: 400 !important;
+}

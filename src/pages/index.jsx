@@ -106,18 +106,19 @@ class IndexPage extends Component {
 
           <section className="section bg-gray">
             <Container>
-              <header className="section-header">
+              <header className="section-header mb-0">
                 <h2>How it Works</h2>
-                <hr />
-                <Button
-                  size="lg" className="btn-circular" color="primary"
-                  onClick={this.handle1MinuteVideoModalToggled}
+                <div
+                  className={styles.playVideoContainer}
                   id="PlayVideoButton"
+                  onClick={this.handle1MinuteVideoModalToggled}
                 >
-                  &nbsp;
-                  <i className="ti-control-play"></i>
-                </Button>
-                <p><small>Cimmerse in 1 minute</small></p>
+                  <Button size="lg" className="btn-circular" color="primary">
+                    &nbsp;
+                    <i className="ti-control-play"></i>
+                  </Button>
+                </div>
+                <p><em>Video: Cimmerse in 1 minute</em></p>
                 <VideoModal
                   isOpen={this.state.is1MinuteVideoPlaying}
                   onToggle={this.handle1MinuteVideoModalToggled}
@@ -130,9 +131,9 @@ class IndexPage extends Component {
               <Row className="gap-y">
                 <Col className="col-12">
                   <blockquote className="blockquote">
-                    <p className="lead">
+                    <p className="lead" className={cx('lead', styles.leadText)}>
                       Cimmerse tech seamlessly integrates your 2D product photo with a highly realistic interactive 3D model. With any mobile device and a tap of an icon, customers can place your products in the same room with them and experience real-time Augmented Reality.
-                  </p>
+                    </p>
                     <p>
                       Shopping online has never been more convenient and detailed to actually see products instantly from a website anywhere and all the time!
                   </p>
