@@ -16,7 +16,7 @@ import styles from './pricing.module.scss'
 const PricingPage = () => (
   <main className="main-content">
 
-    <section className="section py-50">
+    <section className="section pb-50">
 
       <Container>
 
@@ -107,7 +107,7 @@ const PricingPage = () => (
         <Row className="gap-y text-center">
           <Col className="col-12 col-md-4">
             <div className="pricing-1">
-              <p className="plan-name">Pilot</p>
+              <p className="plan-name">Pilot Project</p>
               <small>STARTING FROM</small>
               <h2 className={styles.pricingSize}>€100</h2>
               <br />
@@ -120,9 +120,9 @@ const PricingPage = () => (
 
           <Col className="col-12 col-md-4">
             <div className="pricing-1">
-              <p className="plan-name">Professional</p>
+              <p className="plan-name">Professional Subscription</p>
               <small>STARTING FROM</small>
-              <h2 className={styles.pricingSize}>€100<small>/month</small></h2>
+              <h2 className={styles.pricingSize}>€200<small>/month</small></h2>
               <br />
               <h6>Up to 500 products</h6>
               <h6>Pay monthly or yearly</h6>
@@ -133,7 +133,7 @@ const PricingPage = () => (
 
           <Col className="col-12 col-md-4">
             <div className="pricing-1">
-              <p className="plan-name">Enterprise</p>
+              <p className="plan-name">Enterprise Subscription</p>
               <br />
               <GetStartedButton buttonText='Contact us' />
               <br /><div className="m-40"></div>
