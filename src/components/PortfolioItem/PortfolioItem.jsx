@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
 import styles from './PortfolioItem.module.scss'
 
 class PortfolioItem extends Component {
@@ -20,7 +19,7 @@ class PortfolioItem extends Component {
 
     return (
       <div
-        className={cx('portfolio-1')}
+        className="portfolio-1"
         onClick={this.handleClick}
       >
         <img src={imageSrc} />
