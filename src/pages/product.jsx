@@ -92,7 +92,7 @@ const ProductPage = () => (
             <ul>
               <li>No Apps or installs. </li>
               <li>This allows customers to browser your products and place them right in the room with them instantly. </li>
-              <li>All mobile devices supported (IOS, Android,...)</li>
+              <li>All mobile devices supported (iOS, Android ...)</li>
             </ul>
           </Col>
         </Row>
@@ -165,7 +165,7 @@ const ProductPage = () => (
           <Col className="col-md-4 col-12 d-flex flex-column">
             <div className="mb-7">
               <p className={cx('text-info fs-50 mb-0', styles.blueText)}>Art</p>
-              <p>Galleries, auction houses, museums</p>
+              <p>Paitings, fine art prints, drawings, sculptures</p>
             </div>
             <div className="px-20 mt-auto">
               <img className={cx('opacity-80"', styles.imageHeight)} src={artPicSrc} alt="..." data-aos="slide-up" data-aos-delay="600" />

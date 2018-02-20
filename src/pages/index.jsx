@@ -14,12 +14,13 @@ import Waypoint from 'react-waypoint'
 
 import ModelViewer from '../components/ModelViewer'
 import GetStartedButton from '../components/GetStartedButton/GetStartedButton'
+import VideoModal from '../components/VideoModal/VideoModal'
 import videoPosterSrc from '../assets/video/frontpageloop.jpg'
 import videoMp4Src from '../assets/video/frontpageloop.mp4'
 import videoWebMSrc from '../assets/video/frontpageloop.webm'
 import styles from './index.module.scss'
+import videoThumbnailSrc from '../assets/images/1minvideo.jpg'
 import './index.scss'
-import VideoModal from '../components/VideoModal/VideoModal'
 
 class IndexPage extends Component {
   constructor(props) {
@@ -108,17 +109,22 @@ class IndexPage extends Component {
             <Container>
               <header className="section-header mb-0">
                 <h2>How it Works</h2>
-                <div
-                  className={styles.playVideoContainer}
-                  id="PlayVideoButton"
-                  onClick={this.handle1MinuteVideoModalToggled}
-                >
-                  <Button size="lg" className="btn-circular" color="primary">
+                <div className={styles.playVideoContainer}>
+                  <img
+                    src={videoThumbnailSrc}
+                    id="PlayVideoButton"
+                    onClick={this.handle1MinuteVideoModalToggled}
+                    className={styles.playVideoThumbnail}
+                  />
+                  <Button
+                    size="xl" color="primary"
+                    className={cx('btn-circular', styles.playVideoButton)}
+                  >
                     &nbsp;
                     <i className="ti-control-play"></i>
                   </Button>
                 </div>
-                <p><em>Video: Cimmerse in 1 minute</em></p>
+                <p>Cimmerse in 1 minute</p>
                 <VideoModal
                   isOpen={this.state.is1MinuteVideoPlaying}
                   onToggle={this.handle1MinuteVideoModalToggled}
@@ -128,16 +134,14 @@ class IndexPage extends Component {
                 </UncontrolledTooltip>
               </header>
 
-              <Row className="gap-y">
-                <Col className="col-12">
-                  <blockquote className="blockquote">
-                    <p className="lead" className={cx('lead', styles.leadText)}>
-                      Cimmerse tech seamlessly integrates your 2D product photo with a highly realistic interactive 3D model. With any mobile device and a tap of an icon, customers can place your products in the same room with them and experience real-time Augmented Reality.
-                    </p>
-                    <p>
-                      Shopping online has never been more convenient and detailed to actually see products instantly from a website anywhere and all the time!
+              <Row className="gap-y my-20">
+                <Col className="col-12 text-center">
+                  <p className={styles.leadTextLarge}>
+                    Cimmerse tech seamlessly integrates your 2D product photo with a highly realistic interactive 3D model. With any mobile device and a tap of an icon, customers can place your products in the same room with them and experience real-time Augmented Reality.
                   </p>
-                  </blockquote>
+                  <p className={styles.leadTextSmall}>
+                    Shopping online has never been more convenient and detailed to actually see products instantly from a website anywhere and all the time!
+                  </p>
                 </Col>
               </Row>
 

@@ -94,8 +94,8 @@ class RequestQuote extends Component {
         <ModalHeader toggle={this.props.onToggle}>Get started in two easy steps</ModalHeader>
         <ModalBody>
           <ol>
-            <li>We digitize your products into high quality 3D.</li>
-            <li>You integrate our 3D/AR solution into your site with one line of code.</li>
+            <li>We digitize your products into high quality 3D models.</li>
+            <li>You integrate the 3D/AR solution into your site with one line of code.</li>
           </ol>
         </ModalBody>
         <ModalFooter>
@@ -266,7 +266,7 @@ class RequestQuote extends Component {
       <div>
         <ModalHeader toggle={this.props.onToggle}>Thank you!</ModalHeader>
         <ModalBody>
-          <p>We will get back to you within 1 business day.</p>
+          <p>We will get back to you within one business day.</p>
         </ModalBody>
         <ModalFooter>
           <Button color="primary" onClick={this.props.onToggle}>Close</Button>

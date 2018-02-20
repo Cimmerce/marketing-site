@@ -3,15 +3,29 @@
 }
 
 .playVideoContainer {
-  background-image: url('../assets/images/1minvideo.jpg');
-  background-size: 100%;
-  width: 30em;
-  height: 16.8em;
   margin: 0 auto;
   padding-top: 6em;
   cursor: pointer;
+  position: relative;
 }
 
-.leadText  {
-  font-weight: 400 !important;
+.playVideoThumbnail {
+  width: calc(100vw - 80px);
+  max-width: 30em;
+  z-index: 1;
+}
+
+.playVideoButton {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 44px);
+  z-index: 2;
+}
+
+.leadTextLarge  {
+  font-size: 1.5rem;
+}
+
+.leadTextSmall  {
+  font-size: 1.1rem;
 }
