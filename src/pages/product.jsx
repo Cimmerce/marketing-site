@@ -10,7 +10,7 @@ import {
 import GetStartedButton from '../components/GetStartedButton/GetStartedButton'
 import styles from './product.module.scss'
 
-import digitizationPicSrc from '../assets/images/digitize1.jpg'
+import digitizationPicSrc from '../assets/images/digitize2.jpg'
 import embedPicSrc from '../assets/images/embedsample.jpg'
 import vrPicSrc from '../assets/images/VR_graphic.png'
 import arPicSrc from '../assets/images/ar_graphic.jpg'
@@ -29,7 +29,7 @@ const ProductPage = () => (
           <Col className="col-12 col-lg-8 offset-lg-2">
 
             <h1>Product</h1>
-            <p className="fs-20 opacity-70">Our platform helps retailers sell more using the latest in Augmented and Virtual Reality technology</p>
+            <p className="fs-20 opacity-70">Our platform helps brands and retailers sell more using the latest in Augmented and Virtual Reality technology</p>
           </Col>
         </Row>
         <Row className="gap-y align-items-center mb-90">
@@ -42,10 +42,10 @@ const ProductPage = () => (
             <h3 className="fw-300">Digitization </h3>
             <p> We create your products into highly realistic 3D </p>
             <ul>
-              <li>High quality 3D Scanning: We digitize your products in our studio or come to you.</li>
-              <li>3D files: We process your existing 3D models. CAD, FBX, DWG, OBJ and many more supported.</li>
-              <li>3D from 2D images: Send us your product photos and we convert them to 3D.</li>
-              <li>Custom built models: Our 3D artists help design and create high quality models.</li>
+              <li><b>High quality 3D Scanning:</b> We digitize your products in our studio or come to you.</li>
+              <li><b>3D files:</b> We process your existing 3D models. CAD, FBX, DWG, OBJ and many more supported.</li>
+              <li><b>3D from 2D images:</b> Send us your product photos and we convert them to 3D.</li>
+              <li><b>Custom built models:</b> Our 3D artists help design and create high quality models.</li>
             </ul>
           </Col>
         </Row>
