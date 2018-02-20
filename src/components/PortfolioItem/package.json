@@ -1,0 +1,6 @@
+{
+  "name": "PortfolioItem",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PortfolioItem.jsx"
+}

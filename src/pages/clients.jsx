@@ -14,6 +14,7 @@ import metaluxSrc from '../assets/images/metalux.png'
 import muuceSrc from '../assets/images/muuce.jpg'
 import poshtelSrc from '../assets/images/poshtel.png'
 import vtexSrc from '../assets/images/VTEX.png'
+import PortfolioItem from '../components/PortfolioItem/PortfolioItem';
 
 
 const ClientsPage = () => (
@@ -30,47 +31,37 @@ const ClientsPage = () => (
 
       <Container>
         <Row className="gap-y gap-2">
-
           <Col className="col-6 col-lg-3">
-            <div className="portfolio-1">
-              <img src={metaluxSrc} />
-              <div className="portfolio-details">
-                <h5>Metalux</h5>
-                <p className={styles.testimonial}>“No way! This is like I am standing in front of the real thing, my customers will love this!”</p>
-              </div>
-            </div>
+            <PortfolioItem
+              imageSrc={metaluxSrc}
+              headline="Metalux"
+              testimonial="“No way! This is like I am standing in front of the real thing, my customers will love this!”"
+            />
           </Col>
 
           <Col className="col-6 col-lg-3">
-            <div className="portfolio-1">
-              <img src={muuceSrc} />
-              <div className="portfolio-details">
-                <h5>Muuce</h5>
-                <p className={styles.testimonial}>“This is going to change how people buy art and place it in their homes, amazing”</p>
-              </div>
-            </div>
+            <PortfolioItem
+              imageSrc={muuceSrc}
+              headline="Muuce"
+              testimonial="“This is going to change how people buy art and place it in their homes, amazing”"
+            />
           </Col>
 
           <Col className="col-6 col-lg-3">
-            <div className="portfolio-1">
-              <img src={poshtelSrc} />
-              <div className="portfolio-details">
-                <h5>Poshtel</h5>
-                <p className={styles.testimonial}>“It’s too awesome, we will be able to put our clients in any location we have in the world.”</p>
-              </div>
-            </div>
+            <PortfolioItem
+              imageSrc={poshtelSrc}
+              headline="Poshtel"
+              testimonial="“It’s too awesome, we will be able to put our clients in any location we have in the world.”"
+            />
           </Col>
 
           <Col className="col-6 col-lg-3">
-            <div className="portfolio-1">
-              <img src={vtexSrc} />
-              <div className="portfolio-details">
-                <h5>VTEX</h5>
-                <p className={styles.testimonial}>“Our customers had a great VR experience having access to hundreds of potential partners at their fingertips”</p>
-              </div>
-            </div>
+            <PortfolioItem
+              imageSrc={vtexSrc}
+              headline="VTEX"
+              testimonial="“Our customers had a great VR experience having access to hundreds of potential partners at their fingertips”"
+            />
           </Col>
-
         </Row>
 
       </Container>
