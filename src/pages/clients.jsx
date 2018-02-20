@@ -164,17 +164,14 @@ const ClientsPage = () => (
     </section>
 
     <section className="section bg-gray">
-      <div className="container">
-        <div className="row gap-y align-items-center">
-          <div className="col-12 col-md-9 text-center text-md-left">
-            <h4 className="mb-0">Get a piece of the AR advantage today</h4>
-          </div>
-
-          <div className="col-12 col-md-3 text-center text-md-right">
+      <header className="section-header">
+        <p className="lead"> Increase conversion, reduce returns, sell more with AR today!</p>
+        <Row className="gap-y align-items-center mt-20">
+          <Col className="col-12 align-self-center text-center hidden-sm-down">
             <GetStartedButton />
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </header>
     </section>
 
   </main>

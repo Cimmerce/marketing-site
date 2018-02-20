@@ -39,10 +39,11 @@ const ProductPage = () => (
 
           <Col className="col-12 col-md-5 offset-md-1 text-center text-md-left">
             <p className="fs-60 fw-900 opacity-10">01</p>
-            <h3 className="fw-300">Digitization: We create your products into highly realistic 3D </h3>
+            <h3 className="fw-300">Digitization </h3>
+            <p> We create your products into highly realistic 3D </p>
             <ul>
               <li>High quality 3D Scanning: We digitize your products in our studio or come to you.</li>
-              <li>Your 3D files: We process your existing 3D models. CAD, FBX, DWG, OBJ and many more supported.</li>
+              <li>3D files: We process your existing 3D models. CAD, FBX, DWG, OBJ and many more supported.</li>
               <li>3D from 2D images: Send us your product photos and we convert them to 3D.</li>
               <li>Custom built models: Our 3D artists help design and create high quality models.</li>
             </ul>
@@ -58,8 +59,8 @@ const ProductPage = () => (
             <h3 className="fw-300">Cimmerse Platform</h3>
             <ul>
               <li>Upload, light and stage your 3D models. </li>
-              <li>Customize information about your products and features for easy usability.
-              All the information your customer needs to make a decision to purchase at their fingertips.  </li>
+              <li>Customize information about your products and features for easy usability. </li>
+              <li>All the information your customer needs to make a decision to purchase at their fingertips.  </li>
               <li>One of the first VR/AR check out that ties into your existing payment solution. </li>
             </ul>
           </Col>
@@ -91,7 +92,7 @@ const ProductPage = () => (
             <p>View your products in AR straight through the browser. </p>
             <ul>
               <li>No Apps or installs. </li>
-              <li>This allows customers to browser your products and place them right in the room with them instantly. </li>
+              <li>This allows customers to browse your products and place them right in the room with them instantly. </li>
               <li>All mobile devices supported (iOS, Android ...)</li>
             </ul>
           </Col>
@@ -123,22 +124,22 @@ const ProductPage = () => (
           </Col>
         </Row>
 
-        <Row className="gap-y align-items-center mt-20">
-          <Col className="col-12 align-self-center text-center hidden-sm-down">
-            <GetStartedButton />
-          </Col>
-        </Row>
-
-
       </Container>
     </section>
 
     <section className="section py-0 overflow-hidden">
       <Container>
         <header className="section-header">
-          <h2>We work with all types of lifestyle businesses</h2>
-          <hr />
           <p className="lead"> Increase conversion, reduce returns, sell more with AR today!</p>
+          <Row className="gap-y align-items-center mt-20">
+            <Col className="col-12 align-self-center text-center hidden-sm-down">
+              <GetStartedButton />
+            </Col>
+          </Row>
+        </header>
+
+        <header className="section-header">
+          <h2>We work with all types of lifestyle businesses</h2>
         </header>
 
         <Row className="row gap-y text-center">
