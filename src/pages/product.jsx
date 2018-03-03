@@ -146,7 +146,7 @@ const ProductPage = () => (
           <Col className="col-md-4 col-12 d-flex flex-column">
             <div className="mb-60">
               <p className={cx('text-info fs-50 mb-0', styles.blueText)}>Fashion</p>
-              <p>Shoes, accessories, jewlery, clothing</p>
+              <p>Shoes, accessories, jewelry, clothing</p>
             </div>
             <div className="px-20 mt-auto">
               <img className={cx('opacity-80"', styles.imageHeight)} src={fashionPicSrc} alt="..." data-aos="slide-up" data-aos-delay="300" />
@@ -166,7 +166,7 @@ const ProductPage = () => (
           <Col className="col-md-4 col-12 d-flex flex-column">
             <div className="mb-7">
               <p className={cx('text-info fs-50 mb-0', styles.blueText)}>Art</p>
-              <p>Paitings, fine art prints, drawings, sculptures</p>
+              <p>Paintings, fine art prints, drawings, sculptures</p>
             </div>
             <div className="px-20 mt-auto">
               <img className={cx('opacity-80"', styles.imageHeight)} src={artPicSrc} alt="..." data-aos="slide-up" data-aos-delay="600" />
