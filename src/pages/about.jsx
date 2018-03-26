@@ -11,7 +11,7 @@ import {
 import pressPic1Src from '../assets/images/press_pic_1.png'
 import pressPic2Src from '../assets/images/press_pic_2.png'
 import pressPicInsiderSrc from '../assets/images/insider_trends.png'
-import conferencePic1Src from '../assets/images/landing_festival_pic.jpeg'
+import conferencePic1Src from '../assets/images/awe.png'
 import conferencePic2Src from '../assets/images/shop_talk_pic.png'
 import ericPic1Src from '../assets/images/eric.jpg'
 import casperPic1Src from '../assets/images/casper.jpg'
@@ -111,29 +111,31 @@ const AboutPage = () => (
         <header className="section-header">
           <h2>Where to Meet Us</h2>
           <hr />
-          <p className="lead">Conferences and events where we'll be exhibiting our product.</p>
+          <p className="lead">Conferences and events where we'll be giving talks and exhibiting our product.</p>
         </header>
 
         <Row className="gap-y">
 
           <Col className="col-12 col-lg-6">
-            <a href="https://www.business.dk/vaekst/her-er-de-15-der-slap-gennem-elevator-testen-i-berlingske-business-boost" className="card card-bordered card-hover-shadow text-center">
-              <div className="card-block">
-                <br />
-                <p><img className={styles.imgSize} src={conferencePic1Src} /></p>
-                <br />
-                <h4 className="card-title">Landing Festival</h4>
-              </div>
-            </a>
-          </Col>
-
-          <Col className="col-12 col-lg-6">
-            <a href="http://cphpost.dk/news/goggle-me-up-scotty-this-is-the-final-frontier.html" className="card card-bordered card-hover-shadow text-center">
+            <a href="https://www.shoptalk.com/" className="card card-bordered card-hover-shadow text-center">
               <div className="card-block">
                 <br />
                 <p><img className={styles.imgSize} src={conferencePic2Src} /></p>
                 <br />
                 <h4 className="card-title">Shop Talk</h4>
+                <small>March 2018</small>
+              </div>
+            </a>
+          </Col>
+
+          <Col className="col-12 col-lg-6">
+            <a href="https://augmentedworldexpo.com/" className="card card-bordered card-hover-shadow text-center">
+              <div className="card-block">
+                <br />
+                <p><img className={styles.imgSize} src={conferencePic1Src} /></p>
+                <br />
+                <h4 className="card-title">Augmented World Expo</h4>
+                <small>May 2018</small>
               </div>
             </a>
           </Col>
