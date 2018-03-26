@@ -10,6 +10,7 @@ import {
 
 import pressPic1Src from '../assets/images/press_pic_1.png'
 import pressPic2Src from '../assets/images/press_pic_2.png'
+import pressPicInsiderSrc from '../assets/images/insider_trends.png'
 import conferencePic1Src from '../assets/images/landing_festival_pic.jpeg'
 import conferencePic2Src from '../assets/images/shop_talk_pic.png'
 import ericPic1Src from '../assets/images/eric.jpg'
@@ -153,7 +154,19 @@ const AboutPage = () => (
 
         <Row className="gap-y">
 
-          <Col className="col-12 col-lg-6">
+          <Col className="col-12 col-lg-4 d-flex align-items-stretch">
+            <a href="https://www.insider-trends.com/2018-update-50-best-retail-tech-startups/" className="card card-bordered card-hover-shadow text-center">
+              <div className="card-block">
+                <br />
+                <p><img className={styles.imgSize} src={pressPicInsiderSrc} /></p>
+                <br />
+                <h4 className="card-title">Named Cimmerse as on of "50 Best Retail Tech Startups"</h4>
+                <small>March 2018</small>
+              </div>
+            </a>
+          </Col>
+
+          <Col className="col-12 col-lg-4 d-flex align-items-stretch">
             <a href="https://www.business.dk/vaekst/her-er-de-15-der-slap-gennem-elevator-testen-i-berlingske-business-boost" className="card card-bordered card-hover-shadow text-center">
               <div className="card-block">
                 <br />
@@ -165,7 +178,7 @@ const AboutPage = () => (
             </a>
           </Col>
 
-          <Col className="col-12 col-lg-6">
+          <Col className="col-12 col-lg-4 d-flex align-items-stretch">
             <a href="http://cphpost.dk/news/goggle-me-up-scotty-this-is-the-final-frontier.html" className="card card-bordered card-hover-shadow text-center">
               <div className="card-block">
                 <br />
