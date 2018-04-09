@@ -21,7 +21,7 @@ const VideoModal = ({ isOpen, onToggle }) => {
         <div className={styles.lityContainer}>
           <div className={styles.lityContent}>
             <div className={styles.lityIframeContainer}>
-              <iframe frameBorder="0" allowFullScreen src="https://player.vimeo.com/video/236880208?color=ffffff&autoplay=1"></iframe>
+              <iframe frameBorder="0" allowFullScreen src="https://player.vimeo.com/video/263871720?color=ffffff&autoplay=1"></iframe>
             </div>
           </div>
           <button className={styles.lityClose} type="button" aria-label="Close (Press escape to close)" onClick={onToggle}>×</button>
