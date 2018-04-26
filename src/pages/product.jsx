@@ -77,7 +77,7 @@ const ProductPage = () => (
             <p>Headsets (HMD) supported in VR (Rift, Vive, GearVR and Daydream.)</p>
             <ul>
               <li>The VR Experience from anywhere your customer chooses to be. </li>
-              <li>Make available all of your inventory in your retail store without having the actual items on the showroom floor. </li>
+              <li>Make all of your inventory available in your online store without having the actual items on the showroom floor. </li>
             </ul>
           </Col>
         </Row>
@@ -91,7 +91,7 @@ const ProductPage = () => (
             <h3 className="fw-300">AR</h3>
             <p>View your products in AR straight through the browser. </p>
             <ul>
-              <li>No Apps or installs. </li>
+              <li>No apps or installs. </li>
               <li>This allows customers to browse your products and place them right in the room with them instantly. </li>
               <li>All mobile devices supported (iOS, Android ...)</li>
             </ul>

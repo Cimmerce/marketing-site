@@ -159,7 +159,7 @@ class IndexPage extends Component {
                   <Card className="gap-items-4 card-bordered card-shadowed">
                     <CardBody>
                       <CardTitle>Perfect for mobile</CardTitle>
-                      <CardText>Cimmerse is designed and built for mobile use. Mobile phones, mobile AR, mobile VR. We love mobile!</CardText>
+                      <CardText>Cimmerse is designed and built for mobile use. Mobile phones, mobile AR, & mobile VR.</CardText>
                     </CardBody>
                   </Card>
                 </Col>
@@ -168,7 +168,7 @@ class IndexPage extends Component {
                   <Card className="gap-items-4 card-bordered card-shadowed">
                     <CardBody>
                       <CardTitle>3D on any device</CardTitle>
-                      <CardText>We provide the platform that lets your customers see your products in 3D on any device with a web browser</CardText>
+                      <CardText>We provide the platform that lets your customers see your products in 3D on any device with a web browser.</CardText>
                     </CardBody>
                   </Card>
                 </Col>

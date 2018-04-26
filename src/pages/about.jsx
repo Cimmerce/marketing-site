@@ -30,7 +30,6 @@ const AboutPage = () => (
           <p className="fs-20 opacity-70">A web based full-service 3D, AR, & VR platform for ecommerce</p>
         </header>
         <header className="section-header">
-          <small>Team</small>
           <h2>Who We Are</h2>
           <hr />
           <p className="lead">Meet the team working on the future of augmented reality ecommerce.</p>
@@ -81,7 +80,7 @@ const AboutPage = () => (
       </Container>
     </section>
 
-    <section className={cx('section py-50', styles.gradientBackground)}>
+    <section className={cx('section', styles.gradientBackground)}>
       <Container className="">
 
         <Row className="">
@@ -117,18 +116,6 @@ const AboutPage = () => (
         <Row className="gap-y">
 
           <Col className="col-12 col-lg-6">
-            <a href="https://www.shoptalk.com/" className="card card-bordered card-hover-shadow text-center">
-              <div className="card-block">
-                <br />
-                <p><img className={styles.imgSize} src={conferencePic2Src} /></p>
-                <br />
-                <h4 className="card-title">Shop Talk</h4>
-                <small>March 2018</small>
-              </div>
-            </a>
-          </Col>
-
-          <Col className="col-12 col-lg-6">
             <a href="https://augmentedworldexpo.com/" className="card card-bordered card-hover-shadow text-center">
               <div className="card-block">
                 <br />
@@ -148,7 +135,6 @@ const AboutPage = () => (
       <Container className="">
 
         <header className="section-header">
-          <small>In The News</small>
           <h2>Press Coverage</h2>
           <hr />
           <p className="lead">Read all the news, reports and stories published about our startup.</p>
