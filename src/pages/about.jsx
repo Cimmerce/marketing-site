@@ -116,6 +116,18 @@ const AboutPage = () => (
         <Row className="gap-y">
 
           <Col className="col-12 col-lg-6">
+            <a href="https://hbgtech.se/" className="card card-bordered card-hover-shadow text-center">
+              <div className="card-block">
+                <br />
+                <p><div className={styles.textLogo}>#HBGTECH</div></p>
+                <br />
+                <h4 className="card-title">HBGTech</h4>
+                <small>May 2018</small>
+              </div>
+            </a>
+          </Col>
+
+          <Col className="col-12 col-lg-6">
             <a href="https://augmentedworldexpo.com/" className="card card-bordered card-hover-shadow text-center">
               <div className="card-block">
                 <br />

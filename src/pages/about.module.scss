@@ -1,3 +1,10 @@
+@import "../layouts/bootstrap/functions";
+@import "../layouts/bootstrap/mixins";
+@import "../layouts/bootstrap/variables";
+@import "../layouts/theme/variables";
+@import "../layouts/theme/mixins";
+@import "../layouts/theme/utility/color";
+
 .imgSize {
     width: 200px;
     height: 200px;
@@ -18,4 +25,12 @@
 
 .centerAbout {
     padding-top: 2em;
+}
+
+.textLogo {
+    height: 200px;
+    font-size: 3rem;
+    text-align: center;
+    color: $color-text;
+    padding-top: 50px;
 }
