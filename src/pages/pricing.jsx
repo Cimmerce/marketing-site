@@ -126,6 +126,7 @@ const PricingPage = () => (
               <br />
               <h6>Scales with your business</h6>
               <h6>Pay monthly or yearly</h6>
+              <h6>&nbsp;</h6>
               <br />
             </div>
           </Col>
