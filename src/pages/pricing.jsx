@@ -124,9 +124,8 @@ const PricingPage = () => (
               <small>STARTING FROM</small>
               <h2 className={styles.pricingSize}>€200<small>/month</small></h2>
               <br />
-              <h6>Up to 500 products</h6>
-              <h6>Pay monthly or yearly</h6>
               <h6>Scales with your business</h6>
+              <h6>Pay monthly or yearly</h6>
               <br />
             </div>
           </Col>
