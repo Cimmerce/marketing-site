@@ -11,8 +11,11 @@ import {
 import pressPic1Src from '../assets/images/press_pic_1.png'
 import pressPic2Src from '../assets/images/press_pic_2.png'
 import pressPicInsiderSrc from '../assets/images/insider_trends.png'
+import forbesLogoSrc from '../assets/images/forbes-logo-transparent.png'
+import rfGlobalNetLogoSrc from '../assets/images/rfglobalnet-logo.jpg'
 import conferencePic1Src from '../assets/images/awe.png'
 import conferencePic2Src from '../assets/images/shop_talk_pic.png'
+import slushLogoSrc from '../assets/images/slush.jpg'
 import ericPic1Src from '../assets/images/eric.jpg'
 import casperPic1Src from '../assets/images/casper.jpg'
 import yoniPic1Src from '../assets/images/yoni.jpg'
@@ -111,31 +114,17 @@ const AboutPage = () => (
         </header>
 
         <Row className="gap-y">
-
           <Col className="col-12 col-lg-6">
-            <a href="https://hbgtech.se/" className="card card-bordered card-hover-shadow text-center">
+            <a href="http://www.slush.org/" className={cx("card card-bordered card-hover-shadow text-center", styles.width100)}>
               <div className="card-block">
                 <br />
-                <p><div className={styles.textLogo}>#HBGTECH</div></p>
+                <p><img className={styles.imgSize} src={slushLogoSrc} /></p>
                 <br />
-                <h4 className="card-title">HBGTech</h4>
-                <small>May 2018</small>
+                <h4 className="card-title">Slush</h4>
+                <small>December 2018</small>
               </div>
             </a>
           </Col>
-
-          <Col className="col-12 col-lg-6">
-            <a href="https://augmentedworldexpo.com/" className="card card-bordered card-hover-shadow text-center">
-              <div className="card-block">
-                <br />
-                <p><img className={styles.imgSize} src={conferencePic1Src} /></p>
-                <br />
-                <h4 className="card-title">Augmented World Expo</h4>
-                <small>May 2018</small>
-              </div>
-            </a>
-          </Col>
-
         </Row>
       </Container>
     </section>
@@ -150,9 +139,32 @@ const AboutPage = () => (
         </header>
 
         <Row className="gap-y">
+          <Col className="col-12 col-lg-4 d-flex align-items-stretch">
+            <a href="https://www.forbes.com/sites/roslynlayton/2018/06/06/5g-can-reinvent-ecommerce-with-ar-and-vr-if-policymakers-allow/" className={cx("card card-bordered card-hover-shadow text-center", styles.width100)}>
+              <div className="card-block">
+                <br />
+                <p><img className={styles.imgSize} src={forbesLogoSrc} /></p>
+                <br />
+                <h4 className="card-title">Cimmerse CEO Eric Prince<br />featured in Forbes</h4>
+                <small>June 2018</small>
+              </div>
+            </a>
+          </Col>
 
           <Col className="col-12 col-lg-4 d-flex align-items-stretch">
-            <a href="https://www.insider-trends.com/2018-update-50-best-retail-tech-startups/" className="card card-bordered card-hover-shadow text-center">
+            <a href="https://www.rfglobalnet.com/doc/the-week-in-g-g-pcs-from-intel-and-sprint-coming-next-year-uk-conducts-first-live-g-trial-ar-vr-needs-g-to-boost-ecommerce-0001" className={cx("card card-bordered card-hover-shadow text-center", styles.width100)}>
+              <div className="card-block">
+                <br />
+                <p><img className={styles.imgSize} src={rfGlobalNetLogoSrc} /></p>
+                <br />
+                <h4 className="card-title">Cimmerse part of<br />This in Week 5G</h4>
+                <small>June 2018</small>
+              </div>
+            </a>
+          </Col>
+
+          <Col className="col-12 col-lg-4 d-flex align-items-stretch">
+            <a href="https://www.insider-trends.com/2018-update-50-best-retail-tech-startups/" className={cx("card card-bordered card-hover-shadow text-center", styles.width100)}>
               <div className="card-block">
                 <br />
                 <p><img className={styles.imgSize} src={pressPicInsiderSrc} /></p>
@@ -164,7 +176,7 @@ const AboutPage = () => (
           </Col>
 
           <Col className="col-12 col-lg-4 d-flex align-items-stretch">
-            <a href="https://www.business.dk/vaekst/her-er-de-15-der-slap-gennem-elevator-testen-i-berlingske-business-boost" className="card card-bordered card-hover-shadow text-center">
+            <a href="https://www.business.dk/vaekst/her-er-de-15-der-slap-gennem-elevator-testen-i-berlingske-business-boost" className={cx("card card-bordered card-hover-shadow text-center", styles.width100)}>
               <div className="card-block">
                 <br />
                 <p><img className={styles.imgSize} src={pressPic1Src} /></p>
@@ -176,7 +188,7 @@ const AboutPage = () => (
           </Col>
 
           <Col className="col-12 col-lg-4 d-flex align-items-stretch">
-            <a href="http://cphpost.dk/news/goggle-me-up-scotty-this-is-the-final-frontier.html" className="card card-bordered card-hover-shadow text-center">
+            <a href="http://cphpost.dk/news/goggle-me-up-scotty-this-is-the-final-frontier.html" className={cx("card card-bordered card-hover-shadow text-center", styles.width100)}>
               <div className="card-block">
                 <br />
                 <p><img className={styles.imgSize} src={pressPic2Src} /></p>
