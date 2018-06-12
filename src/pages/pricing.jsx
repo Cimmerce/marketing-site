@@ -163,60 +163,36 @@ const PricingPage = () => (
 
       <Container className="">
         <Row className="no-gutters pricing-4 popular" >
-          <Col className="col-12 col-md-9 plan-description">
+          <Col className="col-12 plan-description">
             <h5>High quality 3D Scanning</h5>
             <p>Our highest quality option. We digitize your products in our studio or come to you.</p>
           </Col>
-
-          <Col className="col-12 col-md-3 plan-price">
-            <small>STARTING FROM</small>
-            <h3 className="pt-0 mb-0">€60</h3>
-            <small>per product</small>
-          </Col>
         </Row>
 
         <br />
 
         <Row className="no-gutters pricing-4">
-          <Col className="col-12 col-md-9 plan-description">
+          <Col className="col-12 plan-description">
             <h5>Your 3D files</h5>
             <p>We process your existing 3D models. CAD, FBX, DWG, OBJ and many more supported.</p>
           </Col>
-
-          <Col className="col-12 col-md-3 plan-price">
-            <small>STARTING FROM</small>
-            <h3 className="pt-0 mb-0">€40</h3>
-            <small>per product</small>
-          </Col>
         </Row>
 
         <br />
 
         <Row className="no-gutters pricing-4">
-          <Col className="col-12 col-md-9 plan-description">
+          <Col className="col-12 plan-description">
             <h5>3D from 2D images</h5>
             <p>Send us your product photos and we convert them to 3D.</p>
           </Col>
-
-          <Col className="col-12 col-md-3 plan-price">
-            <small>STARTING FROM</small>
-            <h3 className="pt-0 mb-0">€20</h3>
-            <small>per product</small>
-          </Col>
         </Row>
 
         <br />
 
         <Row className="no-gutters pricing-4">
-          <Col className="col-12 col-md-9 plan-description">
+          <Col className="col-12 plan-description">
             <h5>Custom built models</h5>
             <p>Our 3D artists help design and create high quality models.</p>
-          </Col>
-
-          <Col className="col-12 col-md-3 plan-price">
-            <small>STARTING FROM</small>
-            <h3 className="pt-0 mb-0">€200</h3>
-            <small>per product</small>
           </Col>
         </Row>
       </Container>
