@@ -32,22 +32,6 @@ const Footer = () => (
           </Nav>
         </Col>
       </Row>
-
-      <Row>
-        <Col className="col-0 col-md-6"></Col>
-        <Col className="col-12 col-md-6">
-          <div className="d-flex flex-row align-items-center">
-            <div className="p-2 col-4 text-right">
-              <a href="https://www.thinkaccelerate.com/" target="_blank">
-                <img src={thinkLogoSrc} className={styles.thinkLogo} alt="THINK Accelerate logo" />
-              </a>
-            </div>
-            <div className="p-2 col-8">
-              <small>Supported by THINK Accelerate in Helsingborg, Sweden</small>
-            </div>
-          </div>
-        </Col>
-      </Row>
     </Container>
   </footer>
 )
