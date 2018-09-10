@@ -44,7 +44,7 @@ const PricingPage = () => (
                   to="digitization"
                   smooth={true} duration={500} offset={-100}
                 >
-                  See price list <i className="ti-angle-double-down"></i>
+                  See digitization options <i className="ti-angle-double-down"></i>
                 </ScrollLink>
               </li>
             </ul>
@@ -91,65 +91,6 @@ const PricingPage = () => (
     </section>
 
     <section className="section bg-gray">
-      <Element name="more"></Element>
-
-      <header className="section-header">
-        <small>Subscription</small>
-        <h2>Risk-Free Trial</h2>
-        <hr />
-        <p className="lead">
-          We provide cutting-edge technology and we understand the need to try the process and experience the difference it can make for your business before you make a larger commitment.
-          We offer pilot projects starting at €100 so you can see for yourself.
-        </p>
-      </header>
-
-      <Container>
-        <Row className="gap-y text-center">
-          <Col className="col-12 col-md-4">
-            <div className="pricing-1">
-              <p className="plan-name">Pilot Project</p>
-              <small>STARTING FROM</small>
-              <h2 className={styles.pricingSize}>€100</h2>
-              <br />
-              <h6>One 3D scanned product</h6>
-              <h6>3 months subscription included</h6>
-              <h6>Unlimited support</h6>
-              <br />
-            </div>
-          </Col>
-
-          <Col className="col-12 col-md-4">
-            <div className="pricing-1">
-              <p className="plan-name">Professional Subscription</p>
-              <small>STARTING FROM</small>
-              <h2 className={styles.pricingSize}>€200<small>/month</small></h2>
-              <br />
-              <h6>Scales with your business</h6>
-              <h6>Pay monthly or yearly</h6>
-              <h6>&nbsp;</h6>
-              <br />
-            </div>
-          </Col>
-
-          <Col className="col-12 col-md-4">
-            <div className="pricing-1">
-              <p className="plan-name">Enterprise Subscription</p>
-              <br />
-              <GetStartedButton buttonText='Contact us' />
-              <br /><div className="m-40"></div>
-              <h6>Unlimited products</h6>
-              <h6>Customized digitization process</h6>
-              <h6>Customized integration</h6>
-              <br />
-            </div>
-          </Col>
-
-        </Row>
-
-      </Container>
-    </section>
-
-    <section className="section">
       <Element name="digitization"></Element>
 
       <header className="section-header">
@@ -162,37 +103,57 @@ const PricingPage = () => (
       </header>
 
       <Container className="">
-        <Row className="no-gutters pricing-4 popular" >
-          <Col className="col-12 plan-description">
-            <h5>High quality 3D Scanning</h5>
-            <p>Our highest quality option. We digitize your products in our studio or come to you.</p>
+        <Row className="gap-y text-center">
+          <Col className="col-12 col-md-4">
+            <div className="pricing-1">
+              <p className="plan-name">High quality 3D Scanning</p>
+              <p>Our highest quality option. We digitize your products in our studio or come to you.</p>
+              <br />
+            </div>
+          </Col>
+
+          <Col className="col-12 col-md-4">
+            <div className="pricing-1">
+              <p className="plan-name">Your 3D files</p>
+              <p>We process and optimize your existing 3D models. CAD, FBX, DWG, OBJ and many more supported.</p>
+            </div>
+          </Col>
+
+          <Col className="col-12 col-md-4">
+            <div className="pricing-1">
+              <p className="plan-name">Custom built models</p>
+              <p>Our 3D artists help design and create high quality models.</p>
+              <br />
+            </div>
           </Col>
         </Row>
+      </Container>
+    </section>
 
-        <br />
+    <section className="section">
+      <Element name="more"></Element>
 
+      <header className="section-header">
+        <small>Subscription</small>
+        <h2>Scales with the number of products</h2>
+        <hr />
+        <p className="lead">
+          Test the waters with a few products or dive straight in with your full catalog.
+          We have you covered with an affordable monthly subscription that scales with your business.
+        </p>
+      </header>
+
+      <Container>
         <Row className="no-gutters pricing-4">
-          <Col className="col-12 plan-description">
-            <h5>Your 3D files</h5>
-            <p>We process your existing 3D models. CAD, FBX, DWG, OBJ and many more supported.</p>
+          <Col className="col-12 col-md-9 plan-description">
+            <h5>Monthly subscription</h5>
+            <p>We host all required assets and keep the Cimmerse platform up to date with the newest software and devices.</p>
           </Col>
-        </Row>
 
-        <br />
-
-        <Row className="no-gutters pricing-4">
-          <Col className="col-12 plan-description">
-            <h5>3D from 2D images</h5>
-            <p>Send us your product photos and we convert them to 3D.</p>
-          </Col>
-        </Row>
-
-        <br />
-
-        <Row className="no-gutters pricing-4">
-          <Col className="col-12 plan-description">
-            <h5>Custom built models</h5>
-            <p>Our 3D artists help design and create high quality models.</p>
+          <Col className="col-12 col-md-3 plan-price">
+            <small>DOWN TO</small>
+            <h3 className="pt-0 mb-0">€3</h3>
+            <small>per product</small>
           </Col>
         </Row>
       </Container>
