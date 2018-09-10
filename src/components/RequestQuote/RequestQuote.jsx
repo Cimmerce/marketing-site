@@ -23,7 +23,7 @@ class RequestQuote extends Component {
     this.bindMethods()
 
     this.state = {
-      currentStep: 'intro',
+      currentStep: 'details',
       formFields: {
         selectedDigitizationOptions: [],
         websiteUrl: '',
@@ -167,7 +167,7 @@ class RequestQuote extends Component {
         data-netlify-honeypot="bot-field"
         onSubmit={this.handleSubmit}
       >
-        <ModalHeader toggle={this.props.onToggle}>How can we help you?</ModalHeader>
+        <ModalHeader toggle={this.props.onToggle}>Get a quote</ModalHeader>
         <ModalBody>
           <Input
             name="bot-field"
@@ -253,9 +253,14 @@ class RequestQuote extends Component {
             </Row>
           </Container>
         </ModalBody>
-        <ModalFooter>
-          <Button color="primary" type="submit" disabled={this.state.isSubmitting}>Finish</Button>{' '}
-          <Button color="secondary" onClick={this.gotoStep.bind(this, 'digitization')}>Go back</Button>
+        <ModalFooter className="justify-content-start align-items-center">
+          <div className="flex-grow-1">
+            <Button color="primary" type="submit" disabled={this.state.isSubmitting}>Submit</Button>{' '}
+            <Button color="secondary" onClick={this.props.onToggle}>Cancel</Button>
+          </div>
+          <div>
+            or email us directly: <a href="mailto:info@cimmerse.com">info@cimmerse.com</a>
+          </div>
         </ModalFooter>
       </Form>
     )

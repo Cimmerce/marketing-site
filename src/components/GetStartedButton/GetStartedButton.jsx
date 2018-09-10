@@ -11,7 +11,7 @@ const GetStartedButton = ({ buttonText }) => (
     color='primary'
     size='sm'
     onClick={() => { document.getElementById('getStartedButton').click() }}
-  >{ buttonText || 'Get started' }</Button>
+  >{ buttonText || 'Get a quote' }</Button>
 )
 
 GetStartedButton.propTypes = propTypes

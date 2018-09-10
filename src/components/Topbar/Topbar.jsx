@@ -93,7 +93,7 @@ class Topbar extends Component {
                     color='primary'
                     className={styles.getStartedButton}
                     onClick={this.handleRequestQuoteModalToggled}
-                  >Get started</Button>
+                  >Get a quote</Button>
                 </NavItem>
               </Nav>
             </div>
