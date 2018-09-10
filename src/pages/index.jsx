@@ -97,10 +97,10 @@ class IndexPage extends Component {
               </header>
 
               <ModelViewer modelIds={[
-                '11130d3a-be12-480c-bb0e-29b0558a9197', // Gold chair
+                '2a0c912c-6a81-44dd-b442-01c0c09ad8fd', // Brown leather couch
+                'a7869d2c-f262-4df7-bca9-7c3fcd79b902', // Nike Pegasus shoe
                 '9b285fc4-b892-421d-9856-c90d2016d425', // LV handbag
-                '0c0b7508-02d6-4ec0-af7b-404faad43be8', // Muuce
-                '4bbe458d-c287-43b5-9c78-4d36956ee7b1' // Sneaker
+                '0c0b7508-02d6-4ec0-af7b-404faad43be8' // Muuce
               ]} />
             </Container>
           </section>
